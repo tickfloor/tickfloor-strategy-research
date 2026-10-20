@@ -5,9 +5,9 @@ after Benjamini-Hochberg false-discovery-rate correction for running that many t
 updated 11 October 2026 (ledger runs 15 September to 11 October 2026; the robustness and holdout reports are from 29 September).
 
 **Result: 0 of 801 tests survived correction** (708 strategies plus reruns and variants). 113
-strategies beat the benchmark on the raw number, and 12 of those cleared p < 0.05 before correction. The lowest FDR-adjusted q-value across
-all 801 tests is 0.1602 (a robustness rerun of a volatility-managed QQQ/AGG rule; 0.2243 in this file's
-latest-run row), above the ledger's q < 0.10 gate. The 2 candidates that then got a single
+strategies beat the benchmark on the raw number, and 12 of those cleared p < 0.05 before correction. The closest miss is a volatility-managed QQQ/AGG rule
+at q = 0.2243 (its latest run, the figure tickfloor.com/evidence shows; a superseded version of the same
+rule reached 0.1602), above the ledger's q < 0.10 gate. The 2 candidates that then got a single
 look at held-back data (after 2025-03-15) were both not confirmed.
 
 This is the dataset behind [tickfloor.com/evidence](https://tickfloor.com/evidence). Tickfloor
