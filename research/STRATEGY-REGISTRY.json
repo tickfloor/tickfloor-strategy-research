@@ -845,6 +845,1506 @@
     "costVerdict": "loses_at_zero_cost"
   },
   {
+    "id": "fx1012-acc",
+    "name": "Low accruals (Sloan)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-acc.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.051625690896594634,
+    "pExcess": 0.030984507746126936,
+    "halfExcess": [
+      0.052063560981348456,
+      0.05126784405649354
+    ]
+  },
+  {
+    "id": "fx1012-bm",
+    "name": "Low P/B (book/market)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-bm.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.01235413824129905,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06555461289267606,
+      0.04160345595817816
+    ]
+  },
+  {
+    "id": "fx1012-egm",
+    "name": "Earnings-growth momentum",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-egm.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.06514706961643046,
+    "pExcess": 0.02348825587206397,
+    "halfExcess": [
+      0.09365548569495452,
+      0.03822839303422665
+    ]
+  },
+  {
+    "id": "fx1012-ey",
+    "name": "Low P/E (earnings yield)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-ey.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.012375915904067947,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.01173196637451479,
+      -0.013013828628571478
+    ]
+  },
+  {
+    "id": "fx1012-fcfy",
+    "name": "Free-cash-flow yield",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-fcfy.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.013398458398125701,
+    "pExcess": 0.3213393303348326,
+    "halfExcess": [
+      0.014509194156269167,
+      0.012341058450420661
+    ]
+  },
+  {
+    "id": "fx1012-fscore",
+    "name": "Piotroski F-score >= 8",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-fscore.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03721252395435193,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.02194490686008521,
+      -0.05181945357005113
+    ]
+  },
+  {
+    "id": "fx1012-gp",
+    "name": "Gross profitability (Novy-Marx)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-gp.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.032882976701541944,
+    "pExcess": 0.16241879060469766,
+    "halfExcess": [
+      0.06554453321587639,
+      0.0021357914869222228
+    ]
+  },
+  {
+    "id": "fx1012-lev",
+    "name": "Low leverage (liabilities/equity)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-lev.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.016978341943282516,
+    "pExcess": 0.2733633183408296,
+    "halfExcess": [
+      0.013233163650960389,
+      0.020637147306277415
+    ]
+  },
+  {
+    "id": "fx1012-qv",
+    "name": "Value + quality (rank blend of earnings yield and gross profitability)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-qv.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.03041377814394486,
+    "pExcess": 0.15592203898050974,
+    "halfExcess": [
+      0.048828437744367514,
+      0.012890602022162634
+    ]
+  },
+  {
+    "id": "fx1012-roe",
+    "name": "ROE",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-roe.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.017650409453847438,
+    "pExcess": 0.25837081459270367,
+    "halfExcess": [
+      0.05924222016859204,
+      -0.021218732937306584
+    ]
+  },
+  {
+    "id": "fx1012-shy",
+    "name": "Shareholder yield (div + net buyback)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-shy.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.023749750336234943,
+    "pExcess": 0.2773613193403298,
+    "halfExcess": [
+      -0.005247653063444879,
+      0.052564268440052686
+    ]
+  },
+  {
+    "id": "fx1012-sp",
+    "name": "Low P/S (sales/market)",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "source": "research/factors-1012/SPEC.md",
+    "evidencePath": "research/hunt2/results/fx1012-sp.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.02015461521035422,
+    "pExcess": 0.27786106946526734,
+    "halfExcess": [
+      -0.027012905364470097,
+      0.06775289032165976
+    ]
+  },
+  {
+    "id": "h3-cd-choppiness-release",
+    "name": "Does leaving a choppy market identify a crypto trend?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: Choppiness Index 61.8 release crypto trend strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-choppiness-release.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.554736335234453,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.3374860895831882,
+      -0.10539920961744154
+    ]
+  },
+  {
+    "id": "h3-cd-cyber-cycle",
+    "name": "Does Ehlers' Cyber Cycle work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "John F. Ehlers, Cybernetic Analysis for Stocks and Futures (2004)",
+    "evidencePath": "research/hunt2/results/h3-cd-cyber-cycle.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.38549836533978876,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.230948552431561,
+      0.11036199776190858
+    ]
+  },
+  {
+    "id": "h3-cd-fisher-transform",
+    "name": "Does the Fisher Transform indicator work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: Ehlers Fisher Transform nine period crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-fisher-transform.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04576692488193124,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.3265257828850143,
+      0.08222198782450252
+    ]
+  },
+  {
+    "id": "h3-cd-frama",
+    "name": "Does the FRAMA adaptive moving average work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: Ehlers FRAMA fractal adaptive moving average crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-frama.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.24676106298280387,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8300082472380153,
+      0.05953223327371937
+    ]
+  },
+  {
+    "id": "h3-cd-gain-to-pain-rank",
+    "name": "Does ranking crypto by gain-to-pain beat chasing the biggest winners?",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "retail trading content: Jack Schwager gain to pain ratio crypto portfolio ranking",
+    "evidencePath": "research/hunt2/results/h3-cd-gain-to-pain-rank.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2712006538453948,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5276916607125459,
+      -0.1308689569069551
+    ]
+  },
+  {
+    "id": "h3-cd-mcginley-dynamic",
+    "name": "Does the McGinley Dynamic work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: McGinley Dynamic 20 period crypto trading strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-mcginley-dynamic.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05453063473625752,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.22422016395727562,
+      0.02294499039414233
+    ]
+  },
+  {
+    "id": "h3-cd-pmo",
+    "name": "Does the Price Momentum Oscillator work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: DecisionPoint Price Momentum Oscillator PMO crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-pmo.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0003841063067020478,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.6222403617576842,
+      0.3214545535774507
+    ]
+  },
+  {
+    "id": "h3-cd-relative-vigor-rank",
+    "name": "Does buying crypto with the strongest Relative Vigor Index work?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: Relative Vigor Index RVI crypto strength ranking",
+    "evidencePath": "research/hunt2/results/h3-cd-relative-vigor-rank.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.49195558273766515,
+    "pExcess": 0.09795102448775612,
+    "halfExcess": [
+      1.507446683027796,
+      0.07419593424894955
+    ]
+  },
+  {
+    "id": "h3-cd-schaff-trend-cycle",
+    "name": "Does the Schaff Trend Cycle work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: Schaff Trend Cycle 23 50 10 trading strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-schaff-trend-cycle.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.28185044467496967,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9405913218208799,
+      0.07392775543043473
+    ]
+  },
+  {
+    "id": "h3-cd-stoch-rsi",
+    "name": "Does the Stochastic RSI work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: stochastic rsi crypto strategy 20 80",
+    "evidencePath": "research/hunt2/results/h3-cd-stoch-rsi.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5192742610692369,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4000118237706993,
+      0.007266029876433988
+    ]
+  },
+  {
+    "id": "h3-cd-supertrend",
+    "name": "Does the Supertrend indicator work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: supertrend 10 3 crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-supertrend.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.06035903085867922,
+    "pExcess": 0.4192903548225887,
+    "halfExcess": [
+      -0.14237004236929574,
+      0.14088136616855995
+    ]
+  },
+  {
+    "id": "h3-cd-supertrend-adx",
+    "name": "Does Supertrend plus an ADX filter work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: supertrend adx combo strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-supertrend-adx.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.27779263787246444,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0869672575194531,
+      0.18748148519621455
+    ]
+  },
+  {
+    "id": "h3-cd-three-line-break",
+    "name": "Does a three-line-break chart trend rule work on crypto?",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "source": "retail trading content: three line break chart non repainting crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-three-line-break.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.07269353552535618,
+    "pExcess": 0.38630684657671166,
+    "halfExcess": [
+      -0.12026424884977382,
+      0.14739150552234515
+    ]
+  },
+  {
+    "id": "h3-cd-trend-trigger-factor",
+    "name": "Does the Trend Trigger Factor work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: Trend Trigger Factor 15 period 100 threshold crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-trend-trigger-factor.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17424790610888352,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8123940126875324,
+      0.16416514684200068
+    ]
+  },
+  {
+    "id": "h3-cd-vidya",
+    "name": "Does the VIDYA adaptive moving average work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: VIDYA Chande momentum adaptive moving average crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-cd-vidya.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1984614797523836,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.7182916950872766,
+      0.06753193065379892
+    ]
+  },
+  {
+    "id": "h3-etf-accumulative-swing",
+    "name": "Does Wilder's Accumulative Swing Index work on ETFs?",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "source": "J. Welles Wilder Jr., New Concepts in Technical Trading Systems (1978)",
+    "evidencePath": "research/hunt2/results/h3-etf-accumulative-swing.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.055735756774453415,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06591767158232287,
+      -0.04570673381265333
+    ]
+  },
+  {
+    "id": "h3-etf-cppi-cushion",
+    "name": "Does CPPI portfolio insurance work with QQQ and SHY?",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "https://arxiv.org/abs/0905.2926",
+    "evidencePath": "research/hunt2/results/h3-etf-cppi-cushion.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.028520728012704222,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10046049373389132,
+      0.047653421881407754
+    ]
+  },
+  {
+    "id": "h3-etf-dow-confirmation",
+    "name": "Does Dow Theory confirmation using DIA and XLI work?",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "retail trading content: Dow Theory industrial ETF confirmation DIA XLI",
+    "evidencePath": "research/hunt2/results/h3-etf-dow-confirmation.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.01740669822451646,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.00928871159498712,
+      -0.02520802903939634
+    ]
+  },
+  {
+    "id": "h3-etf-four-asset-bands",
+    "name": "Does 10% band rebalancing work for a four-asset ETF portfolio?",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "retail trading content: permanent portfolio relative rebalance bands stocks gold bonds cash",
+    "evidencePath": "research/hunt2/results/h3-etf-four-asset-bands.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0634391127130709,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11619782061584782,
+      -0.010828429049269284
+    ]
+  },
+  {
+    "id": "h3-etf-golden-cross-sectors",
+    "name": "Does the golden cross (50/200) work across sector ETFs?",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "source": "retail trading content: golden cross death cross etf strategy",
+    "evidencePath": "research/hunt2/results/h3-etf-golden-cross-sectors.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.022026579881081254,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.017873581061786936,
+      -0.02605788170924983
+    ]
+  },
+  {
+    "id": "h3-etf-hull-turn",
+    "name": "Does the Hull moving average work on ETFs?",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "source": "https://alanhull.com/the-hull-moving-average/",
+    "evidencePath": "research/hunt2/results/h3-etf-hull-turn.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03229409564047492,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03769742465720305,
+      -0.026994203363516434
+    ]
+  },
+  {
+    "id": "h3-etf-klinger-cross",
+    "name": "Does the Klinger volume oscillator work on ETFs?",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "source": "https://www.tradingview.com/support/solutions/43000589157-klinger-oscillator/",
+    "evidencePath": "research/hunt2/results/h3-etf-klinger-cross.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06410650564283116,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06128187685826658,
+      -0.06684172403977562
+    ]
+  },
+  {
+    "id": "h3-etf-laguerre-rsi",
+    "name": "Does Laguerre RSI work on ETFs?",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "source": "retail trading content: John Ehlers Laguerre RSI gamma 0.5 strategy",
+    "evidencePath": "research/hunt2/results/h3-etf-laguerre-rsi.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0596754153884147,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07145289817675438,
+      -0.04805779545514555
+    ]
+  },
+  {
+    "id": "h3-etf-mass-index-bulge",
+    "name": "Does the Mass Index reversal bulge work on ETFs?",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "source": "https://www.tradingview.com/support/solutions/43000589169-mass-index/",
+    "evidencePath": "research/hunt2/results/h3-etf-mass-index-bulge.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07045616952154976,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08056130285844332,
+      -0.06050338294879942
+    ]
+  },
+  {
+    "id": "h3-etf-tail-ratio",
+    "name": "Does choosing ETFs by their return tail ratio work?",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "retail trading content: tail ratio ETF selection 95th percentile 5th percentile",
+    "evidencePath": "research/hunt2/results/h3-etf-tail-ratio.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.021766212416981512,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.000026941823009885013,
+      -0.042538378235937646
+    ]
+  },
+  {
+    "id": "h3-etf-underwater-duration",
+    "name": "Does choosing ETFs with shorter drawdowns work?",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "retail trading content: ETF time under water drawdown duration ranking",
+    "evidencePath": "research/hunt2/results/h3-etf-underwater-duration.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.007486311789312472,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.000026941823009885013,
+      -0.014712071516711722
+    ]
+  },
+  {
+    "id": "h3-hourly-bw-facilitation",
+    "name": "Does Bill Williams' Market Facilitation Index work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "https://www.metatrader4.com/en/trading-platform/help/analytics/tech_indicators/market_facilitation_index",
+    "evidencePath": "research/hunt2/results/h3-hourly-bw-facilitation.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6440180285779207,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4708998644057285,
+      -0.17496639775718204
+    ]
+  },
+  {
+    "id": "h3-hourly-causal-zigzag",
+    "name": "Does a confirmed ZigZag reversal work on crypto?",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "source": "retail trading content: non repainting ZigZag directional change crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-hourly-causal-zigzag.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.0783183785168244,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.1824565454391434,
+      -0.3794945506771611
+    ]
+  },
+  {
+    "id": "h3-hourly-chande-forecast",
+    "name": "Does the Chande Forecast Oscillator work on crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: Chande Forecast Oscillator linear regression crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-hourly-chande-forecast.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6730263222943731,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4712470632354004,
+      -0.22173234054469027
+    ]
+  },
+  {
+    "id": "h3-hourly-classic-r1-break",
+    "name": "Does breaking yesterday's R1 pivot work on crypto?",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "source": "retail trading content: classic pivot point R1 breakout crypto trading strategy",
+    "evidencePath": "research/hunt2/results/h3-hourly-classic-r1-break.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.38791054569329875,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.6624309747125339,
+      -0.22565680370444097
+    ]
+  },
+  {
+    "id": "h3-hourly-descending-trendline",
+    "name": "Does breaking a descending trendline work on crypto?",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "source": "retail trading content: confirmed pivot descending trendline breakout crypto strategy",
+    "evidencePath": "research/hunt2/results/h3-hourly-descending-trendline.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.49080800332183827,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8803236997481934,
+      -0.26740057125463934
+    ]
+  },
+  {
+    "id": "h3-hourly-ema-9-21-cross",
+    "name": "Does the 9/21 EMA cross work on 1-hour crypto?",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "source": "retail trading content: 9 21 ema crossover crypto 1h scalping",
+    "evidencePath": "research/hunt2/results/h3-hourly-ema-9-21-cross.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6287522830119463,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1288169165536885,
+      -0.34095607699392694
+    ]
+  },
+  {
+    "id": "h3-hourly-log-renko",
+    "name": "Do non-repainting Renko trends work on crypto?",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "source": "https://www.tradingview.com/support/solutions/43000502284-understanding-renko-charts/",
+    "evidencePath": "research/hunt2/results/h3-hourly-log-renko.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.9361975406812574,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.003743216478763,
+      -0.2735757051374099
+    ]
+  },
+  {
+    "id": "h3-hourly-round-number-break",
+    "name": "Do psychological round-number breakouts work on crypto?",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "source": "retail trading content: Bitcoin round number psychological resistance breakout strategy",
+    "evidencePath": "research/hunt2/results/h3-hourly-round-number-break.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5752330007232322,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.379169575688705,
+      -0.12380029060266895
+    ]
+  },
+  {
+    "id": "h3-hourly-williams-fractal-break",
+    "name": "Do confirmed Williams fractal breakouts work on crypto?",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "source": "https://www.metatrader5.com/en/terminal/help/indicators/bw_indicators/fractals",
+    "evidencePath": "research/hunt2/results/h3-hourly-williams-fractal-break.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8250416370573941,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5592348943310192,
+      -0.40386683241143817
+    ]
+  },
+  {
+    "id": "h3-us-accelerator-green-bars",
+    "name": "Does the Accelerator Oscillator three-green-bars rule work?",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "source": "retail trading content: Bill Williams Accelerator Oscillator three green bars below zero",
+    "evidencePath": "research/hunt2/results/h3-us-accelerator-green-bars.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11613648550507372,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.13649686071014178,
+      -0.09748608013071447
+    ]
+  },
+  {
+    "id": "h3-us-awesome-saucer",
+    "name": "Does the Awesome Oscillator saucer setup work on stocks?",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "source": "retail trading content: Bill Williams Awesome Oscillator bullish saucer strategy",
+    "evidencePath": "research/hunt2/results/h3-us-awesome-saucer.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.042399343676185364,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07375797212695345,
+      -0.013658582881507897
+    ]
+  },
+  {
+    "id": "h3-us-bullish-kicker",
+    "name": "Does the bullish kicker candlestick pattern work on stocks?",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "source": "retail trading content: bullish kicker candlestick reversal stock strategy",
+    "evidencePath": "research/hunt2/results/h3-us-bullish-kicker.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1788470516922014,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2463248940314755,
+      -0.11519257188420817
+    ]
+  },
+  {
+    "id": "h3-us-bump-and-run",
+    "name": "Does the bearish bump-and-run reversal pattern work on stocks?",
+    "family": "chart-structure",
+    "assetClass": "us_stock",
+    "source": "retail trading content: bearish bump and run reversal daily stock pattern",
+    "evidencePath": "research/hunt2/results/h3-us-bump-and-run.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.18291103725257707,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2509964859541872,
+      -0.11865008335838256
+    ]
+  },
+  {
+    "id": "h3-us-center-of-gravity",
+    "name": "Does the Ehlers Center of Gravity oscillator work on stocks?",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "source": "retail trading content: Ehlers Center of Gravity oscillator turning point stock strategy",
+    "evidencePath": "research/hunt2/results/h3-us-center-of-gravity.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1302078362042185,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.15346389397617388,
+      -0.10888030722414932
+    ]
+  },
+  {
+    "id": "h3-us-gann-hilo-activator",
+    "name": "Does the Gann HiLo Activator work on daily stocks?",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "source": "retail trading content: Gann HiLo Activator three day stock trend strategy",
+    "evidencePath": "research/hunt2/results/h3-us-gann-hilo-activator.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12271231975098806,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.15350687635066174,
+      -0.09442062435643317
+    ]
+  },
+  {
+    "id": "h3-us-keltner-breakout",
+    "name": "Does the Keltner channel breakout work on stocks?",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "Chester Keltner / Linda Raschke; retail trading content: keltner channel breakout strategy 20 2",
+    "evidencePath": "research/hunt2/results/h3-us-keltner-breakout.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12796814564183445,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1899152218618534,
+      -0.0698013760679792
+    ]
+  },
+  {
+    "id": "h3-us-morning-star",
+    "name": "Does the morning-star candlestick pattern work on stocks?",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "source": "retail trading content: morning star candlestick daily stock trading strategy",
+    "evidencePath": "research/hunt2/results/h3-us-morning-star.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.175923203192081,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23241828939326958,
+      -0.12310571364534573
+    ]
+  },
+  {
+    "id": "h3-us-random-walk-index",
+    "name": "Does the Random Walk Index work as a stock-selection signal?",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "source": "retail trading content: Michael Poulos Random Walk Index stock trading strategy",
+    "evidencePath": "research/hunt2/results/h3-us-random-walk-index.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0001415728131350935,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03029692598595579,
+      0.027434209390780673
+    ]
+  },
+  {
+    "id": "h3-us-rising-three-methods",
+    "name": "Does the rising-three-methods continuation pattern work?",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "source": "retail trading content: rising three methods five candle continuation stock strategy",
+    "evidencePath": "research/hunt2/results/h3-us-rising-three-methods.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17968743204392923,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24685048483334804,
+      -0.11634686017924878
+    ]
+  },
+  {
+    "id": "h3-us-three-inside-up",
+    "name": "Does a bullish harami with three-inside-up confirmation work?",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "source": "retail trading content: bullish harami three inside up stock strategy",
+    "evidencePath": "research/hunt2/results/h3-us-three-inside-up.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.18033143703109455,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2458182973168368,
+      -0.11865905076724315
+    ]
+  },
+  {
+    "id": "h3-us-vhf-direction",
+    "name": "Does the Vertical Horizontal Filter identify stock trends worth buying?",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "source": "retail trading content: Vertical Horizontal Filter Adam White stock trend strategy",
+    "evidencePath": "research/hunt2/results/h3-us-vhf-direction.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0653699345871186,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06753008738815214,
+      -0.06325584653745997
+    ]
+  },
+  {
+    "id": "h3-us-volume-profile-poc",
+    "name": "Does reclaiming the volume-profile point of control work on stocks?",
+    "family": "chart-structure",
+    "assetClass": "us_stock",
+    "source": "retail trading content: stock volume profile point of control reclaim strategy",
+    "evidencePath": "research/hunt2/results/h3-us-volume-profile-poc.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09000692461914261,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12638342099462285,
+      -0.05651196149457571
+    ]
+  },
+  {
+    "id": "h4-cd-anchor-residence",
+    "name": "Does reclaiming a price after spending most of a month below it work?",
+    "family": "anchor-occupation",
+    "assetClass": "crypto",
+    "source": "retail trading content: price occupation time historical anchor reclaim",
+    "evidencePath": "research/hunt2/results/h4-cd-anchor-residence.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5789671292314524,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5134859630019701,
+      -0.003904409274486431
+    ]
+  },
+  {
+    "id": "h4-cd-discount-entry",
+    "name": "Does buying crypto well below its yearly high work?",
+    "family": "underwater-entry",
+    "assetClass": "crypto",
+    "source": "retail trading content: buy cryptocurrency twenty percent below 52 week high",
+    "evidencePath": "research/hunt2/results/h4-cd-discount-entry.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5360965046044219,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4582312515280484,
+      0.027378886348605525
+    ]
+  },
+  {
+    "id": "h4-cd-loss-run-sizing",
+    "name": "Does sizing down coins with clustered losing runs work?",
+    "family": "tail-budget",
+    "assetClass": "crypto",
+    "source": "retail trading content: consecutive loss run risk position sizing crypto equal weight comparison",
+    "evidencePath": "research/hunt2/results/h4-cd-loss-run-sizing.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1751413862926865,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5451834691149751,
+      0.008379977980191855
+    ]
+  },
+  {
+    "id": "h4-cd-movement-clock",
+    "name": "Does a movement budget improve crypto exits?",
+    "family": "event-clock",
+    "assetClass": "crypto",
+    "source": "retail trading content: cumulative absolute return event time trade exit",
+    "evidencePath": "research/hunt2/results/h4-cd-movement-clock.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5122909468712076,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4128002277034728,
+      0.03153080573566913
+    ]
+  },
+  {
+    "id": "h4-cd-original-entry-retry",
+    "name": "Does reclaiming the original entry justify buying crypto back?",
+    "family": "stop-reentry",
+    "assetClass": "crypto",
+    "source": "retail trading content: stopped out buy back original entry reclaim",
+    "evidencePath": "research/hunt2/results/h4-cd-original-entry-retry.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.33728560912728844,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0423915457440591,
+      0.051592960521830156
+    ]
+  },
+  {
+    "id": "h4-cd-return-time-centroids",
+    "name": "Does the ordering of crypto gains and losses matter?",
+    "family": "path-order",
+    "assetClass": "crypto",
+    "source": "retail trading content: temporal ordering of gains losses return centroids portfolio selection",
+    "evidencePath": "research/hunt2/results/h4-cd-return-time-centroids.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.09514506728987304,
+    "pExcess": 0.3458270864567716,
+    "halfExcess": [
+      -0.06440482982626694,
+      0.15197132137167402
+    ]
+  },
+  {
+    "id": "h4-cd-sign-entropy",
+    "name": "Does predictable return-sign ordering help crypto entries?",
+    "family": "path-order",
+    "assetClass": "crypto",
+    "source": "retail trading content: return sign transition entropy crypto trading filter",
+    "evidencePath": "research/hunt2/results/h4-cd-sign-entropy.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6291672355059496,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.6024047666074472,
+      -0.016327636112008825
+    ]
+  },
+  {
+    "id": "h4-cd-tail-loss-sizing",
+    "name": "Does sizing crypto by its worst daily losses work?",
+    "family": "tail-budget",
+    "assetClass": "crypto",
+    "source": "retail trading content: expected shortfall position sizing crypto portfolio versus equal weight",
+    "evidencePath": "research/hunt2/results/h4-cd-tail-loss-sizing.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2709427977244223,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8230960513662569,
+      0.017949730335715453
+    ]
+  },
+  {
+    "id": "h4-cd-volume-burst-adjacency",
+    "name": "Do clustered volume bursts predict crypto returns?",
+    "family": "volume-order",
+    "assetClass": "crypto",
+    "source": "retail trading content: clustered volume bursts versus isolated volume spikes crypto",
+    "evidencePath": "research/hunt2/results/h4-cd-volume-burst-adjacency.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.48997628580588737,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.371642918476726,
+      0.037217905871599566
+    ]
+  },
+  {
+    "id": "h4-cd-winner-stall",
+    "name": "Does selling a stalled crypto winner work?",
+    "family": "holding-clock",
+    "assetClass": "crypto",
+    "source": "retail trading content: time since maximum favorable excursion stalled winner exit",
+    "evidencePath": "research/hunt2/results/h4-cd-winner-stall.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.28780604225256634,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9150711578099939,
+      0.04776898644088967
+    ]
+  },
+  {
+    "id": "h4-etf-activity-clock-refresh",
+    "name": "Does market activity give a better ETF rebalance clock?",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "source": "retail trading content: quadratic variation business time ETF portfolio rebalance clock",
+    "evidencePath": "research/hunt2/results/h4-etf-activity-clock-refresh.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.010627212004073128,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0021963897343344474,
+      -0.01894144902838879
+    ]
+  },
+  {
+    "id": "h4-etf-aging-price-barriers",
+    "name": "Do exits that tighten with trade age work?",
+    "family": "age-price-barrier",
+    "assetClass": "etf",
+    "source": "retail trading content: trade age decaying profit target tightening stop neutral entry",
+    "evidencePath": "research/hunt2/results/h4-etf-aging-price-barriers.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09346151821142246,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08890920304560868,
+      -0.09790130050986123
+    ]
+  },
+  {
+    "id": "h4-etf-confirmed-target-refresh",
+    "name": "Does confirming the whole ETF target portfolio reduce false rotations?",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "source": "retail trading content: debounce whole target portfolio five day confirmation ETF rebalancing",
+    "evidencePath": "research/hunt2/results/h4-etf-confirmed-target-refresh.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.035719241239877464,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.02822885580408463,
+      -0.043110884283851236
+    ]
+  },
+  {
+    "id": "h4-etf-dip-deadline-deployment",
+    "name": "Does waiting briefly for dips improve dollar-cost averaging?",
+    "family": "capital-deployment",
+    "assetClass": "etf",
+    "source": "retail trading content: dollar cost averaging dip deadline finite reserve investment timing",
+    "evidencePath": "research/hunt2/results/h4-etf-dip-deadline-deployment.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.046427248571651925,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10046049373389132,
+      0.00982163373049505
+    ]
+  },
+  {
+    "id": "h4-etf-excursion-balance-exit",
+    "name": "Does requiring gains to repay a trade's worst excursion improve exits?",
+    "family": "excursion-balance",
+    "assetClass": "etf",
+    "source": "retail trading content: maximum adverse favorable excursion balance trade exit",
+    "evidencePath": "research/hunt2/results/h4-etf-excursion-balance-exit.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03293261233453548,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03427254556585302,
+      -0.03161286092165705
+    ]
+  },
+  {
+    "id": "h4-etf-joint-tail-sizing",
+    "name": "Does sizing ETFs by their losses on shared bad days work?",
+    "family": "tail-budget",
+    "assetClass": "etf",
+    "source": "retail trading content: co expected shortfall portfolio tail contribution ETF sizing",
+    "evidencePath": "research/hunt2/results/h4-etf-joint-tail-sizing.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.060430296097711,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08219860613068075,
+      -0.038498725616586515
+    ]
+  },
+  {
+    "id": "h4-etf-local-transfer-rebalancing",
+    "name": "Does correcting only the largest ETF allocation gap work?",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "source": "retail trading content: pairwise extreme sleeve transfer rebalancing four asset portfolio",
+    "evidencePath": "research/hunt2/results/h4-etf-local-transfer-rebalancing.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06303741504623583,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11619782061584782,
+      -0.01000546446261108
+    ]
+  },
+  {
+    "id": "h4-etf-one-replacement",
+    "name": "Does limiting an ETF rotation to one replacement work?",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "source": "retail trading content: turnover constrained ETF momentum portfolio one replacement per rebalance",
+    "evidencePath": "research/hunt2/results/h4-etf-one-replacement.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.018525074110051554,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.021817894768297652,
+      -0.015242585792406782
+    ]
+  },
+  {
+    "id": "h4-etf-sign-evidence-exit",
+    "name": "Does accumulating evidence of bad trade direction improve ETF exits?",
+    "family": "sequential-evidence",
+    "assetClass": "etf",
+    "source": "retail trading content: sequential probability ratio evidence stop loss trade direction",
+    "evidencePath": "research/hunt2/results/h4-etf-sign-evidence-exit.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.027763906521954596,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03685259439171995,
+      -0.018760520017818694
+    ]
+  },
+  {
+    "id": "h4-etf-tracking-debt-rebalancing",
+    "name": "Does accumulated allocation error give a better ETF reset rule?",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "source": "retail trading content: accumulated tracking error budget portfolio rebalancing",
+    "evidencePath": "research/hunt2/results/h4-etf-tracking-debt-rebalancing.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06370197152518653,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11619782061584782,
+      -0.011366777877367396
+    ]
+  },
+  {
+    "id": "h4-etf-value-path-deployment",
+    "name": "Does value averaging without new deposits improve ETF deployment?",
+    "family": "capital-deployment",
+    "assetClass": "etf",
+    "source": "retail trading content: Michael Edleson value averaging finite reserve no external deposits",
+    "evidencePath": "research/hunt2/results/h4-etf-value-path-deployment.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05431896110281209,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10046049373389132,
+      -0.006648323189915928
+    ]
+  },
+  {
+    "id": "h4-etf-wealth-mixture",
+    "name": "Does combining fixed ETF portfolios by their accumulated wealth work?",
+    "family": "wealth-mixture",
+    "assetClass": "etf",
+    "source": "retail trading content: Cover universal portfolios finite wealth weighted constant rebalanced portfolio experts",
+    "evidencePath": "research/hunt2/results/h4-etf-wealth-mixture.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.002605310176542197,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0035999315327590597,
+      -0.0015967828122680494
+    ]
+  },
+  {
+    "id": "h4-hourly-open-crossings",
+    "name": "Do repeated crossings of the crypto day's opening price work?",
+    "family": "anchor-occupation",
+    "assetClass": "crypto",
+    "source": "retail trading content: daily opening price crossing count next day crypto strategy",
+    "evidencePath": "research/hunt2/results/h4-hourly-open-crossings.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8367129654905334,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.8956577103211112,
+      -0.18228880128087754
+    ]
+  },
+  {
+    "id": "h4-hourly-reversal-clock",
+    "name": "Does counting direction changes improve crypto exits?",
+    "family": "event-clock",
+    "assetClass": "crypto",
+    "source": "retail trading content: direction change count event clock trade exits",
+    "evidencePath": "research/hunt2/results/h4-hourly-reversal-clock.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6652080267950198,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.6418958855337806,
+      -0.08389055038929838
+    ]
+  },
+  {
+    "id": "h4-hourly-session-relay",
+    "name": "Does a crypto gain recovered across three sessions continue?",
+    "family": "session-relay",
+    "assetClass": "crypto",
+    "source": "retail trading content: crypto Asia Europe US session gain recovery relay",
+    "evidencePath": "research/hunt2/results/h4-hourly-session-relay.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8351018001511736,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9605660681783812,
+      -0.11398354699584567
+    ]
+  },
+  {
+    "id": "h4-hourly-volume-clock",
+    "name": "Does a volume clock improve hourly crypto exits?",
+    "family": "event-clock",
+    "assetClass": "crypto",
+    "source": "retail trading content: volume clock holding period neutral entry crypto",
+    "evidencePath": "research/hunt2/results/h4-hourly-volume-clock.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7797882262255738,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7723686946726906,
+      -0.18435993730619438
+    ]
+  },
+  {
+    "id": "h4-hourly-volume-migration",
+    "name": "Does volume arriving later in the crypto day predict returns?",
+    "family": "volume-order",
+    "assetClass": "crypto",
+    "source": "retail trading content: late session volume centroid migration cryptocurrency accumulation",
+    "evidencePath": "research/hunt2/results/h4-hourly-volume-migration.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8453464483127999,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.935832329001414,
+      -0.16039118019054888
+    ]
+  },
+  {
+    "id": "h4-us-adverse-path-budget",
+    "name": "Does a budget for all losing steps improve stock exits?",
+    "family": "event-clock",
+    "assetClass": "us_stock",
+    "source": "retail trading content: cumulative adverse return loss budget trade exit",
+    "evidencePath": "research/hunt2/results/h4-us-adverse-path-budget.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1659340794209765,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24205647863449542,
+      -0.09358271700296017
+    ]
+  },
+  {
+    "id": "h4-us-breakeven-lock",
+    "name": "Does moving a stock exit to breakeven after a gain work?",
+    "family": "profit-disposition",
+    "assetClass": "us_stock",
+    "source": "retail trading content: move stop to breakeven after four percent profit stock trade",
+    "evidencePath": "research/hunt2/results/h4-us-breakeven-lock.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03806661183464466,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08168191716823392,
+      0.0022769526901778026
+    ]
+  },
+  {
+    "id": "h4-us-entry-occupation-budget",
+    "name": "Does limiting time below a stock entry improve exits?",
+    "family": "anchor-occupation",
+    "assetClass": "us_stock",
+    "source": "retail trading content: time spent below entry price occupation budget trade exit",
+    "evidencePath": "research/hunt2/results/h4-us-entry-occupation-budget.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10019787182565265,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11713662578718753,
+      -0.08469846934407732
+    ]
+  },
+  {
+    "id": "h4-us-gain-participation",
+    "name": "Does giving back accumulated gains identify a bad stock hold?",
+    "family": "profit-disposition",
+    "assetClass": "us_stock",
+    "source": "retail trading content: exit trade cumulative gains losses participation giveback",
+    "evidencePath": "research/hunt2/results/h4-us-gain-participation.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1319376121352709,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.19606635641080805,
+      -0.07161301943755904
+    ]
+  },
+  {
+    "id": "h4-us-loss-block-confirmation",
+    "name": "Does waiting for three losing blocks improve stock exits?",
+    "family": "path-order",
+    "assetClass": "us_stock",
+    "source": "retail trading content: three consecutive losing return blocks trade exit confirmation",
+    "evidencePath": "research/hunt2/results/h4-us-loss-block-confirmation.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02248100708074796,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05449769078205824,
+      0.006859831755519075
+    ]
+  },
+  {
+    "id": "h4-us-partial-profit-harvest",
+    "name": "Does taking half the stock profit position early work?",
+    "family": "profit-disposition",
+    "assetClass": "us_stock",
+    "source": "retail trading content: sell half after five percent profit stock position harvesting",
+    "evidencePath": "research/hunt2/results/h4-us-partial-profit-harvest.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07225994065526198,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09995701324133988,
+      -0.04690602761345364
+    ]
+  },
+  {
+    "id": "h4-us-permutation-entropy",
+    "name": "Does choosing stocks with orderly return sequences work?",
+    "family": "path-order",
+    "assetClass": "us_stock",
+    "source": "retail trading content: permutation entropy financial returns stock selection",
+    "evidencePath": "research/hunt2/results/h4-us-permutation-entropy.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02758731894085975,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.04261473081017719,
+      -0.013964988209294926
+    ]
+  },
+  {
+    "id": "h4-us-progress-checkpoint",
+    "name": "Does a five-day progress check improve stock exits?",
+    "family": "holding-clock",
+    "assetClass": "us_stock",
+    "source": "retail trading content: time stop trade not working five day checkpoint",
+    "evidencePath": "research/hunt2/results/h4-us-progress-checkpoint.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11659452007114113,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.15417346493363437,
+      -0.08194658402648813
+    ]
+  },
+  {
+    "id": "h4-us-recovery-deadline",
+    "name": "Does a deadline to recover an early loss improve stock exits?",
+    "family": "holding-clock",
+    "assetClass": "us_stock",
+    "source": "retail trading content: trade stop probation recover entry price deadline",
+    "evidencePath": "research/hunt2/results/h4-us-recovery-deadline.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07246960152809634,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09676153596467474,
+      -0.05027097533809366
+    ]
+  },
+  {
+    "id": "h4-us-stop-cooldown-retry",
+    "name": "Does a short cooldown justify retrying a stopped stock trade?",
+    "family": "stop-reentry",
+    "assetClass": "us_stock",
+    "source": "retail trading content: stop loss cooldown unconditional one retry trading policy",
+    "evidencePath": "research/hunt2/results/h4-us-stop-cooldown-retry.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05668122116539531,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08172902441096319,
+      -0.03380385264015007
+    ]
+  },
+  {
+    "id": "h4-us-tail-arrival-clustering",
+    "name": "Does avoiding clustered shock days improve stock selection?",
+    "family": "tail-arrival",
+    "assetClass": "us_stock",
+    "source": "retail trading content: extreme return arrival clustering stock selection tail events",
+    "evidencePath": "research/hunt2/results/h4-us-tail-arrival-clustering.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03326309969030805,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.004933004658763673,
+      -0.05779596799501552
+    ]
+  },
+  {
+    "id": "h4-us-time-irreversibility",
+    "name": "Does return time asymmetry identify better stocks?",
+    "family": "path-order",
+    "assetClass": "us_stock",
+    "source": "retail trading content: time irreversibility lagged third moment stock returns",
+    "evidencePath": "research/hunt2/results/h4-us-time-irreversibility.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0014767133891513406,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.019041539219577297,
+      0.014423617157481416
+    ]
+  },
+  {
+    "id": "h4-us-volume-move-concentration",
+    "name": "Does volume spread across small and large moves improve stock selection?",
+    "family": "volume-concentration",
+    "assetClass": "us_stock",
+    "source": "retail trading content: volume concentration across absolute return size buckets stock portfolio",
+    "evidencePath": "research/hunt2/results/h4-us-volume-move-concentration.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.059896923931650914,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06591071195066278,
+      -0.05435589232108162
+    ]
+  },
+  {
     "id": "macro-crypto-btc-dominance-altseason-rotation",
     "name": "BTC dominance trend (price-based stand-in) as altcoin risk-on rotation signal",
     "family": "macro-intermarket",
@@ -5929,6 +7429,1146 @@
     ]
   },
   {
+    "id": "ssrn-crash-rebound-cond",
+    "name": "Conditioned crypto crash rebound: drop <= -15%, relative loss <= -10%, liquid half",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "Fehle & Zdorovtsov via SSRN top-20 #13; prereg research/prereg-2026-10-07-ssrn.md run 5",
+    "evidencePath": "research/hunt2/results/ssrn-crash-rebound-cond.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5516304619440164,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4247817132562828,
+      -0.03137553855042419
+    ]
+  },
+  {
+    "id": "ssrn-kelly-dur6040",
+    "name": "Half-Kelly QQQ with a duration-momentum bond sleeve (QQQ + TLT/IEF/SHY)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "Yu et al. via SSRN top-20 #15 (sizing layer only); prereg research/prereg-2026-10-07-ssrn.md run 4",
+    "evidencePath": "research/hunt2/results/ssrn-kelly-dur6040.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.04499443154485405,
+    "pExcess": 0.022488755622188907,
+    "halfExcess": [
+      0.005917330219390005,
+      0.08316024690926227
+    ]
+  },
+  {
+    "id": "ssrn-kelly-qqq-agg",
+    "name": "Half-Kelly QQQ with the remainder in AGG (2005+)",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "Yu et al. via SSRN top-20 #15 (sizing layer only); prereg research/prereg-2026-10-07-ssrn.md run 4",
+    "evidencePath": "research/hunt2/results/ssrn-kelly-qqq-agg.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.045468067709161675,
+    "pExcess": 0.016439671206575867,
+    "halfExcess": [
+      0.030177395071330215,
+      0.06120299092725534
+    ]
+  },
+  {
+    "id": "ssrn-mom-irisk-t3",
+    "name": "12-1 momentum excluding the top tercile by idiosyncratic risk (wide US stocks)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "Ben-David et al. via SSRN top-20 #12; prereg research/prereg-2026-10-07-ssrn.md run 3",
+    "evidencePath": "research/hunt2/results/ssrn-mom-irisk-t3.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.047280444995795756,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06963711552668705,
+      -0.025320099923938244
+    ]
+  },
+  {
+    "id": "ssrn-tsmom-crypto",
+    "name": "AQR composite time-series momentum, vol-sized, long-only (18 crypto pairs)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "Hurst, Ooi & Pedersen 2017 (AQR), via Till-Eagleeye SSRN top-20 #20; prereg research/prereg-2026-10-07-ssrn.md run 1",
+    "evidencePath": "research/hunt2/results/ssrn-tsmom-crypto.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.46956862972697166,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.326638842436958,
+      0.03660774717882953
+    ]
+  },
+  {
+    "id": "ssrn-tsmom-etf",
+    "name": "AQR composite time-series momentum, vol-sized, long-only (25 discovery ETFs)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "Hurst, Ooi & Pedersen 2017 (AQR), via Till-Eagleeye SSRN top-20 #20; prereg research/prereg-2026-10-07-ssrn.md run 1",
+    "evidencePath": "research/hunt2/results/ssrn-tsmom-etf.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04316299704745297,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03986782526229815,
+      -0.04635881272161546
+    ]
+  },
+  {
+    "id": "st-btc4h-all",
+    "name": "Steelman BTC 4h +1% momentum, regime all",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-btc4h-all.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8725147539445971,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1954719931340947,
+      -0.5849717423057545
+    ]
+  },
+  {
+    "id": "st-btc4h-chop",
+    "name": "Steelman BTC 4h +1% momentum, regime chop",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-btc4h-chop.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.589249644601929,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.925167075966948,
+      -0.2886471428769276
+    ]
+  },
+  {
+    "id": "st-btc4h-down",
+    "name": "Steelman BTC 4h +1% momentum, regime down",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-btc4h-down.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6249962814825235,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8737398621220103,
+      -0.4168579204810361
+    ]
+  },
+  {
+    "id": "st-btc4h-up",
+    "name": "Steelman BTC 4h +1% momentum, regime up",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-btc4h-up.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6851499443830436,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9787544914033339,
+      -0.43166383770454897
+    ]
+  },
+  {
+    "id": "st-mtf-both",
+    "name": "Steelman multi-timeframe daily AND 4h agree",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-mtf-both.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.038506838383859376,
+    "pExcess": 1,
+    "halfExcess": [
+      0.12333404896219591,
+      -0.09274510194223029
+    ]
+  },
+  {
+    "id": "st-mtf-d",
+    "name": "Steelman multi-timeframe daily only",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-mtf-d.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.08893114016729808,
+    "pExcess": 0.39430284857571213,
+    "halfExcess": [
+      0.4384125896085367,
+      -0.051076416737092734
+    ]
+  },
+  {
+    "id": "st-mtf-h4",
+    "name": "Steelman multi-timeframe 4h only",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-mtf-h4.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11609574046523208,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10201743053969103,
+      -0.10471221210971704
+    ]
+  },
+  {
+    "id": "st-trail-comm-atr",
+    "name": "Steelman 55d breakout, atr exit (comm)",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trail-comm-atr.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.045965483594731404,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07796349719302786,
+      -0.015320167067587764
+    ]
+  },
+  {
+    "id": "st-trail-comm-fixed",
+    "name": "Steelman 55d breakout, fixed exit (comm)",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trail-comm-fixed.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02778786228426311,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.04704570397130636,
+      -0.009551673400119531
+    ]
+  },
+  {
+    "id": "st-trail-comm-pct",
+    "name": "Steelman 55d breakout, pct exit (comm)",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trail-comm-pct.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.037798748290599926,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.04340876985857545,
+      -0.03251933370343163
+    ]
+  },
+  {
+    "id": "st-trail-crypto-atr",
+    "name": "Steelman 55d breakout, atr exit (crypto)",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trail-crypto-atr.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.217264761028658,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8483037040720132,
+      0.11799541639496991
+    ]
+  },
+  {
+    "id": "st-trail-crypto-fixed",
+    "name": "Steelman 55d breakout, fixed exit (crypto)",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trail-crypto-fixed.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3397507606912993,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1225963639114307,
+      0.10571349600545643
+    ]
+  },
+  {
+    "id": "st-trail-crypto-pct",
+    "name": "Steelman 55d breakout, pct exit (crypto)",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trail-crypto-pct.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.31269012586251677,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0523424404063442,
+      0.10005865721163754
+    ]
+  },
+  {
+    "id": "st-trend-comm-base",
+    "name": "Steelman trend comm ungated (close>SMA50)",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trend-comm-base.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.040752866482951955,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06788753735978026,
+      -0.01487878268327214
+    ]
+  },
+  {
+    "id": "st-trend-comm-gated",
+    "name": "Steelman trend comm regime-gated (close>SMA50, UP regime)",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trend-comm-gated.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.040577239987525715,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08101188474507803,
+      -0.0015486316881359041
+    ]
+  },
+  {
+    "id": "st-trend-crypto-base",
+    "name": "Steelman trend crypto ungated (close>SMA50)",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trend-crypto-base.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14569348239423663,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.797425061502572,
+      0.20092953850494477
+    ]
+  },
+  {
+    "id": "st-trend-crypto-gated",
+    "name": "Steelman trend crypto regime-gated (close>SMA50, UP regime)",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trend-crypto-gated.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3431953035172248,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.070349475337315,
+      0.061283121234268156
+    ]
+  },
+  {
+    "id": "st-trend-fx-base",
+    "name": "Steelman trend fx ungated (close>SMA50)",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trend-fx-base.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.002198084636738873,
+    "pExcess": 0.4522738630684658,
+    "halfExcess": [
+      -0.003015163646313268,
+      0.007606903508648566
+    ]
+  },
+  {
+    "id": "st-trend-fx-gated",
+    "name": "Steelman trend fx regime-gated (close>SMA50, UP regime)",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "source": "steelman-1004 PREREG (Reddit commenters, day-1004/haiku)",
+    "evidencePath": "research/hunt2/results/st-trend-fx-gated.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.007904689581237356,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.008717818489071827,
+      -0.007061658785765257
+    ]
+  },
+  {
+    "id": "t100-alligator-c",
+    "name": "Williams Alligator: long while lips > teeth > jaw (13/8, 8/5, 5/3 smoothed medians) (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "YouTube Data Trader 'BEST William's Alligator' 605K views",
+    "evidencePath": "research/hunt2/results/t100-alligator-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.19210740508778312,
+    "pExcess": 0.2988505747126437,
+    "halfExcess": [
+      0.12071476049297925,
+      0.19850229915048012
+    ]
+  },
+  {
+    "id": "t100-alligator-s",
+    "name": "Williams Alligator: long while lips > teeth > jaw (13/8, 8/5, 5/3 smoothed medians) (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "YouTube Data Trader 'BEST William's Alligator' 605K views",
+    "evidencePath": "research/hunt2/results/t100-alligator-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11009052514317919,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.15157076527228175,
+      -0.07175133492677022
+    ]
+  },
+  {
+    "id": "t100-avwap-s",
+    "name": "Anchored VWAP from the lowest close of the last 126 days: long while close is above it (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "AVWAP listed among the five most-used indicators (search result); r/Daytrading VWAP threads; YouTube VWAP videos 82.8K views",
+    "evidencePath": "research/hunt2/results/t100-avwap-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.08666456052841509,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12453712373335946,
+      -0.05160007920216625
+    ]
+  },
+  {
+    "id": "t100-bbrsi-c",
+    "name": "Bollinger + RSI double: buy close under lower band with RSI<30, sell over upper band or RSI>70 (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "TradingView 'Bollinger + RSI, Double Strategy' (ChartArt) 38.1K likes",
+    "evidencePath": "research/hunt2/results/t100-bbrsi-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.45382026302671363,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.3594903792166033,
+      0.09446589133987549
+    ]
+  },
+  {
+    "id": "t100-bbrsi-s",
+    "name": "Bollinger + RSI double: buy close under lower band with RSI<30, sell over upper band or RSI>70 (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TradingView 'Bollinger + RSI, Double Strategy' (ChartArt) 38.1K likes",
+    "evidencePath": "research/hunt2/results/t100-bbrsi-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12669949129695746,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.19164912395193023,
+      -0.06556070268968539
+    ]
+  },
+  {
+    "id": "t100-bos-h",
+    "name": "Market structure: long after higher high and higher low, short after lower high and lower low (2-bar fractals) (crypto 1h x8)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "SMC / market-structure content (BOS, CHoCH), TradingView SMC 78.2K likes, Reddit ICT/SMC 240 posts",
+    "evidencePath": "research/hunt2/results/t100-bos-h.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.6303409520072867,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.715227777779254,
+      -0.9508108941932697
+    ]
+  },
+  {
+    "id": "t100-confrme-s",
+    "name": "RSI + MACD + EMA200 confluence: RSI>50, MACD above signal, close above 200 EMA (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "YouTube/Reddit 'RSI, MACD and EMA' combos (r/Daytrading 1w8i9my); TradingView 2025 multi-indicator behaviour",
+    "evidencePath": "research/hunt2/results/t100-confrme-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12698315356231094,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.19639972223562063,
+      -0.06204909070755682
+    ]
+  },
+  {
+    "id": "t100-confsrm-c",
+    "name": "Stochastic + RSI + MACD confluence: %K crosses above %D under 80 with RSI>50 and MACD above signal; exit when MACD turns down (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "YouTube Data Trader 'Highly Profitable Stochastic + RSI + MACD Trading Strategy'; channel videos 100K to 1.7M views",
+    "evidencePath": "research/hunt2/results/t100-confsrm-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2784575460271901,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9543733575513254,
+      0.08870163030314715
+    ]
+  },
+  {
+    "id": "t100-cup-s",
+    "name": "Cup and handle: 12-35% cup, handle in the upper half, buy the handle-high break, 20-day hold (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "O'Neil / CAN SLIM pattern content; TikTok/YouTube chart-pattern videos",
+    "evidencePath": "research/hunt2/results/t100-cup-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1667195871004188,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23259667007948925,
+      -0.10450436070293612
+    ]
+  },
+  {
+    "id": "t100-ema2050-c",
+    "name": "EMA 20 above EMA 50, long only (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "YouTube/Reddit moving-average crossover content; TradingView built-in EMA; r/Daytrading EMA threads",
+    "evidencePath": "research/hunt2/results/t100-ema2050-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.10831108918413768,
+    "pExcess": 0.36231884057971014,
+    "halfExcess": [
+      -0.027865758542053864,
+      0.1530147621764708
+    ]
+  },
+  {
+    "id": "t100-ema2050-s",
+    "name": "EMA 20 above EMA 50, long only (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "YouTube/Reddit moving-average crossover content; TradingView built-in EMA; r/Daytrading EMA threads",
+    "evidencePath": "research/hunt2/results/t100-ema2050-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09531194323155745,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12272109363475803,
+      -0.07019846664875962
+    ]
+  },
+  {
+    "id": "t100-flag-s",
+    "name": "Bull flag: 15%+ pole in 10 days, 3-10 bar flag retracing at most 38%, buy the flag-high break, 10-day hold (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TikTok/YouTube 'bull flag' pattern content; day-trading education staple",
+    "evidencePath": "research/hunt2/results/t100-flag-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17219475053494282,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23924311196530113,
+      -0.10896850263441205
+    ]
+  },
+  {
+    "id": "t100-fvg-h",
+    "name": "ICT fair value gap retest: trade the first return into a 3-bar gap, stop at the far edge, 2R target (crypto 1h x8)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "TradingView Smart Money Concepts [LuxAlgo] 78.2K likes; YouTube Smart Risk 'I Tested Every ICT Gap Strategy' 24.4K views; 240 Reddit ICT/SMC/FVG posts (Sep 2026)",
+    "evidencePath": "research/hunt2/results/t100-fvg-h.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.053561632685285,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9082806581452176,
+      -0.5500294459792315
+    ]
+  },
+  {
+    "id": "t100-halving-c",
+    "name": "Bitcoin halving cycle: long every crypto for 18 months after each halving (2016-07-09, 2020-05-11, 2024-04-20) (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "Halving-cycle content is a crypto-YouTube/Reddit staple (r/CryptoCurrency threads); 4-year-cycle charts",
+    "evidencePath": "research/hunt2/results/t100-halving-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.3593118870628744,
+    "pExcess": 0.18840579710144928,
+    "halfExcess": [
+      0.7404333970061252,
+      0.16274555577020622
+    ]
+  },
+  {
+    "id": "t100-hns-s",
+    "name": "Inverse head and shoulders: buy a close above the neckline, stop under the right shoulder, target neckline plus head depth (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "classic chart-pattern content (Bulkowski); TikTok/YouTube 'chart patterns you need to know'",
+    "evidencePath": "research/hunt2/results/t100-hns-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17955511207735975,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24570396179953002,
+      -0.11722456530189174
+    ]
+  },
+  {
+    "id": "t100-impulse-s",
+    "name": "Elder Impulse: long when EMA13 and MACD histogram both rise, flat when both fall, hold otherwise (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TradingView Impulse MACD indicators; YouTube Data Trader 'Traded NEW IMPULSE MACD' 80.6K views; Elder, Come Into My Trading Room",
+    "evidencePath": "research/hunt2/results/t100-impulse-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10479552614789656,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1490371154109642,
+      -0.06382671894836056
+    ]
+  },
+  {
+    "id": "t100-logreg-c",
+    "name": "Rainbow-style log regression: long below -0.5 sigma of a rolling 730-day log fit, exit above +0.5 sigma (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "Bitcoin Rainbow Chart (log-regression bands), crypto-media staple; 730-day rolling form so it is causal",
+    "evidencePath": "research/hunt2/results/t100-logreg-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.383231275525322,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5717204137694585,
+      -0.2274852664675644
+    ]
+  },
+  {
+    "id": "t100-macd-c",
+    "name": "MACD(12,26,9) line above signal, long only (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "TradingView MACD custom indicator 70.4K likes; Ciana survey 22.0%",
+    "evidencePath": "research/hunt2/results/t100-macd-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.17691593328253297,
+    "pExcess": 0.2748625687156422,
+    "halfExcess": [
+      0.2430096402192472,
+      0.12654387513573906
+    ]
+  },
+  {
+    "id": "t100-macd-s",
+    "name": "MACD(12,26,9) line above signal, long only (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TradingView MACD custom indicator 70.4K likes; Ciana survey 22.0%",
+    "evidencePath": "research/hunt2/results/t100-macd-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0831538586554692,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12017228077349862,
+      -0.049057993902788644
+    ]
+  },
+  {
+    "id": "t100-ob-h",
+    "name": "Order block / supply-demand zone retest: last opposing candle before a 1.5 ATR impulse, stop at the far edge, 2R target (crypto 1h x8)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "OB tutorials top YouTube view counts (search result); TradingView SMC 78.2K likes; YouTube Data Trader supply & demand video 33.9K views",
+    "evidencePath": "research/hunt2/results/t100-ob-h.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.9987817484041256,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9807168813603588,
+      -0.40987773468978106
+    ]
+  },
+  {
+    "id": "t100-picycle-c",
+    "name": "Pi Cycle Top: flat while the 111-day average is above twice the 350-day average, long otherwise (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "Pi Cycle Top indicator (bitcoin chart staple, widely posted on TradingView and r/Bitcoin)",
+    "evidencePath": "research/hunt2/results/t100-picycle-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.004273764944618286,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.02052053680155108,
+      0.002233719383856747
+    ]
+  },
+  {
+    "id": "t100-pivotbo-c",
+    "name": "Support/resistance break: buy a close above the last 15-bar pivot high, exit under the last pivot low (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "TradingView Support and Resistance Levels with Breaks [LuxAlgo] 33.8K likes; Swing high/low S/R 33.8K",
+    "evidencePath": "research/hunt2/results/t100-pivotbo-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07612231377854362,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.4571585326698915,
+      0.10514642236836758
+    ]
+  },
+  {
+    "id": "t100-pivotbo-s",
+    "name": "Support/resistance break: buy a close above the last 15-bar pivot high, exit under the last pivot low (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TradingView Support and Resistance Levels with Breaks [LuxAlgo] 33.8K likes; Swing high/low S/R 33.8K",
+    "evidencePath": "research/hunt2/results/t100-pivotbo-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09568044008580046,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.13638073170791687,
+      -0.05809001796044666
+    ]
+  },
+  {
+    "id": "t100-rsi3070-c",
+    "name": "RSI(14) 30/70: buy below 30, sell above 70 (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "Ciana survey (RSI 44.4% of users); r/Daytrading RSI threads; most-used oscillator",
+    "evidencePath": "research/hunt2/results/t100-rsi3070-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.42631690428200875,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.2732671678502525,
+      0.07111646298482355
+    ]
+  },
+  {
+    "id": "t100-rsi3070-s",
+    "name": "RSI(14) 30/70: buy below 30, sell above 70 (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "Ciana survey (RSI 44.4% of users); r/Daytrading RSI threads; most-used oscillator",
+    "evidencePath": "research/hunt2/results/t100-rsi3070-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10545138079559124,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.14818528855980118,
+      -0.06592115041548707
+    ]
+  },
+  {
+    "id": "t100-rsidiv-s",
+    "name": "Bullish RSI divergence: lower low in price, higher low in RSI(14) under 40, 10-day hold (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TradingView RSI-divergence scripts; YouTube Data Trader 'MACD divergence' 116.9K views; hourly crypto version already tested (s29-h-rsi-divergence)",
+    "evidencePath": "research/hunt2/results/t100-rsidiv-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16677086855646506,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23167558888631512,
+      -0.10567656982890417
+    ]
+  },
+  {
+    "id": "t100-scalp1h-h",
+    "name": "Hourly scalp combo: EMA 9/21 trend, MACD side, RSI 50-70 long or 30-50 short (crypto 1h x8)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "YouTube Data Trader 'The BEST 5 Minute Scalping Strategy' 1.7M views (EMA + MACD + RSI + BB filters); hourly proxy, the harness has no 5-minute bars",
+    "evidencePath": "research/hunt2/results/t100-scalp1h-h.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.5820669500148155,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.5175859338700115,
+      -0.9945134678032964
+    ]
+  },
+  {
+    "id": "t100-sma200-s",
+    "name": "Close above the 200-day average, long only (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "Faber / '200-day moving average' content; r/CryptoCurrency and r/stocks 200DMA threads; stock version of the tested crypto cell",
+    "evidencePath": "research/hunt2/results/t100-sma200-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0730708757545484,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12024333686116462,
+      -0.02972978900229628
+    ]
+  },
+  {
+    "id": "t100-squeeze-c",
+    "name": "Squeeze Momentum (LazyBear): enter on release of Bollinger-inside-Keltner squeeze, exit when momentum crosses zero (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "TradingView Squeeze Momentum [LazyBear] 97.4K likes, the most-liked indicator",
+    "evidencePath": "research/hunt2/results/t100-squeeze-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3532831004847261,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9134309017282081,
+      -0.055082702982326204
+    ]
+  },
+  {
+    "id": "t100-squeeze-s",
+    "name": "Squeeze Momentum (LazyBear): enter on release of Bollinger-inside-Keltner squeeze, exit when momentum crosses zero (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TradingView Squeeze Momentum [LazyBear] 97.4K likes, the most-liked indicator",
+    "evidencePath": "research/hunt2/results/t100-squeeze-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.15055238232582324,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.20139251571968964,
+      -0.10322971552482452
+    ]
+  },
+  {
+    "id": "t100-supertrend-h",
+    "name": "Supertrend(10,3) trend flip (crypto 1h x8)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "TradingView SuperTrend [KivancOzbilgic] 55K likes; YouTube 'BEST Supertrend Strategy' 363K views",
+    "evidencePath": "research/hunt2/results/t100-supertrend-h.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.0776531958316014,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7945164132284952,
+      -0.6437485178212523
+    ]
+  },
+  {
+    "id": "t100-supertrend-s",
+    "name": "Supertrend(10,3) trend flip (US stocks 1d x40)",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "source": "TradingView SuperTrend [KivancOzbilgic] 55K likes; YouTube 'BEST Supertrend Strategy' 363K views",
+    "evidencePath": "research/hunt2/results/t100-supertrend-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09412934554609942,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12601543981722974,
+      -0.06484738661117229
+    ]
+  },
+  {
+    "id": "t100-wavetrend-c",
+    "name": "WaveTrend (LazyBear 10/21): buy a cross-up below -53, sell any cross-down (crypto 1d x18)",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "source": "TradingView WaveTrend Oscillator [LazyBear] 52.3K likes",
+    "evidencePath": "research/hunt2/results/t100-wavetrend-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5427557140328649,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5231302721973932,
+      0.07734773594590627
+    ]
+  },
+  {
+    "id": "t1010-ao-zero-c",
+    "name": "Awesome Oscillator zero-line cross: long while AO(5,34 on hl2) > 0, crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "Bill Williams Awesome Oscillator, TradingView/YouTube AO strategy videos",
+    "evidencePath": "research/hunt2/results/t1010-ao-zero-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.26223751601853773,
+    "pExcess": 0.2108945527236382,
+    "halfExcess": [
+      0.26878278322931415,
+      0.2262957735649065
+    ]
+  },
+  {
+    "id": "t1010-bbbreak-c",
+    "name": "Bollinger breakout momentum: long when close > SMA20 + 2sd, exit when close < SMA20, crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "YouTube 'Bollinger band breakout' (ride the upper-band break, not fade it)",
+    "evidencePath": "research/hunt2/results/t1010-bbbreak-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.09322917522675134,
+    "pExcess": 0.4057971014492754,
+    "halfExcess": [
+      -0.22124170129299658,
+      0.22670079974405044
+    ]
+  },
+  {
+    "id": "t1010-bmsb-c",
+    "name": "Bull Market Support Band: long while close above both the 20-week SMA and 21-week EMA (140d SMA / 147d EMA proxy), crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "YouTube/Twitter 'bull market support band' (Bitcoin 20w SMA + 21w EMA)",
+    "evidencePath": "research/hunt2/results/t1010-bmsb-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.02336223284085759,
+    "pExcess": 0.4657671164417791,
+    "halfExcess": [
+      -0.04370306150664938,
+      0.0666904556932928
+    ]
+  },
+  {
+    "id": "t1010-cci100-s",
+    "name": "CCI(20) trend: long while CCI > +100, US stocks 1d x40",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "source": "Donald Lambert CCI; 'CCI +100 breakout' YouTube trend videos",
+    "evidencePath": "research/hunt2/results/t1010-cci100-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14385859999384953,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2046488183060593,
+      -0.08683196905762336
+    ]
+  },
+  {
+    "id": "t1010-cumrsi2-s",
+    "name": "Connors cumulative RSI(2): buy when 2-day sum of RSI(2) < 35 above SMA200, exit on close > SMA5, US stocks 1d x40",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "source": "Larry Connors 'Short Term Trading Strategies That Work' cumulative RSI",
+    "evidencePath": "research/hunt2/results/t1010-cumrsi2-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1486913371056382,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.22450164792083593,
+      -0.0777167951005786
+    ]
+  },
+  {
+    "id": "t1010-deathcross-short-c",
+    "name": "Death cross short: short while SMA50 < SMA200, flat otherwise, crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "YouTube 'death cross' bearish-signal videos; short-side twin of the golden cross",
+    "evidencePath": "research/hunt2/results/t1010-deathcross-short-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6576825985366315,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.2391034740481937,
+      -0.19234916750590547
+    ]
+  },
+  {
+    "id": "t1010-double7-s",
+    "name": "Connors Double 7: buy a 7-day closing low above SMA200, sell a 7-day closing high, US stocks 1d x40",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "source": "Larry Connors / QuantifiedStrategies 'Double 7' strategy",
+    "evidencePath": "research/hunt2/results/t1010-double7-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.13472913246989515,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.19296033467570983,
+      -0.0809867306282217
+    ]
+  },
+  {
+    "id": "t1010-ema20-pullback-s",
+    "name": "Swing pullback to the rising 20 EMA: buy a touch-and-close-above in an EMA20 > EMA50 uptrend, exit on close < EMA50, US stocks 1d x40",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "source": "Swing-trading YouTube 'buy the pullback to the 20 EMA'",
+    "evidencePath": "research/hunt2/results/t1010-ema20-pullback-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12735198563427486,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.16463988554633735,
+      -0.09278404757060987
+    ]
+  },
+  {
+    "id": "t1010-gmma-c",
+    "name": "Guppy multiple moving average: long while all 6 short EMAs (3-15) sit above all 6 long EMAs (30-60), crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "Daryl Guppy GMMA, TradingView/YouTube ribbon videos",
+    "evidencePath": "research/hunt2/results/t1010-gmma-c.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.07889298554432256,
+    "pExcess": 0.4177911044477761,
+    "halfExcess": [
+      0.03680959820634966,
+      0.09600472948641414
+    ]
+  },
+  {
+    "id": "t1010-golden50200-s",
+    "name": "Golden cross: long while SMA50 > SMA200, US stocks 1d x40",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "source": "Investopedia / countless YouTube 'golden cross strategy'",
+    "evidencePath": "research/hunt2/results/t1010-golden50200-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06535298916866084,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1129602753340424,
+      -0.021794395517871656
+    ]
+  },
+  {
+    "id": "t1010-gsr-revert-e",
+    "name": "Gold/silver ratio reversion: long SLV when GLD/SLV 60d z > 1.5, long GLD when z < -1.5, else cash, daily",
+    "family": "tests-1010",
+    "assetClass": "etf",
+    "source": "YouTube/Reddit 'gold silver ratio trade' (swap into the cheap metal)",
+    "evidencePath": "research/hunt2/results/t1010-gsr-revert-e.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10868073560604596,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10865273094003602,
+      -0.10867911303294409
+    ]
+  },
+  {
+    "id": "t1010-mayer-buyzone-c",
+    "name": "Mayer Multiple buy zone: long while close < SMA200 (multiple < 1.0), crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "Trace Mayer 'Mayer Multiple' (price / 200d SMA, below 1 = accumulation zone)",
+    "evidencePath": "research/hunt2/results/t1010-mayer-buyzone-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.22485973573192064,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5981041456837901,
+      0.02779296380671381
+    ]
+  },
+  {
+    "id": "t1010-pdhl-sweep-h",
+    "name": "ICT previous-day high/low sweep: fade a wick through yesterday's high/low that closes back inside, hold 12h, crypto 1h x8",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "ICT/SMC YouTube 'liquidity sweep of previous day high/low'",
+    "evidencePath": "research/hunt2/results/t1010-pdhl-sweep-h.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.3434263963198791,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.4937530121454725,
+      -0.5907766676647632
+    ]
+  },
+  {
+    "id": "t1010-rsi30-crossback-c",
+    "name": "RSI(14) cross back above 30: enter on the cross up through 30, exit when RSI >= 50, crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "r/Daytrading and YouTube 'wait for RSI to leave oversold' variant of the RSI 30 rule",
+    "evidencePath": "research/hunt2/results/t1010-rsi30-crossback-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5925416411207065,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5467295372281051,
+      0.0013684291795166281
+    ]
+  },
+  {
+    "id": "t1010-rsi70-momo-c",
+    "name": "RSI(14) momentum: buy when RSI > 70, exit when RSI < 50, crypto 1d x18",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "source": "YouTube/TradingView 'overbought is bullish' RSI momentum rule",
+    "evidencePath": "research/hunt2/results/t1010-rsi70-momo-c.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07223062310678996,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.6663643828866801,
+      0.2335924190350711
+    ]
+  },
+  {
+    "id": "t1010-turnaround-tue-e",
+    "name": "Turnaround Tuesday: buy Monday close after a down Monday, sell Tuesday close, QQQ+DIA 1d",
+    "family": "tests-1010",
+    "assetClass": "etf",
+    "source": "Stephen Bigalow / Stock Trader's Almanac 'Turnaround Tuesday'",
+    "evidencePath": "research/hunt2/results/t1010-turnaround-tue-e.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09484937282324624,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08962206317360222,
+      -0.10018640927664157
+    ]
+  },
+  {
+    "id": "t1011-minervini-tt-s",
+    "name": "Minervini Trend Template: equal-weight monthly qualifiers of all 8 rules, US stocks wide x171",
+    "family": "tests-1011",
+    "assetClass": "us_stock",
+    "source": "Mark Minervini, Trade Like a Stock Market Wizard (Trend Template); TradingView 'trend template' screens",
+    "evidencePath": "research/hunt2/results/t1011-minervini-tt-s.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.01228910191567123,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0011543269854523697,
+      -0.022347143158515825
+    ]
+  },
+  {
+    "id": "t1011-mom126-top30-ctrl-s",
+    "name": "Control: top 30% by 126-day return alone, equal weight monthly, US stocks wide x171",
+    "family": "tests-1011",
+    "assetClass": "us_stock",
+    "source": "dumb control for the Minervini Trend Template (is the template anything beyond momentum?)",
+    "evidencePath": "research/hunt2/results/t1011-mom126-top30-ctrl-s.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0033660837733386906,
+    "pExcess": 0.4387806096951524,
+    "halfExcess": [
+      -0.0026316434523154797,
+      0.008876293137922486
+    ]
+  },
+  {
     "id": "terra6-funding-sign-carry",
     "name": "Terra6 Funding Sign Carry",
     "family": "carry",
@@ -6031,6 +8671,231 @@
     "halfExcess": [
       -0.08219860613068075,
       -0.05759255261673135
+    ]
+  },
+  {
+    "id": "tr5-crypto-200dma-30d",
+    "name": "Crypto bull regime: long after 30 straight closes above the 200-day average, out on the first close below",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/CryptoCurrency 1woxcq1 ('closes above its 200 Day Moving Average for at least 30 days')",
+    "evidencePath": "research/hunt2/results/tr5-crypto-200dma-30d.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.4858649602115457,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1299656191214287,
+      -0.13098644155955164
+    ]
+  },
+  {
+    "id": "tr5-crypto-golden-cross",
+    "name": "Crypto golden cross: long while the 50-day average is above the 200-day average",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/CryptoCurrency 1wbu8wb ('Bitcoin Chart Flashes Golden Cross'), Sep 2026",
+    "evidencePath": "research/hunt2/results/tr5-crypto-golden-cross.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.4793665770894844,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1595287459775303,
+      -0.1022839583721471
+    ]
+  },
+  {
+    "id": "tr5-crypto-uptober",
+    "name": "Uptober: hold crypto through October only, in cash the other eleven months",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "24/7 Wall St, Sam Daodu, 2026-10-01 ('a sort of mythos known as Uptober'); Lark Davis 'Bitcoin Enters Uptober' (Oct 2026)",
+    "evidencePath": "research/hunt2/results/tr5-crypto-uptober.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5360699266780498,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5107892402048624,
+      0.07826709944577415
+    ]
+  },
+  {
+    "id": "tr5-ema921-1h-both",
+    "name": "9/21 EMA cross on hourly crypto, always in: long when 9 is above 21, short when below",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "YouTube Trade Hunter '9-21 EMA Intraday Trading Strategy' (Aug 2026) and '9-21 EMA Strategy Tested on 100 Trades' (Sep 2026)",
+    "evidencePath": "research/hunt2/results/tr5-ema921-1h-both.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.3601935207984273,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.3242853858028263,
+      -0.7753137066840997
+    ]
+  },
+  {
+    "id": "tr5-ema921-daily-stocks",
+    "name": "9/21 EMA cross on daily US large caps, long only",
+    "family": "trending-1005",
+    "assetClass": "us_stock",
+    "source": "YouTube Trade Hunter 9-21 EMA videos (Aug to Sep 2026); r/algotrading 1wledqw ('EMA 9 and EMA 21 aligned'); daily stock version",
+    "evidencePath": "research/hunt2/results/tr5-ema921-daily-stocks.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0890776818138459,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11431857432434889,
+      -0.06597997699482416
+    ]
+  },
+  {
+    "id": "tr5-ict-asia-sweep-2r",
+    "name": "ICT-style Asia range sweep in the London session, close back inside, stop at the sweep wick, 2R target",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/Daytrading 1wf36to ('Mark out Asia high/low + London high/low', 'TP at 2R', 'B/E after 1R'); hourly crypto version",
+    "evidencePath": "research/hunt2/results/tr5-ict-asia-sweep-2r.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.3317208276865284,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.543568212614045,
+      -0.4885577917669357
+    ]
+  },
+  {
+    "id": "tr5-ict-asia-sweep-be",
+    "name": "ICT-style Asia range sweep in London, 2R target, stop moved to entry after 1R",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/Daytrading 1wf36to ('Mark out Asia high/low + London high/low', 'TP at 2R', 'B/E after 1R'); hourly crypto version",
+    "evidencePath": "research/hunt2/results/tr5-ict-asia-sweep-be.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.32830993345438,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.5438027162864936,
+      -0.4792180996108798
+    ]
+  },
+  {
+    "id": "tr5-ict-asia-sweep-hold",
+    "name": "ICT-style Asia range sweep in London, no stop or target, flat at 20:00 UTC",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/Daytrading 1wf36to ('Mark out Asia high/low + London high/low', 'TP at 2R', 'B/E after 1R'); hourly crypto version",
+    "evidencePath": "research/hunt2/results/tr5-ict-asia-sweep-hold.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.3245527362493745,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.5342641265313057,
+      -0.4856395871790533
+    ]
+  },
+  {
+    "id": "tr5-orb-utc-1h-2r-cutoff",
+    "name": "Opening range breakout, first UTC hour, entries only in the next 2 hours, 2R target, stop at the other edge",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/Daytrading 1wdsegp ('no trading after 10:15') and 1w6samx (15-minute ORB); hourly crypto version",
+    "evidencePath": "research/hunt2/results/tr5-orb-utc-1h-2r-cutoff.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.4299461599716259,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.494535055196023,
+      -0.7692930983712722
+    ]
+  },
+  {
+    "id": "tr5-orb-utc-1h-eod",
+    "name": "Opening range breakout, first hour of the UTC day, stop at the other edge, out at day end",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/Trading 1w6samx and r/Daytrading 1wp9pgy (15-minute ORB); hourly crypto version of the same rule",
+    "evidencePath": "research/hunt2/results/tr5-orb-utc-1h-eod.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.4979529604700175,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.456433648638586,
+      -0.9084657867813934
+    ]
+  },
+  {
+    "id": "tr5-vwap-ema9-trend",
+    "name": "Session VWAP plus 9 EMA trend rule: long above both, short below both, flat when they disagree",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/options 1womyhg ('mainly VWAP and 9 EMA'); YouTube VWAP strategy videos, Aug to Sep 2026; hourly crypto version",
+    "evidencePath": "research/hunt2/results/tr5-vwap-ema9-trend.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.8380792694542802,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.9322167997850417,
+      -1.147882945899532
+    ]
+  },
+  {
+    "id": "tr5-vwap-reclaim-ema9-exit",
+    "name": "Session VWAP reclaim (close back above VWAP), exit on a close below the 9 EMA, long only",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/Daytrading 1wi7h4j ('A VWAP reclaim would look clean'), r/options 1womyhg (9 EMA for exits); hourly crypto version",
+    "evidencePath": "research/hunt2/results/tr5-vwap-reclaim-ema9-exit.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.5817996704003263,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.6470083592906137,
+      -0.9198130246157615
+    ]
+  },
+  {
+    "id": "tr5a-crypto-200dma-30d-matched",
+    "name": "Crypto bull regime: long after 30 straight closes above the 200-day average, out on the first close below (scored from the first bar its 200-day average exists)",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/CryptoCurrency 1woxcq1 ('closes above its 200 Day Moving Average for at least 30 days')",
+    "evidencePath": "research/hunt2/results/tr5a-crypto-200dma-30d-matched.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11279834557191593,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2191532268849714,
+      -0.04617319970433664
+    ]
+  },
+  {
+    "id": "tr5a-crypto-golden-cross-matched",
+    "name": "Crypto golden cross: long while the 50-day average is above the 200-day average (scored from the first bar its 200-day average exists)",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/CryptoCurrency 1wbu8wb ('Bitcoin Chart Flashes Golden Cross'), Sep 2026",
+    "evidencePath": "research/hunt2/results/tr5a-crypto-golden-cross-matched.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1691949408748621,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.4545120676916905,
+      0.0161467547418922
+    ]
+  },
+  {
+    "id": "tr5a-ict-asia-sweep-nostop",
+    "name": "ICT-style Asia range sweep in London, no stop and no target, flat from the 20:00 UTC bar",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "source": "Reddit r/Daytrading 1wf36to ('Mark out Asia high/low + London high/low'); exit ablation of tr5-ict-asia-sweep-be, hourly crypto version",
+    "evidencePath": "research/hunt2/results/tr5a-ict-asia-sweep-nostop.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.2797036083051863,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.505716051470676,
+      -0.4172511257968591
     ]
   },
   {

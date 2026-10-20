@@ -1,12 +1,12 @@
 # Tickfloor Strategy Research
 
-Derived results from testing 517 trading strategies across 31 families against an equal-weight, daily-rebalanced hold of the same assets,
+Derived results from testing 708 trading strategies across 57 families against an equal-weight, daily-rebalanced hold of the same assets,
 after Benjamini-Hochberg false-discovery-rate correction for running that many tests. Last
-updated 29 September 2026 (ledger runs 15 to 29 September 2026).
+updated 11 October 2026 (ledger runs 15 September to 11 October 2026; the robustness and holdout reports are from 29 September).
 
-**Result: 0 of 598 tests survived correction** (517 strategies plus reruns and variants). 87
-strategies beat the benchmark on the raw number, and 8 of those cleared p < 0.05 before correction. The lowest FDR-adjusted q-value across
-all 598 tests is 0.1196 (a robustness rerun of a volatility-managed QQQ/AGG rule; 0.167 in this file's
+**Result: 0 of 801 tests survived correction** (708 strategies plus reruns and variants). 113
+strategies beat the benchmark on the raw number, and 12 of those cleared p < 0.05 before correction. The lowest FDR-adjusted q-value across
+all 801 tests is 0.1602 (a robustness rerun of a volatility-managed QQQ/AGG rule; 0.2243 in this file's
 latest-run row), above the ledger's q < 0.10 gate. The 2 candidates that then got a single
 look at held-back data (after 2025-03-15) were both not confirmed.
 
@@ -17,20 +17,20 @@ actually beat holding the same assets, and published the negative result rather 
 
 ## What's in the data
 
-`data/strategy-results.json` has one row per strategy (517 rows):
+`data/strategy-results.json` has one row per strategy (708 rows):
 
 | field | meaning |
 |---|---|
 | `id` | strategy identifier |
-| `family` | strategy family: trend, breadth, calendar, momentum, etc. (31 total) |
+| `family` | strategy family: trend, breadth, calendar, momentum, etc. (57 total) |
 | `assetClass` | `us_stock`, `etf`, `crypto`, etc. |
 | `excess` | annualized excess return vs. the benchmark (equal-weight, daily-rebalanced hold; pays no costs) |
 | `p` | p-value on excess return, before correction |
-| `q` | Benjamini-Hochberg FDR-adjusted q-value across all 598 tests |
+| `q` | Benjamini-Hochberg FDR-adjusted q-value across all 801 tests |
 | `verdict` | `yes` (beat benchmark, p < 0.05, pre-correction), `not significant`, or `no` |
 
-`q` is computed over all 598 tests (reruns and variants included); each row shows the latest
-run of its strategy, so the lowest `q` in this file (0.167) is above the family-wide minimum.
+`q` is computed over all 801 tests (reruns and variants included); each row shows the latest
+run of its strategy, so the lowest `q` in this file (0.2243) is above the family-wide minimum.
 
 **Not included:** raw price bars. The underlying OHLC data comes from vendors whose terms
 limit redisplay, so this dataset ships only the derived statistics per strategy: enough to
@@ -42,10 +42,10 @@ Under `research/`, generated from the same ledger:
 
 | path | what |
 |---|---|
-| `research/STRATEGY-REGISTRY.json` | the generated registry: 517 strategies, excess, p, half-window excess, cost-sweep fields |
-| `research/researchStats.ts` | headline numbers (517 strategies, 31 families, 598 FDR tests) emitted from the ledger |
+| `research/STRATEGY-REGISTRY.json` | the generated registry: 708 strategies, excess, p, half-window excess, cost-sweep fields |
+| `research/researchStats.ts` | headline numbers (708 strategies, 57 families, 801 FDR tests) emitted from the ledger |
 | `research/hunt2/ledger.jsonl` | the append-only ledger of every run, with source/data/harness hashes |
-| `research/hunt2/strategies/` | the source of all 689 strategy files, one rule each; signals are blocked from reading later bars |
+| `research/hunt2/strategies/` | the source of all 893 strategy files, one rule each; signals are blocked from reading later bars |
 | `research/hunt2/harness.mjs`, `ledger.mjs`, `run.mjs`, `data.mjs` | the harness, BH-FDR ledger and runner |
 | `research/hunt2/prereg-0929.md`, `robustness-0929.md`, `robustness-0929/` | pre-registration and the robustness battery on the top 20 (14 pass a weaker, separate test; a few distinct ideas, none is an edge) |
 | `research/hunt2/holdout-exam-0929.md`, `.json` | the one-shot holdout exam: 2 candidates, 0 confirmed |
@@ -100,6 +100,6 @@ or with pandas: `pd.read_json("data/strategy-results.json")`.
 
 ## Citing
 
-> Tickfloor Strategy Research (2026). 517 backtested trading strategies, FDR-corrected
-> significance (updated 2026-09-29). https://github.com/tickfloor/tickfloor-strategy-research,
+> Tickfloor Strategy Research (2026). 708 backtested trading strategies, FDR-corrected
+> significance (updated 2026-10-11). https://github.com/tickfloor/tickfloor-strategy-research,
 > derived from https://tickfloor.com/evidence.

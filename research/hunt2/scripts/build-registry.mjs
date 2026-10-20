@@ -19,7 +19,17 @@ const p = (...s) => join(ROOT, ...s);
 const isControl = (family) => /^deep-validation/.test(family ?? "");
 const baseId = (id) => id.replace(/__rob\d+$/, "");
 
-const rows = readFileSync(p("research/hunt2/ledger.jsonl"), "utf8").trim().split("\n").map((l) => JSON.parse(l));
+// Batch planners label each idea with its own family ("indicator-fisher"); fold those into the
+// shared families so the public family count means something. Ledger rows stay as written.
+const familyOf = (f) =>
+  /^indicator-|^crypto-1h-crosses$/.test(f) ? "social-ta"
+  : /^(chart-|structure-|event-price-)|^(pivot-momentum|psychological-price-levels|volume-profile)$/.test(f) ? "chart-structure"
+  : /^(channel-breakout|confirmation-dow)$/.test(f) ? "trend"
+  : f === "momentum-gain-pain" ? "momentum"
+  : /^allocation-|^(return-tail-selection|drawdown-duration)$/.test(f) ? "other"
+  : f;
+const rows = readFileSync(p("research/hunt2/ledger.jsonl"), "utf8").trim().split("\n")
+  .map((l) => JSON.parse(l)).map((r) => ({ ...r, family: familyOf(r.family) }));
 const latest = new Map();
 for (const r of rows) latest.set(r.id, r); // later line wins
 const live = [...latest.values()].filter((r) => !isControl(r.family));
@@ -48,9 +58,20 @@ const registry = strategies.map((r) => {
   };
 });
 writeFileSync(p("research/STRATEGY-REGISTRY.json"), JSON.stringify(registry, null, 2) + "\n");
-writeFileSync(p("public/research-registry.json"), JSON.stringify(
-  registry.map(({ id, name, family, assetClass, beatBuyHoldAfterCosts }) => ({ id, name, family, assetClass, beatBuyHoldAfterCosts })),
-) + "\n");
+// Public download (R09): every figure below is copied from the ledger row, nothing recomputed.
+// p is the unadjusted p-value; q is the Benjamini-Hochberg adjusted p over the whole ledger family.
+// `run` is the ledger id the numbers come from: an id ending __robN is a robustness rerun of the
+// strategy, not the original run, so a row's p/q can differ from the original run's.
+const fdrAll = computeLedger(rows.filter((r) => !isControl(r.family)));
+const qByRun = new Map(fdrAll.rows.map((r) => [r.id, r.q]));
+const pub = (r) => ({
+  id: baseId(r.id), name: r.name, family: r.family, assetClass: r.assetClass,
+  beatBuyHoldAfterCosts: verdict(r),
+  run: r.id, excessAnnual: r.excessAnnual, p: r.pExcess, q: qByRun.get(r.id) ?? null,
+  trades: r.trades, nAssets: r.nAssets, timeframe: r.timeframe, dataEnd: new Date(DISCOVERY_END * 1000).toISOString().slice(0, 10),
+  benchmark: "equal-weight daily-rebalanced, no costs", evidencePath: `research/hunt2/results/${r.id}.json`,
+});
+writeFileSync(p("public/research-registry.json"), JSON.stringify(strategies.map(pub)) + "\n");
 
 const families = new Set(strategies.map((r) => r.family)).size;
 const ahead = strategies.filter((r) => r.excessAnnual > 0).length;
@@ -60,8 +81,13 @@ if (significant > 0) console.warn(`NOTE: ${significant} strategies are significa
 // FDR family: the ledger's own gate over every non-control run that traded.
 const fdr = computeLedger(rows.filter((r) => !isControl(r.family)));
 const fdrPassed = fdr.rows.filter((r) => r.promising).length;
-const minQ = Math.min(...fdr.rows.map((r) => r.q));
-const lowestP = Math.min(...fdr.rows.map((r) => r.pExcess));
+const qPassed = fdr.rows.filter((r) => r.q < Q_MAX).length;
+// Closest miss = the published strategy (public/research-registry.json row, the numbers a reader can check) with the
+// lowest BH q. The raw family also holds superseded rule versions with a lower q (p 0.0002 / q 0.1602, 18 Oct); those
+// are not in the registry, so quoting them gave the page three different "closest" figures.
+const closest = strategies.map((r) => ({ p: r.pExcess, q: qByRun.get(r.id) })).filter((r) => r.q != null).sort((a, b) => a.q - b.q || a.p - b.p)[0];
+const minQ = closest.q;
+const lowestP = closest.p;
 const sortedExcess = registry.map((r) => r.excessAnnual).sort((a, b) => a - b);
 const mid = sortedExcess.length >> 1;
 const medianExcess = sortedExcess.length % 2 ? sortedExcess[mid] : (sortedExcess[mid - 1] + sortedExcess[mid]) / 2;
@@ -77,6 +103,7 @@ const familyLedger = [...new Set(registry.map((r) => r.family))].map((family) =>
     ahead: inFam.filter((r) => r.excessAnnual > 0).length,
     significant: inFam.filter((r) => r.beatBuyHoldAfterCosts === "yes").length,
     bestExcessAnnual: round(Math.max(...inFam.map((r) => r.excessAnnual)), 4),
+    bestId: inFam.reduce((a, b) => (b.excessAnnual > a.excessAnnual ? b : a)).id,
     assetClasses: [...new Set(inFam.map((r) => r.assetClass))].sort(),
   };
 }).sort((a, b) => b.strategies - a.strategies || a.family.localeCompare(b.family));
@@ -133,6 +160,23 @@ const randomSummary = randomRows.length ? {
 const byAsset = Object.fromEntries([...new Set(registry.map((r) => r.assetClass))].sort()
   .map((c) => [c, registry.filter((r) => r.assetClass === c).length]));
 
+// Overfitting diagnostics (research/hunt2/overfit.mjs -> docs/research/overfit-1007/overfit.json); null until that has run.
+const overfitFile = p("docs/research/overfit-1007/overfit.json");
+const ov = existsSync(overfitFile) ? JSON.parse(readFileSync(overfitFile, "utf8")) : null;
+const overfitSummary = ov ? {
+  tests: ov.multtest.M, bhyCM: ov.multtest.cM, bhPassed: ov.multtest.passBH10, bhyPassed: ov.multtest.passBHY10, holmPassed: ov.multtest.passHolm05,
+  bestId: ov.best.id, bestIR: ov.best.irExcess, bestIRAfterHaircut: ov.best.haircutIR,
+  topTId: ov.top[0].id, nullDSR755: ov.top[0].nullDSR["755"], nullDSR5000: ov.top[0].nullDSR["5000"], expectedMaxZ755: ov.emax["755"],
+  pboSharpe: ov.pbo[0].sharpe.pbo, pboMean: ov.pbo[0].mean.pbo, pboSeries: ov.pbo[0].N,
+  ruleOutExcluded: ov.edgeExcluded["ruled-out"]?.ubBelow0 ?? null, ruleOutWithSeries: ov.edgeExcluded["ruled-out"]?.n ?? null,
+} : null;
+
+const claimsJson = JSON.parse(readFileSync(p("src/data/findings.json"), "utf8"));
+const nq = JSON.parse(readFileSync(p("docs/research/orb-1002/PAGE-NUMBERS.json"), "utf8")).claim_81pct["NQ/A"];
+const orb = { win: nq.win_rate_net_pct, trades: nq.trades, net: nq.exp_per_trade_all, test: nq.exp_per_trade_test };
+// rule vs the same assets' own move, percent a year after costs, read from each claim card's first bar chart (what the live page shows)
+const claimPct = (id) => claimsJson.find((x) => x.id === id).charts[0].rows.map((r) => Math.round(r.value * 1000) / 10);
+const [dcRule, dcHold] = claimPct("golden-cross-death-cross"), [myRule, myHold] = claimPct("mayer-multiple"), [d7Rule, d7Hold] = claimPct("connors-double-7");
 const stats = `// GENERATED by scripts/research/build-registry.mjs — do not hand-edit these numbers.
 // Source of truth: research/hunt2/ledger.jsonl -> research/STRATEGY-REGISTRY.json
 // (latest row per id, __robN reruns folded into their base id, deep-validation
@@ -144,11 +188,11 @@ export const STRATEGY_UNIT = "strategies";
 export const STRATEGY_FAMILIES = ${families};
 /** Individual scored runs behind those strategies (robustness reruns included). */
 export const STRATEGY_TEST_RUNS = ${runs};
-/** Strategies with a better point-estimate return than buy-and-hold after costs. */
+/** Strategies whose point-estimate return (after their own costs) beat the equal-weight, daily-rebalanced, no-cost benchmark. Not a significance test. */
 export const STRATEGIES_AHEAD = ${ahead};
-/** Strategies ahead of buy-and-hold with p < 0.05 before any multiple-testing correction. */
+/** Of STRATEGIES_AHEAD, those whose excess over that benchmark also had an unadjusted p < 0.05 (no multiple-testing correction; FDR_PASSED is the corrected count). */
 export const STRATEGIES_SIGNIFICANT = ${significant};
-/** Median strategy's CAGR minus buy-and-hold CAGR (fraction per year, negative = behind). */
+/** Median strategy's CAGR minus the benchmark's CAGR (fraction per year, negative = behind). */
 export const MEDIAN_EXCESS_ANNUAL = ${round(medianExcess, 4)};
 export const STRATEGIES_BY_ASSET_CLASS: Record<string, number> = ${JSON.stringify(byAsset)};
 
@@ -157,7 +201,7 @@ export const FDR_TESTS = ${fdr.nTests};
 export const FDR_Q_MAX = ${Q_MAX};
 /** Runs that cleared the full gate (q, random controls, both halves, trades, net > 0, 2+ assets). */
 export const FDR_PASSED = ${fdrPassed};
-export const FDR_LOWEST_P = ${round(lowestP, 4)};
+export const FDR_LOWEST_P = ${round(lowestP, 6)};
 export const FDR_LOWEST_Q = ${round(minQ, 4)};
 
 /** Last bar any test could see; everything after it is held back. */
@@ -176,14 +220,31 @@ export type RandomClassRow = { assetClass: string; random: { n: number; p10: num
 /** Coin-flip strategies through the same harness (scripts/research/random-control-sweep.mjs), beside the tested ones; null until that sweep has run. */
 export const RANDOM_CONTROL: null | { n: number; rejected: number; note: string; pBelow05: number; aheadOfBuyHold: number; beats95PctOfControls: number; under5PctOfControls: number; byAssetClass: RandomClassRow[] } = ${JSON.stringify(randomSummary, null, 2)};
 
-export type FamilyLedgerRow = { family: string; strategies: number; ahead: number; significant: number; bestExcessAnnual: number; assetClasses: string[] };
+export type FamilyLedgerRow = { family: string; strategies: number; ahead: number; significant: number; bestExcessAnnual: number; bestId: string; assetClasses: string[] };
 export const FAMILY_LEDGER: FamilyLedgerRow[] = ${JSON.stringify(familyLedger, null, 2)};
 
+/** Overfitting diagnostics over the FDR family (research/hunt2/overfit.mjs); diagnostics, never a pass gate. null until that has run. */
+export const OVERFIT: null | { tests: number; bhyCM: number; bhPassed: number; bhyPassed: number; holmPassed: number; bestId: string; topTId: string; bestIR: number; bestIRAfterHaircut: number; nullDSR755: number; nullDSR5000: number; expectedMaxZ755: number; pboSharpe: number; pboMean: number; pboSeries: number; ruleOutExcluded: number | null; ruleOutWithSeries: number | null } = ${JSON.stringify(overfitSummary, null, 2)};
+
+/** ORB claim page (/research/claims/opening-range-breakout-81-percent), NQ 15m, 10 pt target, net of costs. Source: docs/research/orb-1002/PAGE-NUMBERS.json claim_81pct["NQ/A"]. Ads use the all-data figure (it pairs with the 1,641 trades); the test split is a different sample. */
+export const ORB_WIN_RATE_PCT = ${orb.win};
+export const ORB_TRADES = ${orb.trades};
+export const ORB_NET_PER_TRADE_PTS = ${orb.net};
+export const ORB_TEST_SPLIT_NET_PER_TRADE_PTS = ${orb.test};
+
+/** Claim cards in src/data/findings.json: percent a year after costs, the rule vs the same assets' own price change. */
+export const DEATH_CROSS_RULE_ANNUAL_PCT = ${dcRule};
+export const DEATH_CROSS_HOLD_ANNUAL_PCT = ${dcHold};
+export const MAYER_RULE_ANNUAL_PCT = ${myRule};
+export const MAYER_HOLD_ANNUAL_PCT = ${myHold};
+export const DOUBLE7_RULE_ANNUAL_PCT = ${d7Rule};
+export const DOUBLE7_HOLD_ANNUAL_PCT = ${d7Hold};
+
 export const RESEARCH_HEADLINE =
-  "${strategies.length} strategies across ${families} families. None beat buy-and-hold after costs by more than luck would explain.";
+  "${strategies.length} strategies across ${families} families. None passed the corrected test against an equal-weight benchmark that pays no costs.";
 
 export const RESEARCH_SUBLINE =
-  "${strategies.length} distinct strategies across ${families} families, ${runs} scored runs, all backtested with real costs against buy-and-hold. ${ahead} finished ahead of buy-and-hold on the point estimate; ${significant === 0 ? "none were statistically significant" : `${significant} ${significant === 1 ? "was" : "were"} significant at p < 0.05 before correction`}, and none survived correction for testing this many strategies at once.";
+  "${strategies.length} distinct strategies across ${families} families, ${runs} scored runs, all backtested with real costs against an equal-weight benchmark rebalanced daily that pays no trading costs. ${ahead} finished ahead of it on the point estimate; ${significant === 0 ? "none had an unadjusted p-value under 0.05" : `${significant} had an unadjusted p-value under 0.05`}, and ${qPassed === 0 ? "none" : qPassed} met the corrected q < ${Q_MAX} threshold (Benjamini-Hochberg, ${fdr.nTests} tests). That does not prove no strategy works.";
 `;
 writeFileSync(p("src/data/researchStats.ts"), stats);
 
@@ -191,10 +252,8 @@ writeFileSync(p("src/data/researchStats.ts"), stats);
 // was hand-typed and drifted twice (217, 321). Derive it here too.
 const indexHtml = readFileSync(p("index.html"), "utf8");
 let indexHits = 0;
-const syncedIndex = indexHtml
-  .replace(/\d+ strategies backtested vs buy-and-hold: \d+ survived/g, () => (indexHits++, `${strategies.length} strategies backtested vs buy-and-hold: ${fdrPassed} survived`))
-  .replace(/including the \d+ that failed/g, () => (indexHits++, `including the ${strategies.length} that failed`));
-if (indexHits !== 3) console.warn(`NOTE: index.html meta count patterns matched ${indexHits} times, expected 3; check its description/og/twitter copy`);
+const syncedIndex = indexHtml.replace(/We tested \d+ strategies so you/g, () => (indexHits++, `We tested ${strategies.length} strategies so you`));
+if (indexHits !== 2) console.warn(`NOTE: index.html meta count pattern matched ${indexHits} times, expected 2 (description + og:description); check its copy`);
 writeFileSync(p("index.html"), syncedIndex);
 if (costSummary) console.log(`cost sweep: ${costSummary.losesAtZeroCost} lose to B&H at zero cost, ${costSummary.needsCheaper} need cheaper execution (median ${costSummary.medianCostRatioNeedsCheaper}x), ${costSummary.aheadAtRealCost} ahead at real cost`);
 if (randomSummary) console.log(`random control: ${randomSummary.n} coin-flip strategies, ${randomSummary.pBelow05} at p<0.05, ${randomSummary.aheadOfBuyHold} ahead of B&H, ${randomSummary.beats95PctOfControls} beat 95% of exposure-matched controls`);

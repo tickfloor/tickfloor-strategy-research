@@ -1,6 +1,6 @@
 # Confirmatory holdout exam, 29 September 2026: nothing confirmed
 
-Pre-registration: `research/hunt2/prereg-0929.md` (lane/hunt-0929 commit 2177423). Runner: `scripts/research/confirm-hunt-2026-09-29.mjs` (sha256 6be7c80c…a954). Raw output: `research/hunt2/holdout-exam-0929.json`. The holdout log (integrate/0927) has the CONFIRMATORY lines at 2026-09-29T01:39:41Z and the RESULT lines at 01:41Z. Each candidate ran once. Every number below is copied from the runner's output.
+Pre-registration: `research/hunt2/prereg-0929.md` (lane/hunt-0929 commit 2177423). Runner: `scripts/research/confirm-hunt-2026-09-29.mjs` (sha256 6be7c80c…a954). Raw output: `research/hunt2/holdout-exam-0929.json`. Fetched bars: `holdout-exam-0929.data.json.gz`. The holdout log (integrate/0927) has the CONFIRMATORY lines at 2026-09-29T01:39:41Z and the RESULT lines at 01:41Z. Each candidate ran once. Every number below is copied from the runner's output.
 
 ## Setup
 

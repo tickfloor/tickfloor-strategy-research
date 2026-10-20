@@ -14,7 +14,15 @@
 //   Sharpe       mean(R)/sd(R) * sqrt(return days per year). p (Sharpe): paired circular block
 //                bootstrap of Sharpe(R) - Sharpe(B), centred, one-sided.
 //   random %     share of exposure-matched random controls whose mean daily log return
-//                (and, separately, Sharpe) is strictly below the strategy's.
+//                (and, separately, Sharpe) is strictly below the strategy's. Control v3 (2026-10-06,
+//                CONTROL_VERSION): every copy is the rule's own positions rotated in time by one shift
+//                shared across assets. v2 placed each asset's trades independently (too narrow for rules
+//                whose timing is shared across correlated assets); v1 also merged touching trades.
+//   portfolio R  accounting v2 (2026-10-07, accounting.mjs, ACCOUNTING_VERSION): dollar holdings drift between
+//                rebalances and every rebalance pays on the notional it trades. v1 held target weights constant every
+//                day (a free daily rebalance). Results/ledger rows without accountingVersion are v1.
+//   dataSha256   since 2026-10-07 every bar and served extras value (canonicalDataSha256); earlier rows hashed only
+//                symbol/count/endpoints/last close (kept as dataSummarySha256 for the ledger's test identity).
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -22,6 +30,8 @@ import { pathToFileURL } from "node:url";
 import { DISCOVERY_END, TF_SEC, UNIVERSES, loadBars, loadFunding, loadOpenInterest, loadMacro, MACRO, assetClassOf, assertDiscovery, EXCLUDED } from "./data.mjs";
 import { blockBootstrapPValueRefined, mulberry32 } from "../../src/lib/quant/stats.ts";
 import { slippageFor, DEFAULT_SLIPPAGE } from "../../src/lib/quant/walkforward.ts";
+import { ACCOUNTING_VERSION, driftingReturns } from "./accounting.mjs";
+export { ACCOUNTING_VERSION };
 
 const HERE = import.meta.dirname;
 const ROOT = path.resolve(HERE, "../..");
@@ -29,6 +39,8 @@ export const RESULTS_DIR = path.join(HERE, "results");
 export const SOURCES_DIR = path.join(RESULTS_DIR, "sources");
 export const LEDGER_PATH = path.join(HERE, "ledger.jsonl");
 export const METRICS_VERSION = 2;
+/** Random-control version (signal mode). 2 = trade-count- and turnover-preserving copies; 3 = one shared time rotation per copy (CHANGELOG 2026-10-06). */
+export const CONTROL_VERSION = 3;
 export const MIN_TRADES = 5;
 /** INDEX_PROXY rule: a catalogue rule naming a holdout index ETF may run on a declared discovery proxy. */
 export const INDEX_PROXY = Object.freeze({ holdout: Object.freeze(["SPY", "IWM", "EFA"]), proxies: Object.freeze(["QQQ", "DIA"]) });
@@ -60,7 +72,7 @@ let loadCounter = 0;
 // fresh module instance per run: module-level state cannot carry data between runs
 const freshModule = (file) => import(`${pathToFileURL(file).href}?hunt2=${++loadCounter}`);
 
-const META_KEYS = new Set(["id", "name", "family", "source", "assetClass", "timeframe", "holdBars", "params", "longShort", "assets", "universe", "rebalance", "proxyFor"]);
+const META_KEYS = new Set(["id", "name", "family", "source", "assetClass", "timeframe", "holdBars", "params", "longShort", "assets", "universe", "rebalance", "proxyFor", "warmup"]);
 function deepFreeze(o) {
   if (o && typeof o === "object") { Object.values(o).forEach(deepFreeze); Object.freeze(o); }
   return o;
@@ -82,6 +94,7 @@ export function validateMeta(mod, file, override) {
   if (!m.params || typeof m.params !== "object" || Array.isArray(m.params)) bad("params must be an object ({} if none)");
   if (m.longShort !== undefined && typeof m.longShort !== "boolean") bad("longShort must be true or false");
   if (m.holdBars !== undefined && (!isSignal || !Number.isInteger(m.holdBars) || m.holdBars < 1 || m.holdBars > 2000)) bad("holdBars must be an integer 1..2000 (signal strategies only)");
+  if (m.warmup !== undefined && (!Number.isInteger(m.warmup) || m.warmup < 1 || m.warmup > 2000)) bad("warmup must be an integer 1..2000 (bars per asset in signal mode, days of the universe calendar in rank mode)");
   if (m.rebalance !== undefined && (!isRank || !["daily", "weekly", "monthly"].includes(m.rebalance))) bad("rebalance must be daily | weekly | monthly (rank strategies only)");
   if (isRank && m.timeframe !== "1d") bad("rank (portfolio) strategies are daily only");
   if (m.universe !== undefined && !UNIVERSES[m.universe]) bad(`universe must be one of ${Object.keys(UNIVERSES).join(", ")}`);
@@ -300,6 +313,7 @@ function makeExtras(cryptoSymbols) {
     funding: (sym) => (cryptoSymbols.has(sym) ? get(`funding:${sym}`, () => loadFunding(sym)) : null),
     oi: (sym) => (cryptoSymbols.has(sym) ? get(`oi:${sym}`, () => loadOpenInterest(sym)) : null),
     fingerprint: () => [...used].sort().map(([k, s]) => `${k}:${s.length}:${s.at(-1)?.time}:${s.at(-1)?.value}`).join("|"),
+    served: () => [...used],
   };
 }
 
@@ -381,7 +395,7 @@ function assetReturns(bars, pos, c) {
   }
   return r;
 }
-function segments(pos) {
+export function segments(pos) {
   const segs = [];
   for (let i = 0; i < pos.length - 1; i++) {
     if (pos[i] === 0) continue;
@@ -390,23 +404,23 @@ function segments(pos) {
   }
   return segs;
 }
-/** Same trade lengths + directions, placed at random non-overlapping spots after the first real entry. */
-function shuffledPositions(segs, n, rnd) {
-  const out = new Int8Array(n);
-  if (!segs.length) return out;
-  const first = segs[0].start;
-  const L = segs.reduce((a, s) => a + s.len, 0);
-  const F = n - 1 - first - L;
-  const order = segs.slice();
-  for (let k = order.length - 1; k > 0; k--) { const j = Math.floor(rnd() * (k + 1)); [order[k], order[j]] = [order[j], order[k]]; }
-  const cuts = order.map(() => Math.floor(rnd() * (F + 1))).sort((a, b) => a - b);
-  let cursor = first, prev = 0;
-  for (let k = 0; k < order.length; k++) {
-    cursor += cuts[k] - prev;
-    prev = cuts[k];
-    out.fill(order[k].dir, cursor, cursor + order[k].len);
-    cursor += order[k].len;
-  }
+/**
+ * Control v3 (2026-10-06, amendment-b): the rule's own position series, rotated in time. One shift `tau` (seconds)
+ * per seed is shared by every asset, so a rule that is long many correlated assets at the same moments keeps that
+ * cross-asset timing in its copies. v2 placed each asset's trades independently, which spread a coherent rule's
+ * timing across the basket and made the copies far less dispersed than the rule (coin-flip rules on the 40 US
+ * stocks beat 95% of v2 copies 27 times in 100 and fell under 5% 38 times). Each asset rotates inside its own
+ * window [first entry, n-1): bar first+j of the rule moves to first+((j+k) mod L), k = window bars in the last
+ * (tau mod window span) seconds. Exposure, every position value and the trade sequence are kept; only the seam
+ * where the window wraps can split or join one trade, so the trade count moves by at most one per asset.
+ */
+export function rotatedPositions(pos, first, times, tau) {
+  const n = pos.length, out = new Int8Array(n), L = n - 1 - first;
+  if (first < 0 || L <= 0) return out;
+  const tEnd = times[n - 2], span = tEnd - times[first], t = span > 0 ? tau % span : 0;
+  let k = 0;
+  while (k < L && times[n - 2 - k] > tEnd - t) k++;
+  for (let j = 0; j < L; j++) out[first + ((j + k) % L)] = pos[first + j];
   return out;
 }
 /** Equal-weight across assets present that UTC day; intraday bars compounded to the day. */
@@ -442,6 +456,7 @@ function controlSummary(method, actualR, seedRs) {
 }
 
 async function runSignalMode(file, meta, symbols, series, cost, extras, minTrades) {
+  if (Object.values(cost).some((c) => typeof c === "function")) throw new Error("time-varying costs are supported in portfolio mode only");
   const assets = [];
   const lookahead = [];
   for (const s of symbols) {
@@ -464,6 +479,14 @@ async function runSignalMode(file, meta, symbols, series, cost, extras, minTrade
       lookahead.push(`${A.symbol}@${cutAt}`);
     }
   }
+  // meta.warmup (amendment 2026-10-06): the first `warmup` bars of each asset are scored for neither the rule
+  // nor the benchmark, so a slow rule is not charged for history its indicator could not see yet.
+  if (meta.warmup) {
+    for (const a of assets) {
+      if (a.bars.length < meta.warmup + 30) throw new Error(`${a.symbol}: only ${a.bars.length} bars, warmup ${meta.warmup} leaves under 30`);
+      a.bars = a.bars.slice(meta.warmup); a.pos = a.pos.slice(meta.warmup); a.segs = segments(a.pos);
+    }
+  }
   const daySet = new Set();
   for (const a of assets) for (let i = 1; i < a.bars.length; i++) daySet.add(Math.floor(a.bars[i].time / DAY));
   const days = [...daySet].sort((x, y) => x - y);
@@ -480,10 +503,21 @@ async function runSignalMode(file, meta, symbols, series, cost, extras, minTrade
   const R = daily(assets, rets, D, present);
   const B = daily(assets, bh, D, present);
 
+  // One shift per seed for every asset: a fraction (5% to 95%) of the median window span across traded assets.
+  const traded = assets.filter((a) => a.segs.length);
+  for (const a of traded) { a.times = a.bars.map((b) => b.time); a.first = a.segs[0].start; }
+  const spans = traded.map((a) => a.times.at(-2) - a.times[a.first]).sort((x, y) => x - y);
+  const S = spans[(spans.length - 1) >> 1];
   const seedRs = [];
   for (let s = 0; s < SEEDS; s++) {
-    const rnd = mulberry32(0x5eed + s * 7919);
-    seedRs.push(daily(assets, assets.map((a) => assetReturns(a.bars, shuffledPositions(a.segs, a.bars.length, rnd), a.cost)), D, present));
+    const tau = (0.05 + 0.9 * mulberry32(0x5eed + s * 7919)()) * S;
+    seedRs.push(daily(assets, assets.map((a) => {
+      if (!a.segs.length) return assetReturns(a.bars, a.pos, a.cost);
+      const p = rotatedPositions(a.pos, a.first, a.times, tau);
+      const dn = segments(p).length - a.segs.length;
+      if (Math.abs(dn) > 1) throw new Error(`random control: ${a.symbol} copy has ${segments(p).length} trades, rule has ${a.segs.length}`);
+      return assetReturns(a.bars, p, a.cost);
+    }), D, present));
   }
 
   let trades = 0, expSum = 0, bars = 0, held = 0;
@@ -504,9 +538,9 @@ async function runSignalMode(file, meta, symbols, series, cost, extras, minTrade
     };
   }
   return {
-    days, R, B, perAsset, lookahead,
+    days, R, B, perAsset, lookahead, seedRs,
     activity: { trades, rebalances: 0, exposure: held / bars, netExpectancy: trades ? expSum / trades : 0 },
-    randomControl: controlSummary("same trade lengths/directions at random non-overlapping spots, same costs (exposure-matched)", R, seedRs),
+    randomControl: { ...controlSummary("the rule's own positions rotated in time by one random shift shared by every asset (5-95% of the median window), so the same exposure, trades and cross-asset timing; only the wrap seam can split or join one trade per asset", R, seedRs), version: CONTROL_VERSION },
     period: { startTime: Math.min(...assets.map((a) => a.bars[0].time)), endTime: Math.max(...assets.map((a) => a.bars.at(-1).time)) },
   };
 }
@@ -571,29 +605,14 @@ async function rankAll(file, meta, symbols, series, idx, days, rebal, upto, extr
   return events;
 }
 
-function portfolioReturns(events, symIndex, ret, D, cost) {
-  const R = new Float64Array(D);
-  let cur = new Map();
-  let e = 0;
-  const periods = [];
-  let periodG = 1;
-  for (let k = 1; k < D; k++) {
-    let turnCost = 0;
-    while (e < events.length && events[e].k < k) {
-      const next = new Map(events[e].list);
-      for (const s of new Set([...cur.keys(), ...next.keys()])) turnCost += Math.abs((next.get(s) ?? 0) - (cur.get(s) ?? 0)) * cost[s];
-      if (cur.size) periods.push(periodG - 1);
-      cur = next; periodG = 1; e++;
-    }
-    let g = 0;
-    for (const [s, w] of cur) { const r = ret[symIndex.get(s)][k]; if (!Number.isNaN(r)) g += w * r; }
-    let x = (1 + g) * (1 - turnCost);
-    if (k === D - 1) for (const [s, w] of cur) x *= 1 - Math.abs(w) * cost[s];
-    R[k] = Math.max(x - 1, -1);
-    if (cur.size) periodG *= 1 + R[k];
-  }
-  if (cur.size) periods.push(periodG - 1);
-  return { R, periods };
+/** Accounting v2 (accounting.mjs): drifting self-financing holdings. cost[s] is a per-side number or a function of the fill's close time. */
+export function portfolioReturns(events, symIndex, ret, D, cost, days) {
+  const costAt = (s, k) => {
+    const c = typeof cost[s] === "function" ? cost[s](days[k] * DAY + DAY) : cost[s];
+    if (!Number.isFinite(c) || c < 0 || c >= 1) throw new Error(`cost for ${s} on ${iso(days[k])} is not a per-side fraction in [0, 1): ${c}`);
+    return c;
+  };
+  return driftingReturns(events, symIndex, ret, D, costAt);
 }
 
 async function runPortfolioMode(file, meta, symbols, series, cost, extras, minTrades) {
@@ -611,13 +630,18 @@ async function runPortfolioMode(file, meta, symbols, series, cost, extras, minTr
 
   const events = await rankAll(file, meta, symbols, series, idx, days, rebal, rebal.length - 1, extras);
   let turnovers = 0, invested = 0, grossSum = 0, cur = [];
+  // meta.warmup in rank mode (amendment 2026-10-11): the first `warmup` days of the universe calendar are scored
+  // for neither the rule nor the benchmark. Weights chosen during warm-up still carry into day W+1.
+  // ponytail: netExpectancy still averages warm-up holding periods too (zero for rules that sit in cash until ready).
+  const W = meta.warmup ?? 0;
+  if (D - 1 - W < 30) throw new Error(`only ${D - 1} days, warmup ${W} leaves under 30`);
   for (let k = 1, e = 0; k < D; k++) {
     while (e < events.length && events[e].k < k) {
-      if (JSON.stringify(events[e].list) !== JSON.stringify(cur)) turnovers++;
-      if (events[e].list.length) invested++;
+      if (k > W && JSON.stringify(events[e].list) !== JSON.stringify(cur)) turnovers++;
+      if (k > W && events[e].list.length) invested++;
       cur = events[e].list; e++;
     }
-    grossSum += cur.reduce((x, p) => x + Math.abs(p[1]), 0);
+    if (k > W) grossSum += cur.reduce((x, p) => x + Math.abs(p[1]), 0);
   }
   tooFewTrades(meta, turnovers, symbols.length, minTrades);
   const lookahead = [];
@@ -632,7 +656,7 @@ async function runPortfolioMode(file, meta, symbols, series, cost, extras, minTr
     lookahead.push(`event@${upto}`);
   }
 
-  const { R, periods } = portfolioReturns(events, symIndex, ret, D, cost);
+  const { R, periods } = portfolioReturns(events, symIndex, ret, D, cost, days);
   const B = new Float64Array(D);
   for (let k = 1; k < D; k++) { let s = 0, c = 0; for (let a = 0; a < symbols.length; a++) if (!Number.isNaN(ret[a][k])) { s += ret[a][k]; c++; } B[k] = c ? s / c : 0; }
 
@@ -648,14 +672,14 @@ async function runPortfolioMode(file, meta, symbols, series, cost, extras, minTr
       for (let j = vals.length - 1; j > 0; j--) { const r = Math.floor(rnd() * (j + 1)); [vals[j], vals[r]] = [vals[r], vals[j]]; }
       return { k: ev.k, keys: ev.keys, list: keys.slice(0, n).map((sym, j) => [sym, vals[j]]) };
     });
-    seedRs.push(portfolioReturns(evs, symIndex, ret, D, cost).R.subarray(1));
+    seedRs.push(portfolioReturns(evs, symIndex, ret, D, cost, days).R.subarray(1 + W));
   }
 
   return {
-    days: days.slice(1), R: R.subarray(1), B: B.subarray(1), perAsset: null, lookahead,
-    activity: { trades: turnovers, rebalances: invested, exposure: grossSum / (D - 1), netExpectancy: periods.length ? meanOf(periods) : 0 },
-    randomControl: controlSummary("same number of names and weight values per rebalance, names drawn at random from that date's universe, same costs (gross-exposure-matched)", R.subarray(1), seedRs),
-    period: { startTime: days[0] * DAY, endTime: days.at(-1) * DAY },
+    days: days.slice(1 + W), R: R.subarray(1 + W), B: B.subarray(1 + W), perAsset: null, lookahead, seedRs,
+    activity: { trades: turnovers, rebalances: invested, exposure: grossSum / (D - 1 - W), netExpectancy: periods.length ? meanOf(periods) : 0 },
+    randomControl: controlSummary("same number of names and weight values per rebalance, names drawn at random from that date's universe, same costs (gross-exposure-matched)", R.subarray(1 + W), seedRs),
+    period: { startTime: days[W] * DAY, endTime: days.at(-1) * DAY },
   };
 }
 
@@ -703,13 +727,69 @@ export function sharpeDiffPValue(R, B, blockLen, { seed = 43, screenIters = 2000
 }
 
 function sha256(s) { return crypto.createHash("sha256").update(s).digest("hex"); }
+/** Code identity of every file that turns bars into returns (accounting.mjs since 2026-10-07). */
+export function harnessSha256() {
+  return sha256(["harness.mjs", "data.mjs", "accounting.mjs"].map((f) => fs.readFileSync(path.join(HERE, f), "utf8")).join(""));
+}
+/** sha256 over every field of every bar of every symbol, then every extras series served, in a fixed key order. */
+export function canonicalDataSha256(symbols, series, extrasServed = []) {
+  const h = crypto.createHash("sha256");
+  const put = (label, rows) => {
+    const keys = [...new Set(rows.flatMap((r) => Object.keys(r)))].sort();
+    h.update(`${label}\n${keys.join(",")}\n${JSON.stringify(rows, keys)}\n`);
+  };
+  for (const s of symbols) put(s, series[s]);
+  for (const [k, rows] of [...extrasServed].sort((a, b) => (a[0] < b[0] ? -1 : 1))) put(`#${k}`, rows);
+  return h.digest("hex");
+}
+
+/**
+ * An annual mean LOG excess (log(1+CAGR_s) - log(1+CAGR_b)) in both units: `relative` = expm1 = (1+CAGR_s)/(1+CAGR_b) - 1,
+ * relative wealth growth; `pp` = CAGR_s - CAGR_b, holding the realised buy&hold CAGR fixed. Same sign, different size.
+ */
+export function annualLogExcessUnits(annualLog, bhCagr) {
+  const relative = Math.expm1(annualLog);
+  return { relative, pp: relative * (1 + bhCagr) };
+}
+
+/** Identity of an extracted return series (reality-check/overfit caches): code, accounting and full data. */
+export function seriesIdentity(r) {
+  return { harnessSha256: r.harnessSha256, accountingVersion: r.accountingVersion, dataSha256: r.dataSha256, assets: r.assets, timeframe: r.timeframe, extras: r.extrasServed };
+}
+/** True only when a cached series was computed by today's harness/accounting from today's bars and extras. */
+export async function isCurrentSeries(rec) {
+  const id = rec?.identity;
+  if (!id || id.harnessSha256 !== harnessSha256() || id.accountingVersion !== ACCOUNTING_VERSION) return false;
+  if (rec.kind !== "ok") return true;
+  const series = {};
+  for (const s of id.assets) series[s] = await loadBars(s, id.timeframe);
+  const load = { macro: loadMacro, funding: loadFunding, oi: loadOpenInterest };
+  const served = id.extras.map((k) => { const i = k.indexOf(":"); return [k, load[k.slice(0, i)](k.slice(i + 1))]; });
+  return canonicalDataSha256(id.assets, series, served) === id.dataSha256;
+}
 
 // ---------- entry points ----------
+/**
+ * Per-side cost for each symbol: the harness default, one scalar for all, or a per-symbol map {SYMBOL: cost} (every symbol
+ * must be present). A map value may be a function (fillCloseTime) => cost for time-varying (causal) costs, portfolio mode only.
+ */
+export function resolveCosts(symbols, costPerSide, assetClass) {
+  if (costPerSide !== null && typeof costPerSide === "object") {
+    return Object.fromEntries(symbols.map((s) => {
+      const c = costPerSide[s];
+      if (typeof c === "function") return [s, c];
+      if (!Number.isFinite(c) || c < 0) throw new Error(`costPerSide map has no valid cost for ${s}`);
+      return [s, c];
+    }));
+  }
+  return Object.fromEntries(symbols.map((s) => [s, costPerSide ?? costFor(assetClass, s)]));
+}
+
 /**
  * Evaluate a strategy file. `data` / `costPerSide` / `minTrades` overrides exist only for the
  * self-test (synthetic nulls) and can never write results or the ledger.
  */
-export async function evaluate(file, { data = null, costPerSide = null, minTrades = MIN_TRADES, write = false } = {}) {
+export async function evaluate(file, { data = null, costPerSide = null, minTrades = MIN_TRADES, write = false, keepSeries = false } = {}) {
   if ((data || costPerSide !== null || minTrades !== MIN_TRADES) && write) throw new Error("evaluate(): data/cost/minTrades overrides cannot write results or the ledger");
   file = path.resolve(file);
   const source = fs.readFileSync(file, "utf8");
@@ -719,7 +799,7 @@ export async function evaluate(file, { data = null, costPerSide = null, minTrade
   const symbols = data ? Object.keys(data) : resolveAssets(meta);
   const series = {};
   for (const s of symbols) series[s] = data ? Object.freeze(data[s].map((b) => Object.freeze({ ...b }))) : await loadBars(s, meta.timeframe);
-  const cost = Object.fromEntries(symbols.map((s) => [s, costPerSide ?? costFor(meta.assetClass, s)]));
+  const cost = resolveCosts(symbols, costPerSide, meta.assetClass);
   const extras = makeExtras(new Set(!data && meta.assetClass === "crypto" ? symbols : []));
 
   const run = meta.mode === "portfolio" ? await runPortfolioMode(file, meta, symbols, series, cost, extras, minTrades) : await runSignalMode(file, meta, symbols, series, cost, extras, minTrades);
@@ -753,19 +833,22 @@ export async function evaluate(file, { data = null, costPerSide = null, minTrade
     assetsRequested: symbols.length, assetsWithExclusions: exSyms.length,
     rule: "vendor-corrupt bars are quarantined (dropped), never clamped or interpolated; see research/hunt2/cache/quarantine.json",
   };
-  const dataSha256 = sha256(symbols.map((s) => `${s}:${series[s].length}:${series[s][0].time}:${series[s].at(-1).time}:${series[s].at(-1).close}`).join("|") + (extras.fingerprint() ? `#${extras.fingerprint()}` : ""));
+  // dataSha256 (2026-10-07): every bar and every served extras value. dataSummarySha256 is the pre-2026-10-07 endpoint
+  // summary, kept only so ledger.mjs keeps counting a re-run of the same source on the same data as one test.
+  const dataSha256 = canonicalDataSha256(symbols, series, extras.served());
+  const dataSummarySha256 = sha256(symbols.map((s) => `${s}:${series[s].length}:${series[s][0].time}:${series[s].at(-1).time}:${series[s].at(-1).close}`).join("|") + (extras.fingerprint() ? `#${extras.fingerprint()}` : ""));
   const result = {
     id: meta.id, name: meta.name, family: meta.family, source: meta.source, mode: meta.mode,
     assetClass: meta.assetClass, timeframe: meta.timeframe, meta,
     assets: symbols, nAssets: symbols.length, substitutions,
     strategyPath: path.relative(ROOT, file),
-    sourceSha256: sha256(source), dataSha256,
-    harnessSha256: sha256(fs.readFileSync(path.join(HERE, "harness.mjs"), "utf8") + fs.readFileSync(path.join(HERE, "data.mjs"), "utf8")),
-    metricsVersion: METRICS_VERSION,
+    sourceSha256: sha256(source), dataSha256, dataSummarySha256,
+    harnessSha256: harnessSha256(),
+    metricsVersion: METRICS_VERSION, accountingVersion: ACCOUNTING_VERSION, extrasServed: extras.served().map(([k]) => k).sort(),
     ranAt: new Date().toISOString(),
     discoveryEnd: new Date(DISCOVERY_END * 1000).toISOString(),
     period: { start: iso(days[0]), end: iso(days.at(-1)), startTime: run.period.startTime, endTime: run.period.endTime, returnDays: n },
-    costs: { perSide: cost, note: "charged on every change in position/weight; benchmark pays none; no funding/borrow on shorts" },
+    costs: { perSide: Object.fromEntries(Object.entries(cost).map(([k, c]) => [k, typeof c === "function" ? "time-varying" : c])), note: meta.mode === "portfolio" ? `accounting v${ACCOUNTING_VERSION}: holdings drift between rebalances; every rebalance (including restoring drift) and the final liquidation pay on traded notional, self-financing; benchmark pays none; no funding/borrow on shorts` : "charged on every change in position; benchmark pays none; no funding/borrow on shorts" },
     portfolio: { ...strat, ...run.activity },
     benchmark: { ...bench, what: "equal-weight long of the same assets, rebalanced daily across assets trading that day (no costs)" },
     excess: {
@@ -780,6 +863,8 @@ export async function evaluate(file, { data = null, costPerSide = null, minTrade
     lookaheadCheck: { method: "bars view throws past bar i; ctx lookups are capped at bar i; positions re-run on truncated data must match", truncations: run.lookahead, ok: true },
     perAsset: run.perAsset,
     dataExclusions: excluded,
+    // hunt-1003: daily strategy/benchmark returns for the whole-registry reality check (never written to results/).
+    ...(keepSeries && !write ? { series: { days, R: Array.from(R), B: Array.from(B) }, seedRs: run.seedRs.map((x) => Array.from(x)) } : {}),
     warnings: excluded.symbols.length
       ? [`DATA EXCLUSIONS: ${excluded.barDays} vendor-corrupt symbol-day(s) dropped across ${excluded.symbols.length} of ${symbols.length} assets (${excluded.symbols.map((e) => `${e.symbol} ${e.dates.map((d) => d.date).join(",")}`).join("; ")}). Quarantined, never repaired — research/hunt2/cache/quarantine.json.`]
       : [],
@@ -811,11 +896,11 @@ export function ledgerEntry(r, resultPath) {
   return {
     id: r.id, name: r.name, family: r.family, source: r.source, mode: r.mode, assetClass: r.assetClass, timeframe: r.timeframe,
     nAssets: r.nAssets, assets: r.nAssets <= 10 ? r.assets : undefined, proxyFor: r.meta.proxyFor, strategyPath: r.strategyPath, resultPath,
-    sourceSha256: r.sourceSha256, dataSha256: r.dataSha256, harnessSha256: r.harnessSha256, metricsVersion: r.metricsVersion, ranAt: r.ranAt,
+    sourceSha256: r.sourceSha256, dataSha256: r.dataSha256, dataSummarySha256: r.dataSummarySha256, harnessSha256: r.harnessSha256, metricsVersion: r.metricsVersion, accountingVersion: r.accountingVersion, ranAt: r.ranAt,
     pExcess: r.excess.p, excessAnnual: r.excess.annual, cagr: r.portfolio.cagr, bhCagr: r.benchmark.cagr,
     sharpe: r.portfolio.sharpe, bhSharpe: r.benchmark.sharpe, pSharpe: r.sharpeTest.p, maxDD: r.portfolio.maxDD, bhMaxDD: r.benchmark.maxDD,
     trades: r.portfolio.trades, rebalances: r.portfolio.rebalances, exposure: r.portfolio.exposure, netExpectancy: r.portfolio.netExpectancy,
-    randomPercentile: r.randomControl.percentile, randomSharpePercentile: r.randomControl.sharpePercentile,
+    randomPercentile: r.randomControl.percentile, randomSharpePercentile: r.randomControl.sharpePercentile, randomControlVersion: r.randomControl.version ?? null,
     halfExcess: r.halfExcess, halfSharpeDiff: r.halfSharpeDiff,
   };
 }

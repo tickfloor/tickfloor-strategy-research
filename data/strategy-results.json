@@ -423,6 +423,906 @@
     "verdict": "no"
   },
   {
+    "id": "fx1012-acc",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.051626,
+    "p": 0.030984507746126936,
+    "q": 1,
+    "verdict": "yes"
+  },
+  {
+    "id": "fx1012-bm",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": -0.012354,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "fx1012-egm",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.065147,
+    "p": 0.02348825587206397,
+    "q": 1,
+    "verdict": "yes"
+  },
+  {
+    "id": "fx1012-ey",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": -0.012376,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "fx1012-fcfy",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.013398,
+    "p": 0.3213393303348326,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "fx1012-fscore",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": -0.037213,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "fx1012-gp",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.032883,
+    "p": 0.16241879060469766,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "fx1012-lev",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.016978,
+    "p": 0.2733633183408296,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "fx1012-qv",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.030414,
+    "p": 0.15592203898050974,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "fx1012-roe",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.01765,
+    "p": 0.25837081459270367,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "fx1012-shy",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.02375,
+    "p": 0.2773613193403298,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "fx1012-sp",
+    "family": "fundamental-factor",
+    "assetClass": "us_stock",
+    "excess": 0.020155,
+    "p": 0.27786106946526734,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "h3-cd-choppiness-release",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.554736,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-cyber-cycle",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.385498,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-fisher-transform",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.045767,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-frama",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.246761,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-gain-to-pain-rank",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.271201,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-mcginley-dynamic",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.054531,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-pmo",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.000384,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-relative-vigor-rank",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": 0.491956,
+    "p": 0.09795102448775612,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "h3-cd-schaff-trend-cycle",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.28185,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-stoch-rsi",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.519274,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-supertrend",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": 0.060359,
+    "p": 0.4192903548225887,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "h3-cd-supertrend-adx",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.277793,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-three-line-break",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "excess": 0.072694,
+    "p": 0.38630684657671166,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "h3-cd-trend-trigger-factor",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.174248,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-cd-vidya",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.198461,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-accumulative-swing",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "excess": -0.055736,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-cppi-cushion",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": -0.028521,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-dow-confirmation",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.017407,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-four-asset-bands",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": -0.063439,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-golden-cross-sectors",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "excess": -0.022027,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-hull-turn",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "excess": -0.032294,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-klinger-cross",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "excess": -0.064107,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-laguerre-rsi",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "excess": -0.059675,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-mass-index-bulge",
+    "family": "social-ta",
+    "assetClass": "etf",
+    "excess": -0.070456,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-tail-ratio",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": -0.021766,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-etf-underwater-duration",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": -0.007486,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-bw-facilitation",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.644018,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-causal-zigzag",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "excess": -1.078318,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-chande-forecast",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.673026,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-classic-r1-break",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "excess": -0.387911,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-descending-trendline",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "excess": -0.490808,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-ema-9-21-cross",
+    "family": "social-ta",
+    "assetClass": "crypto",
+    "excess": -0.628752,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-log-renko",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "excess": -0.936198,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-round-number-break",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "excess": -0.575233,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-hourly-williams-fractal-break",
+    "family": "chart-structure",
+    "assetClass": "crypto",
+    "excess": -0.825042,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-accelerator-green-bars",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "excess": -0.116136,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-awesome-saucer",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "excess": -0.042399,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-bullish-kicker",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "excess": -0.178847,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-bump-and-run",
+    "family": "chart-structure",
+    "assetClass": "us_stock",
+    "excess": -0.182911,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-center-of-gravity",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "excess": -0.130208,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-gann-hilo-activator",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "excess": -0.122712,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-keltner-breakout",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.127968,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-morning-star",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "excess": -0.175923,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-random-walk-index",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "excess": -0.000142,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-rising-three-methods",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "excess": -0.179687,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-three-inside-up",
+    "family": "candle-patterns",
+    "assetClass": "us_stock",
+    "excess": -0.180331,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-vhf-direction",
+    "family": "social-ta",
+    "assetClass": "us_stock",
+    "excess": -0.06537,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h3-us-volume-profile-poc",
+    "family": "chart-structure",
+    "assetClass": "us_stock",
+    "excess": -0.090007,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-anchor-residence",
+    "family": "anchor-occupation",
+    "assetClass": "crypto",
+    "excess": -0.578967,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-discount-entry",
+    "family": "underwater-entry",
+    "assetClass": "crypto",
+    "excess": -0.536097,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-loss-run-sizing",
+    "family": "tail-budget",
+    "assetClass": "crypto",
+    "excess": -0.175141,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-movement-clock",
+    "family": "event-clock",
+    "assetClass": "crypto",
+    "excess": -0.512291,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-original-entry-retry",
+    "family": "stop-reentry",
+    "assetClass": "crypto",
+    "excess": -0.337286,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-return-time-centroids",
+    "family": "path-order",
+    "assetClass": "crypto",
+    "excess": 0.095145,
+    "p": 0.3458270864567716,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "h4-cd-sign-entropy",
+    "family": "path-order",
+    "assetClass": "crypto",
+    "excess": -0.629167,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-tail-loss-sizing",
+    "family": "tail-budget",
+    "assetClass": "crypto",
+    "excess": -0.270943,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-volume-burst-adjacency",
+    "family": "volume-order",
+    "assetClass": "crypto",
+    "excess": -0.489976,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-cd-winner-stall",
+    "family": "holding-clock",
+    "assetClass": "crypto",
+    "excess": -0.287806,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-activity-clock-refresh",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "excess": -0.010627,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-aging-price-barriers",
+    "family": "age-price-barrier",
+    "assetClass": "etf",
+    "excess": -0.093462,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-confirmed-target-refresh",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "excess": -0.035719,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-dip-deadline-deployment",
+    "family": "capital-deployment",
+    "assetClass": "etf",
+    "excess": -0.046427,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-excursion-balance-exit",
+    "family": "excursion-balance",
+    "assetClass": "etf",
+    "excess": -0.032933,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-joint-tail-sizing",
+    "family": "tail-budget",
+    "assetClass": "etf",
+    "excess": -0.06043,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-local-transfer-rebalancing",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "excess": -0.063037,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-one-replacement",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "excess": -0.018525,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-sign-evidence-exit",
+    "family": "sequential-evidence",
+    "assetClass": "etf",
+    "excess": -0.027764,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-tracking-debt-rebalancing",
+    "family": "rebalance-control",
+    "assetClass": "etf",
+    "excess": -0.063702,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-value-path-deployment",
+    "family": "capital-deployment",
+    "assetClass": "etf",
+    "excess": -0.054319,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-etf-wealth-mixture",
+    "family": "wealth-mixture",
+    "assetClass": "etf",
+    "excess": -0.002605,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-hourly-open-crossings",
+    "family": "anchor-occupation",
+    "assetClass": "crypto",
+    "excess": -0.836713,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-hourly-reversal-clock",
+    "family": "event-clock",
+    "assetClass": "crypto",
+    "excess": -0.665208,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-hourly-session-relay",
+    "family": "session-relay",
+    "assetClass": "crypto",
+    "excess": -0.835102,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-hourly-volume-clock",
+    "family": "event-clock",
+    "assetClass": "crypto",
+    "excess": -0.779788,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-hourly-volume-migration",
+    "family": "volume-order",
+    "assetClass": "crypto",
+    "excess": -0.845346,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-adverse-path-budget",
+    "family": "event-clock",
+    "assetClass": "us_stock",
+    "excess": -0.165934,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-breakeven-lock",
+    "family": "profit-disposition",
+    "assetClass": "us_stock",
+    "excess": -0.038067,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-entry-occupation-budget",
+    "family": "anchor-occupation",
+    "assetClass": "us_stock",
+    "excess": -0.100198,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-gain-participation",
+    "family": "profit-disposition",
+    "assetClass": "us_stock",
+    "excess": -0.131938,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-loss-block-confirmation",
+    "family": "path-order",
+    "assetClass": "us_stock",
+    "excess": -0.022481,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-partial-profit-harvest",
+    "family": "profit-disposition",
+    "assetClass": "us_stock",
+    "excess": -0.07226,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-permutation-entropy",
+    "family": "path-order",
+    "assetClass": "us_stock",
+    "excess": -0.027587,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-progress-checkpoint",
+    "family": "holding-clock",
+    "assetClass": "us_stock",
+    "excess": -0.116595,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-recovery-deadline",
+    "family": "holding-clock",
+    "assetClass": "us_stock",
+    "excess": -0.07247,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-stop-cooldown-retry",
+    "family": "stop-reentry",
+    "assetClass": "us_stock",
+    "excess": -0.056681,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-tail-arrival-clustering",
+    "family": "tail-arrival",
+    "assetClass": "us_stock",
+    "excess": -0.033263,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-time-irreversibility",
+    "family": "path-order",
+    "assetClass": "us_stock",
+    "excess": -0.001477,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "h4-us-volume-move-concentration",
+    "family": "volume-concentration",
+    "assetClass": "us_stock",
+    "excess": -0.059897,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
     "id": "macro-crypto-btc-dominance-altseason-rotation",
     "family": "macro-intermarket",
     "assetClass": "crypto",
@@ -1103,7 +2003,7 @@
     "assetClass": "crypto",
     "excess": 0.389232,
     "p": 0.007599848003039939,
-    "q": 0.454471,
+    "q": 0.6087478250434991,
     "verdict": "yes"
   },
   {
@@ -1166,7 +2066,7 @@
     "assetClass": "etf",
     "excess": 0.032735,
     "p": 0.0020599588008239837,
-    "q": 0.168932,
+    "q": 0.22627797444051118,
     "verdict": "yes"
   },
   {
@@ -1247,7 +2147,7 @@
     "assetClass": "etf",
     "excess": 0.058337,
     "p": 0.0006199876002479951,
-    "q": 0.167437,
+    "q": 0.2242755144897102,
     "verdict": "yes"
   },
   {
@@ -1364,7 +2264,7 @@
     "assetClass": "crypto",
     "excess": 0.317724,
     "p": 0.0015799684006319874,
-    "q": 0.168932,
+    "q": 0.22627797444051118,
     "verdict": "yes"
   },
   {
@@ -1596,7 +2496,7 @@
     "id": "r27-sector-dollar-domestic",
     "family": "macro",
     "assetClass": "etf",
-    "excess": -0.000067,
+    "excess": -6.7e-05,
     "p": 1,
     "q": 1,
     "verdict": "no"
@@ -2417,7 +3317,7 @@
     "assetClass": "etf",
     "excess": 0.037573,
     "p": 0.021989005497251374,
-    "q": 0.936398,
+    "q": 1,
     "verdict": "yes"
   },
   {
@@ -3339,6 +4239,690 @@
     "verdict": "not significant"
   },
   {
+    "id": "ssrn-crash-rebound-cond",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.55163,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "ssrn-kelly-dur6040",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.044994,
+    "p": 0.022488755622188907,
+    "q": 1,
+    "verdict": "yes"
+  },
+  {
+    "id": "ssrn-kelly-qqq-agg",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": 0.045468,
+    "p": 0.016439671206575867,
+    "q": 1,
+    "verdict": "yes"
+  },
+  {
+    "id": "ssrn-mom-irisk-t3",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.04728,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "ssrn-tsmom-crypto",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.469569,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "ssrn-tsmom-etf",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.043163,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-btc4h-all",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.872515,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-btc4h-chop",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.58925,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-btc4h-down",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.624996,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-btc4h-up",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.68515,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-mtf-both",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.038507,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-mtf-d",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": 0.088931,
+    "p": 0.39430284857571213,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "st-mtf-h4",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.116096,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trail-comm-atr",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "excess": -0.045965,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trail-comm-fixed",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "excess": -0.027788,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trail-comm-pct",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "excess": -0.037799,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trail-crypto-atr",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.217265,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trail-crypto-fixed",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.339751,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trail-crypto-pct",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.31269,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trend-comm-base",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "excess": -0.040753,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trend-comm-gated",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "excess": -0.040577,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trend-crypto-base",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.145693,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trend-crypto-gated",
+    "family": "steelman-1004",
+    "assetClass": "crypto",
+    "excess": -0.343195,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "st-trend-fx-base",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "excess": 0.002198,
+    "p": 0.4522738630684658,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "st-trend-fx-gated",
+    "family": "steelman-1004",
+    "assetClass": "etf",
+    "excess": -0.007905,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-alligator-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": 0.192107,
+    "p": 0.2988505747126437,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t100-alligator-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.110091,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-avwap-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.086665,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-bbrsi-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.45382,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-bbrsi-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.126699,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-bos-h",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -1.630341,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-confrme-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.126983,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-confsrm-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.278458,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-cup-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.16672,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-ema2050-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": 0.108311,
+    "p": 0.36231884057971014,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t100-ema2050-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.095312,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-flag-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.172195,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-fvg-h",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -1.053562,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-halving-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": 0.359312,
+    "p": 0.18840579710144928,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t100-hns-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.179555,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-impulse-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.104796,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-logreg-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.383231,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-macd-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": 0.176916,
+    "p": 0.2748625687156422,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t100-macd-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.083154,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-ob-h",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.998782,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-picycle-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.004274,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-pivotbo-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.076122,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-pivotbo-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.09568,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-rsi3070-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.426317,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-rsi3070-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.105451,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-rsidiv-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.166771,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-scalp1h-h",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -1.582067,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-sma200-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.073071,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-squeeze-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.353283,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-squeeze-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.150552,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-supertrend-h",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -1.077653,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-supertrend-s",
+    "family": "top100-1006",
+    "assetClass": "us_stock",
+    "excess": -0.094129,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t100-wavetrend-c",
+    "family": "top100-1006",
+    "assetClass": "crypto",
+    "excess": -0.542756,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-ao-zero-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": 0.262238,
+    "p": 0.2108945527236382,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t1010-bbbreak-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": 0.093229,
+    "p": 0.4057971014492754,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t1010-bmsb-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": 0.023362,
+    "p": 0.4657671164417791,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t1010-cci100-s",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "excess": -0.143859,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-cumrsi2-s",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "excess": -0.148691,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-deathcross-short-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": -0.657683,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-double7-s",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "excess": -0.134729,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-ema20-pullback-s",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "excess": -0.127352,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-gmma-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": 0.078893,
+    "p": 0.4177911044477761,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "t1010-golden50200-s",
+    "family": "tests-1010",
+    "assetClass": "us_stock",
+    "excess": -0.065353,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-gsr-revert-e",
+    "family": "tests-1010",
+    "assetClass": "etf",
+    "excess": -0.108681,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-mayer-buyzone-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": -0.22486,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-pdhl-sweep-h",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": -1.343426,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-rsi30-crossback-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": -0.592542,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-rsi70-momo-c",
+    "family": "tests-1010",
+    "assetClass": "crypto",
+    "excess": -0.072231,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1010-turnaround-tue-e",
+    "family": "tests-1010",
+    "assetClass": "etf",
+    "excess": -0.094849,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1011-minervini-tt-s",
+    "family": "tests-1011",
+    "assetClass": "us_stock",
+    "excess": -0.012289,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "t1011-mom126-top30-ctrl-s",
+    "family": "tests-1011",
+    "assetClass": "us_stock",
+    "excess": 0.003366,
+    "p": 0.4387806096951524,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
     "id": "terra6-funding-sign-carry",
     "family": "carry",
     "assetClass": "crypto",
@@ -3397,6 +4981,141 @@
     "family": "mean-reversion-statarb",
     "assetClass": "etf",
     "excess": -0.069815,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-crypto-200dma-30d",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -0.485865,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-crypto-golden-cross",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -0.479367,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-crypto-uptober",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -0.53607,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-ema921-1h-both",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.360194,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-ema921-daily-stocks",
+    "family": "trending-1005",
+    "assetClass": "us_stock",
+    "excess": -0.089078,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-ict-asia-sweep-2r",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.331721,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-ict-asia-sweep-be",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.32831,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-ict-asia-sweep-hold",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.324553,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-orb-utc-1h-2r-cutoff",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.429946,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-orb-utc-1h-eod",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.497953,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-vwap-ema9-trend",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.838079,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5-vwap-reclaim-ema9-exit",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.5818,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5a-crypto-200dma-30d-matched",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -0.112798,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5a-crypto-golden-cross-matched",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -0.169195,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "tr5a-ict-asia-sweep-nostop",
+    "family": "trending-1005",
+    "assetClass": "crypto",
+    "excess": -1.279704,
     "p": 1,
     "q": 1,
     "verdict": "no"

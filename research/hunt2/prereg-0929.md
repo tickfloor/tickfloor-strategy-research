@@ -1,6 +1,6 @@
 # Pre-registration: confirmatory holdout exam, 29 September 2026
 
-Status: FROZEN. Committed on lane/hunt-0929 before any holdout byte is read. The CONFIRMATORY lines go into `[private repo path]` (committed on integrate/0927) before the run. Each candidate runs once. There is no tuning, no second look and no swapping candidates after the results. A rule, window or gate that turns out wrong after the run is reported as a limitation, not edited and rerun.
+Status: FROZEN. Committed on lane/hunt-0929 before any holdout byte is read. The CONFIRMATORY lines go into `/Users/olimc18/Desktop/CLAUDEGLOBAL/.wt/integrate/docs_holdout_log.txt` (committed on integrate/0927) before the run. Each candidate runs once. There is no tuning, no second look and no swapping candidates after the results. A rule, window or gate that turns out wrong after the run is reported as a limitation, not edited and rerun.
 
 Input: `research/hunt2/robustness-0929.md` (commit a4ff078), which lists 14 survivors and 0 PROMISING rows. The best q among the survivors is 0.18.
 

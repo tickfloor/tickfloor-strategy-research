@@ -29,7 +29,7 @@ const lg = r => Math.log(Math.max(1 + r, 1e-12)); // same floor as harness.mjs
 
 // ---- frozen by research/hunt2/prereg-0929.md ----
 const PREREG = 'research/hunt2/prereg-0929.md';
-const HOLDOUT_LOG = 'docs_holdout_log.txt'; // the canonical log (integrate/0927)
+const HOLDOUT_LOG = '/Users/olimc18/Desktop/CLAUDEGLOBAL/.wt/integrate/docs_holdout_log.txt'; // the canonical log (integrate/0927)
 const FROZEN = { harness: '8da0f9bf1d2284b55a3b30c8693f1310afe6290809889392989e829e74f3946e', data: '7439f80136985e388c943fbbd5adcf3fe795c588b2dfce40aff9a30d2e71ec3d' };
 const CANDS = [
   { id: 'r25-crypto-btcbeta-low', sha: '7557c69f126a50147b072083ad5cfe2e7f3c2b4a3bea8d160183bacae6fbec91', ctrl: 'dv-ctrl-r25-crypto-btcbeta-low', ctrlSha: 'a27354b796977863263a0face9cdc908b5d680b8921f4587a7c0d6eb5499a2d5' },

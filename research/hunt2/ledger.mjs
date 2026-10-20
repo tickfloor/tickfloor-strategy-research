@@ -9,7 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
-import { evaluate, readLedgerLines, ledgerEntry, writeRun, MIN_TRADES, METRICS_VERSION, LEDGER_PATH, RESULTS_DIR, SOURCES_DIR } from "./harness.mjs";
+import { evaluate, readLedgerLines, ledgerEntry, writeRun, harnessSha256, MIN_TRADES, METRICS_VERSION, LEDGER_PATH, RESULTS_DIR, SOURCES_DIR } from "./harness.mjs";
 
 export const Q_MAX = 0.10;
 const ROOT = path.resolve(import.meta.dirname, "../..");
@@ -54,10 +54,13 @@ export function riskFails(r) {
 export function computeLedger(entries) {
   // <MIN_TRADES runs are implementation failures (the harness now rejects them), not tests.
   const valid = entries.filter((e) => e.trades >= MIN_TRADES);
-  // an identical re-run (same source, data, harness) is one test, not two;
-  // a changed source under the same id IS a new test (that is tuning)
+  // a re-run of the same source on the same data is one test, not two, even under a later harness
+  // (2026-10-06: the control-v2 correction re-ran rows without changing their p); the later line wins.
+  // A changed source under the same id IS a new test (that is tuning).
   const uniq = new Map();
-  for (const e of valid) uniq.set(`${e.sourceSha256}|${e.dataSha256}|${e.harnessSha256}`, e);
+  // Identity uses the endpoint data summary (dataSha256 before 2026-10-07, dataSummarySha256 after), so the full-bar hash and
+  // the accounting v2 re-runs do not inflate M. Reproducibility checks use the full dataSha256.
+  for (const e of valid) uniq.set(`${e.sourceSha256}|${e.dataSummarySha256 ?? e.dataSha256}`, e);
   const rows = [...uniq.values()].map((e) => ({ ...e, legacy: !(e.metricsVersion >= METRICS_VERSION) }));
   const q = bhAdjust(rows.map((r) => pOr1(r.pExcess)));
   const qS = bhAdjust(rows.map((r) => pOr1(r.pSharpe)));
@@ -125,7 +128,7 @@ async function verify(led) {
     else {
       try {
         const x = await evaluate(f, { write: false });
-        const same = x.dataSha256 === r.dataSha256 && x.excess.p === r.pExcess && x.portfolio.cagr === r.cagr && x.sharpeTest.p === r.pSharpe && x.randomControl.percentile === r.randomPercentile;
+        const same = (r.dataSummarySha256 ? x.dataSha256 === r.dataSha256 : x.dataSummarySha256 === r.dataSha256) && x.excess.p === r.pExcess && x.portfolio.cagr === r.cagr && x.sharpeTest.p === r.pSharpe && x.randomControl.percentile === r.randomPercentile;
         status = same ? "OK reproduced" : x.harnessSha256 !== r.harnessSha256 ? "harness changed since run (not comparable)" : `MISMATCH p ${r.pExcess} vs ${x.excess.p}, cagr ${r.cagr} vs ${x.portfolio.cagr}`;
       } catch (e) {
         status = `RERUN FAILED ${e.message}`;
@@ -141,7 +144,7 @@ async function verify(led) {
  * Sources that no longer exist are kept as LEGACY rows (they still count in the FDR family if they traded).
  */
 async function recompute(shard) {
-  const cacheDir = path.join(RESULTS_DIR, ".recompute");
+  const cacheDir = path.join(RESULTS_DIR, ".recompute", harnessSha256().slice(0, 16)); // per harness identity: a code change never reuses old outcomes
   fs.mkdirSync(cacheDir, { recursive: true });
   const old = readLedgerLines();
   const bySrc = new Map();
