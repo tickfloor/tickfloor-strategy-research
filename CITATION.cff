@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "Tickfloor Strategy Research"
+type: dataset
+abstract: "1,083 backtested trading strategies (1,425 tests), Benjamini-Hochberg FDR-corrected, with a ledger, sources, a holdout exam and the published-reads ledger. Every backtest number is in-sample, not a promise."
+authors:
+  - name: "Tickfloor"
+repository-code: "https://github.com/tickfloor/tickfloor-strategy-research"
+url: "https://tickfloor.com/evidence"
+date-released: "2026-10-24"
+keywords:
+  - backtesting
+  - trading strategies
+  - false discovery rate
+  - multiple testing
+  - Benjamini-Hochberg

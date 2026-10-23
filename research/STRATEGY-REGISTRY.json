@@ -30,6 +30,5631 @@
     ]
   },
   {
+    "id": "c1022-acad-01",
+    "name": "Momentum crash gate: 12-1 momentum scaled down in bear + high-vol states (Daniel-Moskowitz)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-01.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.059582590351930254,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.13535340344721392,
+      0.018832096046308644
+    ]
+  },
+  {
+    "id": "c1022-acad-02",
+    "name": "Market-state momentum: 12-1 momentum only after a positive 24-month market (Cooper-Gutierrez-Hameed)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-02.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05346633818684876,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10821951056691059,
+      0.0020392838091509713
+    ]
+  },
+  {
+    "id": "c1022-acad-03",
+    "name": "Jegadeesh-Titman 6/6 overlapping momentum (six monthly cohorts, 1-week skip)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-03.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.010214553257256842,
+    "pExcess": 0.3583208395802099,
+    "halfExcess": [
+      -0.020739878153317015,
+      0.0409542502036182
+    ]
+  },
+  {
+    "id": "c1022-acad-04",
+    "name": "Fresh momentum: recent winners whose prior six months were losers (Chen-Kadan-Kose)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-04.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04922034747443904,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09863191858711429,
+      0.0006129474695015791
+    ]
+  },
+  {
+    "id": "c1022-acad-05",
+    "name": "Absolute strength momentum: long only when 12-1 return clears a fixed historical percentile (Gulen-Petkova)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-05.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.08282262187119183,
+    "pExcess": 0.13193403298350825,
+    "halfExcess": [
+      -0.005267066833798628,
+      0.17471465961002552
+    ]
+  },
+  {
+    "id": "c1022-acad-06",
+    "name": "Capital gains overhang: unrealised-gain proxy from a volume-weighted reference price (Grinblatt-Han)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-06.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.020599786434128964,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.040680938229736396,
+      -0.0008864830667794088
+    ]
+  },
+  {
+    "id": "c1022-acad-07",
+    "name": "Recency of the 52-week high: near the high AND the high was set recently (Bhootra-Hur)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-07.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04314359533497769,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09117234001996133,
+      0.005233984534011693
+    ]
+  },
+  {
+    "id": "c1022-acad-08",
+    "name": "Value-and-momentum combo across asset-class ETFs (Asness-Moskowitz-Pedersen 'everywhere')",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-08.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02481935644028832,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0585313589846479,
+      0.009140542104105975
+    ]
+  },
+  {
+    "id": "c1022-acad-09",
+    "name": "Value-and-momentum combo in stocks (12-1 momentum + 24-month reversal skipping 12)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-09.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.042984288731375164,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12179071375615402,
+      0.03878204608326308
+    ]
+  },
+  {
+    "id": "c1022-acad-10",
+    "name": "Conservative formula, price-only: low 3-year volatility then high 12-1 momentum (Blitz-van Vliet)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-10.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10442604651995002,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.15278937256082892,
+      -0.05572633654212922
+    ]
+  },
+  {
+    "id": "c1022-acad-11",
+    "name": "Crypto one-week cross-sectional momentum, weekly (Liu-Tsyvinski-Wu r1,0)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-11.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11783189305435626,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.289369581599654,
+      -0.03220511910120116
+    ]
+  },
+  {
+    "id": "c1022-acad-12",
+    "name": "Crypto low realised volatility, weekly (low-vol anomaly test in the LTW cross-section)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-12.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.4402015901929959,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1743260881927695,
+      -0.02830917430907831
+    ]
+  },
+  {
+    "id": "c1022-acad-13",
+    "name": "Sector ETF low volatility: hold the 3 least volatile of 11 sectors, monthly",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-13.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0004936599607774372,
+    "pExcess": 0.4737631184407796,
+    "halfExcess": [
+      0.018908404856624594,
+      -0.017505681488599212
+    ]
+  },
+  {
+    "id": "c1022-acad-14",
+    "name": "Betting against beta across asset-class ETFs, long low-beta leg weighted by 1/beta (Frazzini-Pedersen)",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-14.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.045756623201650415,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.028628378986042202,
+      -0.06217372666308063
+    ]
+  },
+  {
+    "id": "c1022-acad-15",
+    "name": "Sector dual momentum: top 3 sectors by 12-month return, each held only if it beats SHY (Antonacci)",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-15.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.00215390683989658,
+    "pExcess": 0.41679160419790107,
+    "halfExcess": [
+      0.001794240095498889,
+      0.0025318696924461204
+    ]
+  },
+  {
+    "id": "c1022-acad-16",
+    "name": "Commodity dual momentum: top 2 of GLD/SLV/USO/DBC/UNG by 12-month return, else SHY (Antonacci)",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-16.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03033393048436417,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06532979242011527,
+      0.003170619746005743
+    ]
+  },
+  {
+    "id": "c1022-acad-17",
+    "name": "Bond dual momentum: best of HYG/LQD/TLT by 12-month return, held only if it beats SHY (Antonacci)",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-17.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0008008332107423133,
+    "pExcess": 1,
+    "halfExcess": [
+      0.01366213661957727,
+      -0.01397205591773032
+    ]
+  },
+  {
+    "id": "c1022-acad-18",
+    "name": "Short-horizon time-series momentum: 1-month lookback, 1-month hold, 25 ETFs, long-only (MOP 2012)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-18.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04760082996192194,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.046559694316894884,
+      -0.04860790406240523
+    ]
+  },
+  {
+    "id": "c1022-acad-19",
+    "name": "Crypto 3-month time-series momentum, monthly check, long-only (MOP horizon test in crypto)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-19.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.31814711748102376,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8168294753596159,
+      -0.05650197676004831
+    ]
+  },
+  {
+    "id": "c1022-acad-20",
+    "name": "Risk-adjusted time-series momentum: weight by the trailing 1-year Sharpe, vol-targeted (Dudler-Gmuer-Malamud)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-20.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0560721248139322,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06428749547218904,
+      -0.04799420082501227
+    ]
+  },
+  {
+    "id": "c1022-acad-21",
+    "name": "CTA-style MACD ensemble trend (3 EMA pairs, response-shaped), vol-targeted, 25 ETFs (Baz et al.)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-21.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06215278744444541,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06923795818279599,
+      -0.05519260923229963
+    ]
+  },
+  {
+    "id": "c1022-acad-22",
+    "name": "CTA-style MACD ensemble trend, vol-targeted, 18 crypto (Baz et al.)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-22.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.4523759863821031,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.2944205124698462,
+      0.04125418056583263
+    ]
+  },
+  {
+    "id": "c1022-acad-23",
+    "name": "CTA-style MACD ensemble trend, vol-targeted, wide US stocks (Baz et al.)",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-23.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.13337430510931747,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.15633735089835543,
+      -0.11092155487660427
+    ]
+  },
+  {
+    "id": "c1022-acad-24",
+    "name": "Momentum turning points: slow 12-month + fast 1-month state machine, 25 ETFs (Goulding-Harvey-Mazzoleni)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-24.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03782164472974614,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03794744093406632,
+      -0.03769376412256453
+    ]
+  },
+  {
+    "id": "c1022-acad-25",
+    "name": "Momentum turning points: slow 12-month + fast 1-month state machine, 18 crypto (Goulding-Harvey-Mazzoleni)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-25.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.39126627312804363,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0521632830953074,
+      -0.03003384555104338
+    ]
+  },
+  {
+    "id": "c1022-acad-26",
+    "name": "Volatility-managed sector ETFs: scale each sector by target variance / last-month realised variance (Moreira-Muir)",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-26.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.039391382158030286,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05082788469644672,
+      -0.02790170956538529
+    ]
+  },
+  {
+    "id": "c1022-acad-27",
+    "name": "Volatility targeting on credit ETFs (HYG, LQD), 5% target, weekly (Harvey et al. 'impact of volatility targeting')",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-27.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.003746226323833146,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.017759005743957612,
+      0.009627929317493344
+    ]
+  },
+  {
+    "id": "c1022-acad-28",
+    "name": "Volatility-managed Treasuries (TLT, IEF): 8% vol target, weekly (falsification test of Moreira-Muir on bonds)",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-28.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.01126613138859156,
+    "pExcess": 0.18940529735132433,
+    "halfExcess": [
+      -0.007980375409112561,
+      0.028521189721416484
+    ]
+  },
+  {
+    "id": "c1022-acad-29",
+    "name": "Momentum's January reversal: hold 12-1 winners Feb-Dec, 12-1 losers in January (Jegadeesh-Titman)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-29.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0012521068414124148,
+    "pExcess": 0.47876061969015493,
+    "halfExcess": [
+      -0.04504799274708393,
+      0.04784460228469145
+    ]
+  },
+  {
+    "id": "c1022-acad-30",
+    "name": "Long-term reversal: buy the bottom quintile by 36-to-13-month-ago return (De Bondt-Thaler)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-30.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.035709411577719674,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12293729906626338,
+      0.05551781414126
+    ]
+  },
+  {
+    "id": "c1022-acad-31",
+    "name": "Crypto long-term reversal: bottom 6 by 52-week return skipping the last 4 weeks, weekly",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-31.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12354159838274459,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.43252125348721515,
+      0.02530127082711986
+    ]
+  },
+  {
+    "id": "c1022-acad-32",
+    "name": "Volume-conditioned weekly reversal: last-week losers only when the week's volume was high (Conrad-Hameed-Niden)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-32.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07432186530673679,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0758750031634492,
+      -0.0729091951496017
+    ]
+  },
+  {
+    "id": "c1022-acad-33",
+    "name": "Intraday-return reversal: long the lowest cumulative open-to-close return over the past month (Lou-Polk-Skouras)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-33.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.010807939781800835,
+    "pExcess": 1,
+    "halfExcess": [
+      0.005853712342934081,
+      -0.02668427214645752
+    ]
+  },
+  {
+    "id": "c1022-acad-34",
+    "name": "Seasonal reversal: long names with the lowest average return in the OTHER calendar months (Keloharju-Linnainmaa-Nyberg)",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-34.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07903358457844067,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.13352551952800806,
+      -0.023810084191616232
+    ]
+  },
+  {
+    "id": "c1022-acad-35",
+    "name": "Same-weekday return seasonality: long the names with the best average return on the coming weekday over the past year (Keloharju et al.)",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-35.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.18292500952130586,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.18840214620638518,
+      -0.17783099950528547
+    ]
+  },
+  {
+    "id": "c1022-acad-36",
+    "name": "Day-of-week lottery tilt: short high-vol/long low-vol into Monday, reverse into Friday (Birru)",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-36.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.262090687503171,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.3008987533985059,
+      -0.2235172381752908
+    ]
+  },
+  {
+    "id": "c1022-acad-37",
+    "name": "Turn-of-month beta rotation: high beta over month-end days, low beta otherwise (Etula et al. 'Dash for cash')",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-37.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.08480508241030948,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11012524636155874,
+      -0.05991179306297356
+    ]
+  },
+  {
+    "id": "c1022-acad-38",
+    "name": "Announcement-day beta: high-beta on employment-report and FOMC days, low-beta otherwise (Savor-Wilson)",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-38.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0646492984315774,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08735833374855329,
+      -0.0423616563579845
+    ]
+  },
+  {
+    "id": "c1022-acad-39",
+    "name": "Employment-report day premium: long QQQ/DIA into the monthly jobs report only (Savor-Wilson)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-39.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12137046788211303,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11343364100717301,
+      -0.12946169242526273
+    ]
+  },
+  {
+    "id": "c1022-acad-40",
+    "name": "Lunar cycle: long QQQ/DIA in the week around the new moon, flat around the full moon (Dichev-Janes)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-40.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10221963138979362,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06508941708559002,
+      -0.13909437549621206
+    ]
+  },
+  {
+    "id": "c1022-acad-41",
+    "name": "First-half-of-month effect: long QQQ/DIA for the first 9 sessions of each month (Ariel)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-41.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0647214089157857,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05736311420047113,
+      -0.07222919610970968
+    ]
+  },
+  {
+    "id": "c1022-acad-42",
+    "name": "Month-end Treasury rebalancing: long TLT/IEF/AGG over the last 3 sessions of each month (Etula et al.)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-42.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.01566544323337371,
+    "pExcess": 0.1184407796101949,
+    "halfExcess": [
+      0.0000617689958413159,
+      0.031020915758430134
+    ]
+  },
+  {
+    "id": "c1022-acad-43",
+    "name": "Post-expiration week weakness: flat QQQ/DIA for the 5 sessions after the third Friday (Stivers-Sun)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-43.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05822403773770679,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05340363962648875,
+      -0.06315016767308368
+    ]
+  },
+  {
+    "id": "c1022-acad-44",
+    "name": "Autumn effect in gold: long GLD/SLV only during September and November (Baur)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-44.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09469835145582262,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07000188347523606,
+      -0.11794554249345002
+    ]
+  },
+  {
+    "id": "c1022-acad-45",
+    "name": "Seasonal-affective bond demand: long Treasury/aggregate bond ETFs September to November (Kamstra-Kramer-Levi-Wermers)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-45.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.006028024237937135,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.009112853338121285,
+      -0.003010547536581032
+    ]
+  },
+  {
+    "id": "c1022-acad-46",
+    "name": "Crypto year-end holiday drift: long all 18 from the Dec 24 close to the Jan 2 close (Kaiser)",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-46.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5969346756121541,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5213168788201534,
+      -0.03129087108759743
+    ]
+  },
+  {
+    "id": "c1022-acad-47",
+    "name": "CME expiry drag: short crypto for the 3 sessions into the last Friday of each month",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-47.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7623454754954996,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.6636694706014978,
+      -0.21681470235885358
+    ]
+  },
+  {
+    "id": "c1022-acad-49",
+    "name": "January barometer per sector: hold each sector/index ETF Feb-Dec only if its own January return was positive",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-49.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.046026538430149255,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06014377820190986,
+      -0.031785693416204186
+    ]
+  },
+  {
+    "id": "c1022-acad-50",
+    "name": "Halloween effect by sector: cyclicals Nov-Apr, defensives May-Oct (Jacobsen-Visaltanachoti)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-50.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.040676917055102235,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03340540503243994,
+      -0.04785668139462773
+    ]
+  },
+  {
+    "id": "c1022-acad-51",
+    "name": "Intraday momentum in crypto: first-hour return predicts the last hour of the UTC day (Gao-Han-Li-Zhou)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-51.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.377264408221242,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.448995466214719,
+      -0.7102887145751213
+    ]
+  },
+  {
+    "id": "c1022-acad-52",
+    "name": "Index-level overnight-return momentum: long QQQ/DIA while the trailing 20-day overnight return is positive",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-52.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04968600569044357,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05189367566475234,
+      -0.04739852508099873
+    ]
+  },
+  {
+    "id": "c1022-acad-53",
+    "name": "Volume trend: long stocks whose monthly volume has been declining over two years (Haugen-Baker)",
+    "family": "other",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-53.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05141212339275825,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07909028567240717,
+      -0.02408685007559419
+    ]
+  },
+  {
+    "id": "c1022-acad-54",
+    "name": "High-low bid-ask spread estimator: long the most illiquid quintile by Corwin-Schultz spread",
+    "family": "other",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-54.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.07174412373249206,
+    "pExcess": 0.02798600699650175,
+    "halfExcess": [
+      0.12561340288709033,
+      0.021878878496068843
+    ]
+  },
+  {
+    "id": "c1022-acad-55",
+    "name": "Sector residual momentum: rank sectors by the Sharpe of their market-residual return over months 12-2 (Blitz-Huij-Martens)",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-55.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02943178297965887,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03534237795757211,
+      -0.023525123601214393
+    ]
+  },
+  {
+    "id": "c1022-acad-56",
+    "name": "Acceleration: long stocks whose last-6-month return most exceeds the prior 6 months (Ardila-Alvarez-Forro-Sornette)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-56.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04702843326634665,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07339330660801213,
+      -0.02102837588496964
+    ]
+  },
+  {
+    "id": "c1022-acad-57",
+    "name": "Crypto on US employment-report day: long all 18 for the UTC session of the jobs report (Corbet et al.)",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-57.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5516249083400924,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4455800108807741,
+      -0.013453721409499853
+    ]
+  },
+  {
+    "id": "c1022-acad-58",
+    "name": "Crypto momentum crash gate: 3-week cross-sectional momentum scaled down after a bear year with high vol (Daniel-Moskowitz in crypto)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-58.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09940464575639885,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.7178703025202493,
+      0.22337531845421843
+    ]
+  },
+  {
+    "id": "c1022-acad-59",
+    "name": "Crypto residual momentum: BTC-beta-adjusted 4-week return (skip 3 days) scaled by residual vol, weekly",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-59.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.10489000439997342,
+    "pExcess": 0.3873063468265867,
+    "halfExcess": [
+      -0.05471828654304467,
+      0.16075470996460806
+    ]
+  },
+  {
+    "id": "c1022-acad-60",
+    "name": "Tail-risk beta: long the quintile whose returns load most on innovations in cross-sectional tail risk (Kelly-Jiang)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-60.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.007147362035572424,
+    "pExcess": 0.4287856071964018,
+    "halfExcess": [
+      -0.06348304404560268,
+      0.0798024848610861
+    ]
+  },
+  {
+    "id": "c1022-acad-61",
+    "name": "Momentum among high-volatility stocks: 12-1 winners within the top half by volatility (Bandarchuk-Hilscher)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-61.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.031872656251483056,
+    "pExcess": 0.2098950524737631,
+    "halfExcess": [
+      -0.0021493954832136897,
+      0.06577630746822516
+    ]
+  },
+  {
+    "id": "c1022-acad-62",
+    "name": "Crypto conservative formula: lowest-vol half, then top 4 by 12-week momentum, weekly (Blitz-van Vliet in crypto)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-62.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09083460247941932,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.678008742673355,
+      0.21120057178989193
+    ]
+  },
+  {
+    "id": "c1022-acad-63",
+    "name": "Liquidity beta: long stocks whose returns rise most when aggregate illiquidity improves (Pastor-Stambaugh, price-volume proxy)",
+    "family": "other",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-63.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.006699225584636315,
+    "pExcess": 0.4512743628185907,
+    "halfExcess": [
+      -0.05847642397527708,
+      0.07341244389504564
+    ]
+  },
+  {
+    "id": "c1022-acad-64",
+    "name": "Weekly-return momentum with a one-week skip: twelve overlapping one-week cohorts (Gutierrez-Kelley)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/acad",
+    "evidencePath": "research/hunt2/results/c1022-acad-64.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.013692110153160852,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.029940265859200954,
+      0.0022091090620475207
+    ]
+  },
+  {
+    "id": "c1022-crypto-01",
+    "name": "Goldilocks funding regime: long only while 30-day funding is positive but not euphoric",
+    "family": "carry",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-01.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5194261739235551,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.406930541365735,
+      0.012972114261430301
+    ]
+  },
+  {
+    "id": "c1022-crypto-02",
+    "name": "Negative funding percentile dip inside an uptrend (shorts pay while trend intact)",
+    "family": "carry",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-02.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6268155512303031,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5820387655849213,
+      -0.03188992610786878
+    ]
+  },
+  {
+    "id": "c1022-crypto-03",
+    "name": "Funding persistence: sustained premium streak as trend confirmation",
+    "family": "carry",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-03.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5763662750150367,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4673740709079672,
+      -0.04066243511563794
+    ]
+  },
+  {
+    "id": "c1022-crypto-04",
+    "name": "Single extreme funding print fade (both sides)",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-04.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7075065178473399,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.749980448711658,
+      -0.018738428981341038
+    ]
+  },
+  {
+    "id": "c1022-crypto-05",
+    "name": "Carry-adjusted momentum: 28-day return net of cumulative funding paid",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-05.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.26976034617845523,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0835676735570399,
+      0.19915535560551656
+    ]
+  },
+  {
+    "id": "c1022-crypto-06",
+    "name": "Funding z-score reversion gated to low realised volatility",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-06.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.660921092709852,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.6146070767371277,
+      -0.06748851050031213
+    ]
+  },
+  {
+    "id": "c1022-crypto-07",
+    "name": "Funding-price divergence: rally that shorts keep fighting",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-07.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5816940333453648,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5190754452155568,
+      -0.003929292478649371
+    ]
+  },
+  {
+    "id": "c1022-crypto-08",
+    "name": "Funding pinned at the clamp = no leverage interest, trade the ensuing 20-day breakout",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-08.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5768657129538841,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5721618131984836,
+      0.05877316077792227
+    ]
+  },
+  {
+    "id": "c1022-crypto-09",
+    "name": "Funding slope: 7-day mean crossing above 30-day mean from below zero",
+    "family": "carry",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-09.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5305466161406536,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4360473108185408,
+      0.01778977182743513
+    ]
+  },
+  {
+    "id": "c1022-crypto-10",
+    "name": "Trend with a funding budget exit: leave once cumulative funding paid since entry exceeds 2%",
+    "family": "carry",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-10.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2615538834002771,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0735240841192635,
+      0.20579447132278506
+    ]
+  },
+  {
+    "id": "c1022-crypto-11",
+    "name": "Open-interest trough inside a price uptrend (deleveraged trend has room)",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-11.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8342682889579425,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.0405890938859113,
+      -0.09597297661911552
+    ]
+  },
+  {
+    "id": "c1022-crypto-12",
+    "name": "OI-confirmed hourly impulse continuation",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-12.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8898827756688928,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9406115553873071,
+      -0.2430283018478463
+    ]
+  },
+  {
+    "id": "c1022-crypto-13",
+    "name": "Short-squeeze exhaustion: price up on falling OI, fade it",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-13.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.9442342788488974,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9474112594222657,
+      -0.33874014891393944
+    ]
+  },
+  {
+    "id": "c1022-crypto-14",
+    "name": "Joint 30-day high in price and open interest, exit on 10% OI drawdown",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-14.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8602395865674178,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.0460364974179903,
+      -0.1424673086944913
+    ]
+  },
+  {
+    "id": "c1022-crypto-15",
+    "name": "Shorts building into negative funding: squeeze setup",
+    "family": "carry",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-15.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8224576805699222,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.048890751163411,
+      -0.06323798060272035
+    ]
+  },
+  {
+    "id": "c1022-crypto-16",
+    "name": "Weekend OI build on a flat price, fade on Monday",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-16.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8639494563987796,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.0565403985645663,
+      -0.13947548747789495
+    ]
+  },
+  {
+    "id": "c1022-crypto-17",
+    "name": "Weekend range breakout in the Monday-Tuesday session",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-17.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8278097836081213,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7016316585286306,
+      -0.3212418295390238
+    ]
+  },
+  {
+    "id": "c1022-crypto-18",
+    "name": "CME-gap fill: trade back toward the Friday 21:00 UTC close",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-18.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.093019912077699,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.2394320607951226,
+      -0.3477975274283137
+    ]
+  },
+  {
+    "id": "c1022-crypto-19",
+    "name": "Weekend move reversal on Monday-Wednesday",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-19.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7334704617364282,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7025865877584407,
+      -0.12478588895776221
+    ]
+  },
+  {
+    "id": "c1022-crypto-20",
+    "name": "US equity-open hour momentum in crypto",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-20.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.28782743009655,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.4013259828544102,
+      -0.5789387220127369
+    ]
+  },
+  {
+    "id": "c1022-crypto-21",
+    "name": "Trend held weekdays only: flat over the weekend",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-21.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5146125484142083,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9363905233929026,
+      -0.2743456934075018
+    ]
+  },
+  {
+    "id": "c1022-crypto-22",
+    "name": "Post-monthly-options-expiry breakout window",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-22.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5862431906049537,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5401847980992724,
+      0.007425683898824698
+    ]
+  },
+  {
+    "id": "c1022-crypto-23",
+    "name": "Post-quarterly-futures-expiry long",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-23.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3862474250601178,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0510234084388141,
+      -0.022709861265380216
+    ]
+  },
+  {
+    "id": "c1022-crypto-24",
+    "name": "Weekend-to-weekday volume ratio as a retail-participation fade",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-24.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8031754776757499,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7751525480803965,
+      -0.19160529037169038
+    ]
+  },
+  {
+    "id": "c1022-crypto-26",
+    "name": "Hourly trend only during US hours",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-26.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.0560842370800536,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9468534023163993,
+      -0.5302813464002547
+    ]
+  },
+  {
+    "id": "c1022-crypto-27",
+    "name": "Keltner channel breakout (EMA20 +/- 2 ATR10)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-27.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.026176411649147857,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5561277267942639,
+      0.2370677516797508
+    ]
+  },
+  {
+    "id": "c1022-crypto-28",
+    "name": "NR7 compression then next-day breakout (Crabel)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-28.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7837657671072913,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.6586417775728082,
+      -0.26024531149222563
+    ]
+  },
+  {
+    "id": "c1022-crypto-29",
+    "name": "Inside-day NR4 (ID/NR4) breakout (Crabel)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-29.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7620413595311151,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.582816704518593,
+      -0.28055106752228887
+    ]
+  },
+  {
+    "id": "c1022-crypto-30",
+    "name": "Hourly wide-range bar closing at its extreme: continuation",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-30.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.9844970122401667,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.1890427919617697,
+      -0.16838912318671428
+    ]
+  },
+  {
+    "id": "c1022-crypto-31",
+    "name": "Parkinson-vol regime switch on hourly bars: breakout when quiet, fade when loud",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-31.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.0598585480978369,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9691561716816532,
+      -0.5219074617442123
+    ]
+  },
+  {
+    "id": "c1022-crypto-32",
+    "name": "Three-day range compression then breakout",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-32.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7085670002502493,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7109627065690458,
+      -0.0651956663634502
+    ]
+  },
+  {
+    "id": "c1022-crypto-33",
+    "name": "Dominance extreme mean-reversion: rotate into alts after BTC has outrun them",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-33.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04191274266281253,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.6389265062888128,
+      0.2646843457073813
+    ]
+  },
+  {
+    "id": "c1022-crypto-34",
+    "name": "Dispersion-conditioned momentum: pick winners only when coins disagree",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-34.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.1754233046955742,
+    "pExcess": 0.27436281859070466,
+    "halfExcess": [
+      0.2550566689562581,
+      0.11980319174365972
+    ]
+  },
+  {
+    "id": "c1022-crypto-35",
+    "name": "Alt-beta regime: alts only when they amplify BTC",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-35.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.4239126336856389,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0795040391490338,
+      -0.06472647177498325
+    ]
+  },
+  {
+    "id": "c1022-crypto-36",
+    "name": "Large-cap vs mid-cap crypto rotation by relative momentum",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-36.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.22893965199713473,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.3234390526618669,
+      -0.1596535033649289
+    ]
+  },
+  {
+    "id": "c1022-crypto-39",
+    "name": "Short-term volume surge with positive return (continuation)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-39.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5639965259230582,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4905494780586535,
+      0.003607130315950613
+    ]
+  },
+  {
+    "id": "c1022-crypto-40",
+    "name": "Momentum acceleration (recent momentum minus scaled longer momentum)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-40.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.30346935881672277,
+    "pExcess": 0.11494252873563218,
+    "halfExcess": [
+      1.0627494932387207,
+      -0.0013946158806730224
+    ]
+  },
+  {
+    "id": "c1022-crypto-42",
+    "name": "Negative-skewness premium: avoid positively skewed (lottery-like) coins",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-42.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1676743584745375,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5303671401581691,
+      0.011526620650293973
+    ]
+  },
+  {
+    "id": "c1022-crypto-43",
+    "name": "Relative-strength breakout versus BTC: alts making a 50-day high in their BTC ratio",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-43.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.20099330448986197,
+    "pExcess": 0.296351824087956,
+    "halfExcess": [
+      0.4736860230190141,
+      0.06878255701452529
+    ]
+  },
+  {
+    "id": "c1022-crypto-44",
+    "name": "Sector rotation: PoW payment coins vs smart-contract/DeFi coins",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-44.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5201374580803819,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.3632652632629108,
+      -0.024970938959971822
+    ]
+  },
+  {
+    "id": "c1022-crypto-45",
+    "name": "Volume-share dominance: BTC's share of market turnover rising = risk-off",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-45.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.5061696344523146,
+    "pExcess": 0.0879560219890055,
+    "halfExcess": [
+      1.1080237835578401,
+      0.20866582410591783
+    ]
+  },
+  {
+    "id": "c1022-crypto-46",
+    "name": "Narrow leadership: BTC at a 50-day high while alt breadth is weak",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-46.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.00463658251912058,
+    "pExcess": 0.4852573713143428,
+    "halfExcess": [
+      -0.34621117658784106,
+      0.16393060324006825
+    ]
+  },
+  {
+    "id": "c1022-crypto-47",
+    "name": "Alt/BTC ratio z-score reversion, long-short",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-47.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.499553315313231,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.2882275022456555,
+      -0.04695543511099254
+    ]
+  },
+  {
+    "id": "c1022-crypto-48",
+    "name": "Idiosyncratic volume shock relative to the market",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-48.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.42376156180640123,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9742548214337241,
+      -0.12661257289456862
+    ]
+  },
+  {
+    "id": "c1022-crypto-49",
+    "name": "Daily Garman-Klass volatility expansion continuation",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-49.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7057372055534221,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.362199810873664,
+      -0.33143309361170337
+    ]
+  },
+  {
+    "id": "c1022-crypto-50",
+    "name": "VIX-level gate on a crypto trend",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-50.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.17679228454102747,
+    "pExcess": 0.2938530734632684,
+    "halfExcess": [
+      -0.0062683099012303956,
+      0.23688519910601258
+    ]
+  },
+  {
+    "id": "c1022-crypto-52",
+    "name": "Trend-strength regime by R-squared of the log-price fit: trend-follow when linear, fade when not",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-52.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.4281045134231436,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.074040173423283,
+      -0.0747872637178526
+    ]
+  },
+  {
+    "id": "c1022-crypto-53",
+    "name": "Hurst-exponent regime switch (persistence vs anti-persistence)",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-53.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7651621042861367,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7871048886199679,
+      -0.09992756601837471
+    ]
+  },
+  {
+    "id": "c1022-crypto-54",
+    "name": "Turnover-participation filter on a trend",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-54.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0970324696296827,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5272614588857354,
+      0.11215928461834968
+    ]
+  },
+  {
+    "id": "c1022-crypto-55",
+    "name": "Realised-price proxy: 90-day VWAP as cost basis",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-55.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2522934119529936,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.819164205736135,
+      0.04434492842595139
+    ]
+  },
+  {
+    "id": "c1022-crypto-56",
+    "name": "Long-term-holder cost-basis proxy: 155-day VWAP reclaim",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-56.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3194342016357252,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9570316162212475,
+      0.024011962581327984
+    ]
+  },
+  {
+    "id": "c1022-crypto-57",
+    "name": "Monthly market structure: higher high and higher low on completed monthly bars",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-57.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.26177195872303627,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.7447482464719706,
+      -0.012554416212004815
+    ]
+  },
+  {
+    "id": "c1022-crypto-58",
+    "name": "Time-under-water regime: cash after 60 days without a 100-day high",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-58.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2872359337547852,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8858932214604549,
+      0.03041397382919886
+    ]
+  },
+  {
+    "id": "c1022-crypto-59",
+    "name": "Relative volume by hour-of-day with a 24h breakout",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-59.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.865187253014241,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9088363084309816,
+      -0.22485496595213073
+    ]
+  },
+  {
+    "id": "c1022-crypto-60",
+    "name": "Up-volume to down-volume ratio (volume flow) over 20 days",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-60.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.48241085461269084,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.2704918568388563,
+      -0.03057232531357701
+    ]
+  },
+  {
+    "id": "c1022-crypto-61",
+    "name": "Liquidity-improvement momentum: Amihud illiquidity falling",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-61.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3586063145884728,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1958460535000555,
+      0.1302473028238622
+    ]
+  },
+  {
+    "id": "c1022-crypto-62",
+    "name": "Orderly deleveraging: OI down sharply while price holds",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-62.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.856710515447118,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.0419218784363458,
+      -0.13951201090713183
+    ]
+  },
+  {
+    "id": "c1022-crypto-63",
+    "name": "Stealth breakout: 20-day high on below-median volume",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-63.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5916009009197369,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.532054012006469,
+      -0.0109172203714607
+    ]
+  },
+  {
+    "id": "c1022-crypto-64",
+    "name": "Hourly return autocorrelation regime: momentum when positive, reversal when negative",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/crypto",
+    "evidencePath": "research/hunt2/results/c1022-crypto-64.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.2422665406383488,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.3282195381194883,
+      -0.5617986693719671
+    ]
+  },
+  {
+    "id": "c1022-macro-02",
+    "name": "High variance risk premium versus its own year (VRP above 252d mean)",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-02.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03355267031312836,
+    "pExcess": 1,
+    "halfExcess": [
+      0.01046209835002787,
+      -0.07702700741148982
+    ]
+  },
+  {
+    "id": "c1022-macro-03",
+    "name": "Variance risk premium sign gate on credit ETFs",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-03.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.01613021018280625,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05113892333837755,
+      0.01799434274854317
+    ]
+  },
+  {
+    "id": "c1022-macro-04",
+    "name": "VIX3M below its 50-day average as the equity gate",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-04.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05790949455207062,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03539074595629765,
+      -0.08058595821944636
+    ]
+  },
+  {
+    "id": "c1022-macro-05",
+    "name": "VIX golden cross (50d over 200d) as risk-off",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-05.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.044492667515701134,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03326889670130151,
+      -0.055910050696569735
+    ]
+  },
+  {
+    "id": "c1022-macro-06",
+    "name": "Hourly crypto 24h momentum only while VIX3M is trending down",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-06.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.02550989974768,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.906462848161224,
+      -0.507198103422569
+    ]
+  },
+  {
+    "id": "c1022-macro-07",
+    "name": "Moreira-Muir volatility-managed index using implied vol (target 15)",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-07.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05057740199820193,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03749748411886178,
+      -0.0638614003517235
+    ]
+  },
+  {
+    "id": "c1022-macro-08",
+    "name": "VIX risk-off ladder: equities, then IG credit, then Treasuries",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-08.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.024602188731929653,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.00005452276637729625,
+      -0.0478245469195131
+    ]
+  },
+  {
+    "id": "c1022-macro-09",
+    "name": "Sector beta rotation by VIX percentile (cyclicals when calm, defensives when stressed)",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-09.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0009103096042841763,
+    "pExcess": 0.4497751124437781,
+    "halfExcess": [
+      -0.01315864428050717,
+      0.01455524586332313
+    ]
+  },
+  {
+    "id": "c1022-macro-10",
+    "name": "Complacency exit: flat when VIX is in its bottom decile",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-10.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02599236419584372,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.01441828301646142,
+      -0.037762836051867366
+    ]
+  },
+  {
+    "id": "c1022-macro-11",
+    "name": "VIX low-and-rising early warning on sector ETFs",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-11.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.008171068613364696,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.032670534439044774,
+      0.016737783751833435
+    ]
+  },
+  {
+    "id": "c1022-macro-12",
+    "name": "Connors RSI(2) buys on ETFs only during VIX backwardation",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-12.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11217823419183581,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.11307430637105031,
+      -0.11128226364463134
+    ]
+  },
+  {
+    "id": "c1022-macro-13",
+    "name": "Crypto cross-sectional momentum, flat when VIX is above 25",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-13.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.19981028715197846,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.7558155313982093,
+      0.0876486166726671
+    ]
+  },
+  {
+    "id": "c1022-macro-14",
+    "name": "BTC-only when VIX is above its yearly median, top alts otherwise",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-14.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.034663852348756574,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07266945050605633,
+      -0.01484635370321441
+    ]
+  },
+  {
+    "id": "c1022-macro-15",
+    "name": "Yield-curve quadrant allocation (bull/bear x steepener/flattener)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-15.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.017825974638269182,
+    "pExcess": 0.1199400299850075,
+    "halfExcess": [
+      0.005917357634897202,
+      0.029359381908879767
+    ]
+  },
+  {
+    "id": "c1022-macro-16",
+    "name": "Fed tightening regime gate: flat equities when the 2y yield rose 25bp in a quarter",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-16.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.01536292338205314,
+    "pExcess": 0.2288855572213893,
+    "halfExcess": [
+      0.0105444138896984,
+      0.020331223282399113
+    ]
+  },
+  {
+    "id": "c1022-macro-17",
+    "name": "Fed regime sector rotation: tightening vs easing baskets by 2y yield momentum",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-17.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.02232108086445539,
+    "pExcess": 0.14992503748125938,
+    "halfExcess": [
+      0.03507591556996936,
+      0.009754390452218376
+    ]
+  },
+  {
+    "id": "c1022-macro-18",
+    "name": "Crypto held only outside Fed tightening (2y yield momentum)",
+    "family": "macro",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-18.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.14339887428962284,
+    "pExcess": 0.29735132433783107,
+    "halfExcess": [
+      0.09813485731632765,
+      0.1437774609275846
+    ]
+  },
+  {
+    "id": "c1022-macro-19",
+    "name": "Breakeven-inflation duration switch (TLT / IEF / SHY)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-19.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0033995293859840903,
+    "pExcess": 0.41579210394802596,
+    "halfExcess": [
+      -0.0020126082707891957,
+      0.008364242533004718
+    ]
+  },
+  {
+    "id": "c1022-macro-20",
+    "name": "Inflation-momentum sector map (reflation vs disinflation baskets)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-20.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.00935144993106185,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.013409346916825715,
+      -0.005244899088412636
+    ]
+  },
+  {
+    "id": "c1022-macro-22",
+    "name": "Growth vs value switch by real-yield momentum (QQQ vs DIA)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-22.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.022999460042007147,
+    "pExcess": 0.01633967320653587,
+    "halfExcess": [
+      0.005917357634897202,
+      0.040810378029874306
+    ]
+  },
+  {
+    "id": "c1022-macro-23",
+    "name": "A-priori duration-sector switch by real-yield momentum",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-23.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.01923895198940384,
+    "pExcess": 0.19290354822588707,
+    "halfExcess": [
+      0.028399933303211666,
+      0.010169689665320947
+    ]
+  },
+  {
+    "id": "c1022-macro-24",
+    "name": "Buy Treasuries after a 5-day real-yield spike",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-24.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.019040685259026358,
+    "pExcess": 0.26036981509245377,
+    "halfExcess": [
+      -0.018033690133176128,
+      0.05290085023267077
+    ]
+  },
+  {
+    "id": "c1022-macro-25",
+    "name": "Stand aside in long-duration assets after a monthly real-rate shock",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-25.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.013585061060513492,
+    "pExcess": 1,
+    "halfExcess": [
+      0.017443824102389316,
+      -0.042937793856224094
+    ]
+  },
+  {
+    "id": "c1022-macro-26",
+    "name": "Bear-steepener gate for rate-sensitive assets",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-26.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.01099349924046611,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.020510960681530355,
+      -0.0019976851559281306
+    ]
+  },
+  {
+    "id": "c1022-macro-27",
+    "name": "Credit-confirmed trend: index above 200d only counts if HYG is too",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-27.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0008602989432602293,
+    "pExcess": 0.4942528735632184,
+    "halfExcess": [
+      -0.00005452276637729625,
+      0.0017655972492673921
+    ]
+  },
+  {
+    "id": "c1022-macro-28",
+    "name": "Sector momentum rotation only while credit is in an uptrend (HYG/LQD ratio)",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-28.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03294037355584489,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06216702703043353,
+      -0.0033415369945066775
+    ]
+  },
+  {
+    "id": "c1022-macro-30",
+    "name": "Commodity trend taken only when the broad dollar is falling",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-30.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06204515280545664,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07808246231975868,
+      -0.04650161821759702
+    ]
+  },
+  {
+    "id": "c1022-macro-31",
+    "name": "Oil-driven sector switch: producers vs oil consumers",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-31.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05595017076221276,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06564680612234763,
+      -0.04583180085194316
+    ]
+  },
+  {
+    "id": "c1022-macro-32",
+    "name": "Four macro-driven sector pairs, equal weight",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-32.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02749078410369088,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.048578201367188045,
+      -0.006878930348560353
+    ]
+  },
+  {
+    "id": "c1022-macro-33",
+    "name": "Stovall sector clock driven by macro state",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-33.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.018327261886331492,
+    "pExcess": 0.2768615692153923,
+    "halfExcess": [
+      -0.019037241744906508,
+      0.056750002117805565
+    ]
+  },
+  {
+    "id": "c1022-macro-34",
+    "name": "Macro-momentum allocation across stocks, bonds, commodities and gold",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-34.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.004969439680363008,
+    "pExcess": 0.391304347826087,
+    "halfExcess": [
+      0.0011768172334076787,
+      0.008587980050856814
+    ]
+  },
+  {
+    "id": "c1022-macro-35",
+    "name": "Sector momentum with an a-priori macro-driver veto",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-35.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02117128696979842,
+    "pExcess": 1,
+    "halfExcess": [
+      0.0024374744790858216,
+      -0.04413001304869879
+    ]
+  },
+  {
+    "id": "c1022-macro-36",
+    "name": "Silver/gold ratio trend as the equity risk-on gate",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-36.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.024096333601167474,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.000944472622101733,
+      -0.04664293673391717
+    ]
+  },
+  {
+    "id": "c1022-macro-37",
+    "name": "Cross-asset risk breadth: how many risk assets are above their 200d",
+    "family": "other",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-37.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.00812435394032307,
+    "pExcess": 0.32983508245877063,
+    "halfExcess": [
+      0.002601180042935747,
+      0.01344977729495822
+    ]
+  },
+  {
+    "id": "c1022-macro-38",
+    "name": "Financial-conditions count gate on equities (flat when 2+ of 4 flags)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-38.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.01774781736502229,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.02035863080850353,
+      -0.015064624549440131
+    ]
+  },
+  {
+    "id": "c1022-macro-39",
+    "name": "Financial-conditions z-score ladder (full / half / zero)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-39.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.006882955654329059,
+    "pExcess": 1,
+    "halfExcess": [
+      0.012689990035567256,
+      -0.026646559477772946
+    ]
+  },
+  {
+    "id": "c1022-macro-40",
+    "name": "Financial-conditions count gate on crypto",
+    "family": "macro",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-40.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2716435721485482,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.47775384950786304,
+      -0.15243424854150645
+    ]
+  },
+  {
+    "id": "c1022-macro-41",
+    "name": "200d trend with a VIX-scaled hysteresis band",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-41.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.040023110724508815,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.019554347844285003,
+      -0.060009414161455776
+    ]
+  },
+  {
+    "id": "c1022-macro-42",
+    "name": "200d exit honoured only after a yield-curve inversion in the past year",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-42.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.007364996843826965,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.005332639273003981,
+      -0.009384173463684364
+    ]
+  },
+  {
+    "id": "c1022-macro-43",
+    "name": "200d exit honoured only while the broad dollar is rising",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-43.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.009263240637868098,
+    "pExcess": 1,
+    "halfExcess": [
+      0.008392763515432167,
+      -0.026557732679117763
+    ]
+  },
+  {
+    "id": "c1022-macro-44",
+    "name": "Long-bond trend taken only in disinflation (breakevens not rising)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-44.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.025362957391517726,
+    "pExcess": 0.17691154422788605,
+    "halfExcess": [
+      0.003584976282846153,
+      0.04492044204989065
+    ]
+  },
+  {
+    "id": "c1022-macro-45",
+    "name": "Defensive sectors instead of cash when the index loses its 200d",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-45.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.04239481371329612,
+    "pExcess": 0.0064598708025839485,
+    "halfExcess": [
+      0.002601180042935747,
+      0.08334427911284137
+    ]
+  },
+  {
+    "id": "c1022-macro-47",
+    "name": "Keller BAA-lite: 13612W canary with offensive/defensive sleeves",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-47.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.00301274750773306,
+    "pExcess": 0.4192903548225887,
+    "halfExcess": [
+      -0.00043299225505344374,
+      0.006385367532405928
+    ]
+  },
+  {
+    "id": "c1022-macro-48",
+    "name": "Accelerating dual momentum (1+3+6 month) across QQQ, DIA, GLD with TLT fallback",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-48.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.010674015735867792,
+    "pExcess": 0.26636681659170414,
+    "halfExcess": [
+      0.0011768172334076787,
+      0.019975364737523593
+    ]
+  },
+  {
+    "id": "c1022-macro-50",
+    "name": "Crypto stand-down after a 5-day real-yield jump",
+    "family": "macro",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-50.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0512242134566534,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.3042081052152845,
+      0.06394777654785666
+    ]
+  },
+  {
+    "id": "c1022-macro-51",
+    "name": "Crypto long for 20 days after a sharp weekly dollar drop",
+    "family": "macro",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-51.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6076953598875678,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.509183062434756,
+      -0.06268145177280438
+    ]
+  },
+  {
+    "id": "c1022-macro-52",
+    "name": "Hourly crypto RSI(14) dip buys only in calm equity vol",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-52.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8980680689875472,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.9344839266742078,
+      -0.2641735305117082
+    ]
+  },
+  {
+    "id": "c1022-macro-53",
+    "name": "BTC-only when the dollar is rising, top alts when it is falling",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-53.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2620445499506743,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.31081729112668777,
+      -0.2044819855156943
+    ]
+  },
+  {
+    "id": "c1022-macro-54",
+    "name": "Sector momentum while VIX3M trends down, defensives otherwise",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-54.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.019232723018740128,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03611282633951873,
+      -0.0021900806404206996
+    ]
+  },
+  {
+    "id": "c1022-macro-55",
+    "name": "Energy stack (XLE + USO) with both oil and dollar tailwinds",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-55.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0200706300884399,
+    "pExcess": 0.39080459770114945,
+    "halfExcess": [
+      0.09847999202852431,
+      -0.08090645723155143
+    ]
+  },
+  {
+    "id": "c1022-macro-57",
+    "name": "Long-short index by VIX curve and 200d trend agreement",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-57.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09037845005789347,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07395564966410562,
+      -0.10700800417695788
+    ]
+  },
+  {
+    "id": "c1022-macro-58",
+    "name": "Long-short Treasuries (TLT, IEF) by 2y-yield momentum",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-58.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.05291260876710491,
+    "pExcess": 0.13343328335832083,
+    "halfExcess": [
+      -0.015016691460133735,
+      0.11695615661582937
+    ]
+  },
+  {
+    "id": "c1022-macro-59",
+    "name": "Vol-curve x real-rate quadrant allocation",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-59.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.019459395372950716,
+    "pExcess": 0.12143928035982009,
+    "halfExcess": [
+      0.0011768172334076787,
+      0.037635247836762975
+    ]
+  },
+  {
+    "id": "c1022-macro-60",
+    "name": "Macro vote for long bonds (2 of 4 disinflation / flight-to-quality tells)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-60.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.018428021402311368,
+    "pExcess": 0.20689655172413793,
+    "halfExcess": [
+      0.002793551125977789,
+      0.032374063814111564
+    ]
+  },
+  {
+    "id": "c1022-macro-61",
+    "name": "Macro vote for precious metals (2 of 4 debasement tells)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-61.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0805263702650818,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.04613138367076841,
+      -0.11264664499854427
+    ]
+  },
+  {
+    "id": "c1022-macro-62",
+    "name": "Macro vote for equities (3 of 5 easing tells)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-62.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.029663984311688596,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03386490227374206,
+      -0.025338629663465895
+    ]
+  },
+  {
+    "id": "c1022-macro-63",
+    "name": "Cross-asset 12-1 momentum, top 5 of 20, with a vol-regime cash override",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-63.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0044063367453668345,
+    "pExcess": 0.3938030984507746,
+    "halfExcess": [
+      0.0011768172334076787,
+      0.0075031808752759055
+    ]
+  },
+  {
+    "id": "c1022-macro-64",
+    "name": "Crypto in the debasement regime: dollar and real yields both falling",
+    "family": "macro",
+    "assetClass": "crypto",
+    "source": "c1022/macro",
+    "evidencePath": "research/hunt2/results/c1022-macro-64.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.37962532435643626,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9172905333951669,
+      -0.09247150725773823
+    ]
+  },
+  {
+    "id": "c1022-redteam-03",
+    "name": "Low beta to the equal-weight crypto index (ex self), bottom half, 70th-percentile hold buffer",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-03.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.48770422116503864,
+    "pExcess": 0.0033399332013359733,
+    "halfExcess": [
+      0.9078016238837052,
+      0.25655855002698114
+    ]
+  },
+  {
+    "id": "c1022-redteam-04",
+    "name": "Low correlation with BTC only (beta with the volatility ratio stripped out), rank-weighted",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-04.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.2354425978537369,
+    "pExcess": 0.03648175912043978,
+    "halfExcess": [
+      0.6411317905689993,
+      0.051691726711055486
+    ]
+  },
+  {
+    "id": "c1022-redteam-05",
+    "name": "Low BTC-beta picked only inside the high-volatility half",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-05.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.17325454654879757,
+    "pExcess": 0.19640179910044978,
+    "halfExcess": [
+      0.2296307583711017,
+      0.1273058102990028
+    ]
+  },
+  {
+    "id": "c1022-redteam-06",
+    "name": "Rank-weighted low BTC-beta scaled by a BTC trend grid",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-06.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.16052664997971222,
+    "pExcess": 0.3073463268365817,
+    "halfExcess": [
+      -0.03099753977622166,
+      0.2262251723147748
+    ]
+  },
+  {
+    "id": "c1022-redteam-07",
+    "name": "Double sort: bottom-half BTC-beta intersected with top-half 4-week momentum",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-07.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.5983592198387608,
+    "pExcess": 0.02498750624687656,
+    "halfExcess": [
+      1.8829969626361143,
+      0.08560448928732156
+    ]
+  },
+  {
+    "id": "c1022-redteam-10",
+    "name": "Crypto momentum consensus: top half on every horizon of 14/21/28 days",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-10.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.5693969714201144,
+    "pExcess": 0.008219835603287933,
+    "halfExcess": [
+      1.5194909324414931,
+      0.1522414884375627
+    ]
+  },
+  {
+    "id": "c1022-redteam-11",
+    "name": "Crypto momentum with the most recent week skipped (28-7)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-11.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.10981373686507423,
+    "pExcess": 0.2798600699650175,
+    "halfExcess": [
+      0.17630017340114934,
+      0.06839749520008098
+    ]
+  },
+  {
+    "id": "c1022-redteam-13",
+    "name": "Crypto 3-week momentum, rank weights across the whole cross-section (no top-K cut)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-13.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.24035425084572504,
+    "pExcess": 0.007659846803063939,
+    "halfExcess": [
+      0.6361359420810677,
+      0.0590225545578662
+    ]
+  },
+  {
+    "id": "c1022-redteam-22",
+    "name": "Crypto breadth gate with hysteresis: in when 60% of coins are above their 50-day SMA, out at 40%",
+    "family": "breadth",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-22.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.2015689387391293,
+    "pExcess": 0.25837081459270367,
+    "halfExcess": [
+      0.09517482169701941,
+      0.2229162862683658
+    ]
+  },
+  {
+    "id": "c1022-redteam-23",
+    "name": "Equal-weight crypto scaled continuously by 50-day breadth, weekly",
+    "family": "breadth",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-23.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.1270405329371771,
+    "pExcess": 0.3213393303348326,
+    "halfExcess": [
+      -0.09609614845478065,
+      0.21123955843412867
+    ]
+  },
+  {
+    "id": "c1022-redteam-29",
+    "name": "Max of the fear grid and the SMA grid: trend or capitulation, daily",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-29.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.01120473440068026,
+    "pExcess": 0.4492753623188406,
+    "halfExcess": [
+      -0.055109212501497584,
+      0.03656747898688417
+    ]
+  },
+  {
+    "id": "c1022-redteam-30",
+    "name": "Equal-weight ensemble of the three crypto leader families, weekly",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-30.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.251338911549005,
+    "pExcess": 0.03648175912043978,
+    "halfExcess": [
+      0.3812366176332045,
+      0.16536091468737646
+    ]
+  },
+  {
+    "id": "c1022-redteam-36",
+    "name": "Sector momentum, rank averaged over 3/6/12 months, top 3, own-trend gate to IEF",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-36.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.005266937743240163,
+    "pExcess": 1,
+    "halfExcess": [
+      0.009104398173251704,
+      -0.01926980418745483
+    ]
+  },
+  {
+    "id": "c1022-redteam-42",
+    "name": "Sector breadth gate with hysteresis (60% above 200-day in, 40% out), else IEF, weekly",
+    "family": "breadth",
+    "assetClass": "etf",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-42.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03689095018022437,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03367581880047377,
+      -0.04005401050047852
+    ]
+  },
+  {
+    "id": "c1022-redteam-46",
+    "name": "12-1 momentum top 15% only when market breadth (% above 200-day) is at least 50%",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-46.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06293103379196463,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05941295155888282,
+      -0.06638728635830837
+    ]
+  },
+  {
+    "id": "c1022-redteam-47",
+    "name": "Composite momentum: average rank of 12-1, 6-1 and distance to 52-week high, top 15%",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-47.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.017730760645704224,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03443934373385993,
+      -0.0013776225949273524
+    ]
+  },
+  {
+    "id": "c1022-redteam-58",
+    "name": "Monthly 200-day SMA check: hold each coin above its 200-day average, checked only at month-end",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-58.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1082169090979368,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.057571113180979516,
+      -0.11106405553198673
+    ]
+  },
+  {
+    "id": "c1022-redteam-60",
+    "name": "12-1 momentum top 15% with a 10% basket drawdown circuit breaker (cash for the next month)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-60.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.007405043242257214,
+    "pExcess": 1,
+    "halfExcess": [
+      0.02445336795387898,
+      -0.037360843424039114
+    ]
+  },
+  {
+    "id": "c1022-redteam-62",
+    "name": "Equal-weight crypto basket gated by BTC's own SMA grid (market-level trend only)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-62.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.14368851621922585,
+    "pExcess": 0.2978510744627686,
+    "halfExcess": [
+      0.1736369173064034,
+      0.11238061071157324
+    ]
+  },
+  {
+    "id": "c1022-redteam-63",
+    "name": "Sector momentum top 3 (6 months) gated by sector breadth hysteresis, else IEF",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/redteam",
+    "evidencePath": "research/hunt2/results/c1022-redteam-63.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05351648872371273,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.04834953337843939,
+      -0.05858939227318305
+    ]
+  },
+  {
+    "id": "c1022-retail-01",
+    "name": "RSI bull-range support test (Cardwell/Brown range rules)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-01.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16118025984465056,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.22368697001251459,
+      -0.10227837596549083
+    ]
+  },
+  {
+    "id": "c1022-retail-02",
+    "name": "RSI 60/40 range-shift hysteresis (Cardwell)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-02.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.21714831340618512,
+    "pExcess": 0.23888055972013994,
+    "halfExcess": [
+      0.324127393989742,
+      0.14495368220430227
+    ]
+  },
+  {
+    "id": "c1022-retail-03",
+    "name": "RSI failure swing bottom (Wilder 1978)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-03.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16220532727870385,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2339968441290039,
+      -0.09401665436052031
+    ]
+  },
+  {
+    "id": "c1022-retail-04",
+    "name": "RSI crosses its own 14-period SMA (TradingView default RSI-based MA)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-04.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06126668262257717,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07247219584717945,
+      -0.0502190991893412
+    ]
+  },
+  {
+    "id": "c1022-retail-05",
+    "name": "RSI 30 dip only in a ranging market (ADX < 20 gate)",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-05.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07265780692201007,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08343869110111402,
+      -0.06203296693233784
+    ]
+  },
+  {
+    "id": "c1022-retail-06",
+    "name": "Weekly RSI > 50 trend, daily RSI 40 pullback (multi-timeframe RSI)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-06.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1601712727474467,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.22639641027284263,
+      -0.09757050746776685
+    ]
+  },
+  {
+    "id": "c1022-retail-07",
+    "name": "Hourly RSI 30 reclaim above the 200 EMA (crypto)",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-07.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8485842881864668,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.93772910020499,
+      -0.1649658155814715
+    ]
+  },
+  {
+    "id": "c1022-retail-08",
+    "name": "MACD zero-line cross (Murphy)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-08.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03639551734190749,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03823557194877836,
+      -0.03459345781373546
+    ]
+  },
+  {
+    "id": "c1022-retail-09",
+    "name": "MACD signal cross taken only above the zero line",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-09.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1704538200518697,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.525658388128639,
+      0.005258031948691899
+    ]
+  },
+  {
+    "id": "c1022-retail-10",
+    "name": "MACD histogram uptick below zero (Elder)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-10.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16047749834857417,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.20823159761203835,
+      -0.11598949686395188
+    ]
+  },
+  {
+    "id": "c1022-retail-11",
+    "name": "Raschke 3/10 oscillator first cross",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-11.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10739534702358267,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1429205720646045,
+      -0.07459106511091584
+    ]
+  },
+  {
+    "id": "c1022-retail-12",
+    "name": "Best Six Months with MACD timing (Hirsch)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-12.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02315915502281274,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0012689403551036094,
+      -0.04464175044112895
+    ]
+  },
+  {
+    "id": "c1022-retail-13",
+    "name": "Bollinger W-bottom (Bollinger's own setup)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-13.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17471278830468928,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24143366215625006,
+      -0.11161684528881222
+    ]
+  },
+  {
+    "id": "c1022-retail-14",
+    "name": "Bollinger lower-band dip gated by ADX < 20 (range-only mean reversion)",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-14.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07055050582759081,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.08891004620402754,
+      -0.05232596818811852
+    ]
+  },
+  {
+    "id": "c1022-retail-15",
+    "name": "Bollinger lower band + Stochastic cross-up (classic combo)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-15.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16164957177374673,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2180688419349397,
+      -0.10874534343112141
+    ]
+  },
+  {
+    "id": "c1022-retail-16",
+    "name": "Stochastic pop (Bernstein/Steckler): buy %K crossing above 80",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-16.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5097856629121693,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4260810701958717,
+      0.048279764686060656
+    ]
+  },
+  {
+    "id": "c1022-retail-17",
+    "name": "Stochastic bullish divergence (price lower low, %K higher low)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-17.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17746079181405405,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24324503132254138,
+      -0.11530001650751798
+    ]
+  },
+  {
+    "id": "c1022-retail-18",
+    "name": "Ichimoku full five-line confirmation (price, TK, cloud, future cloud, Chikou)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-18.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12709361185790558,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.7346225585728212,
+      0.18949647880808418
+    ]
+  },
+  {
+    "id": "c1022-retail-19",
+    "name": "Ichimoku Kijun-sen bounce in an uptrend",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-19.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.13947275854137353,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.20126802558053813,
+      -0.0812758818920869
+    ]
+  },
+  {
+    "id": "c1022-retail-22",
+    "name": "Supertrend(10,3) flip filtered by the 200 EMA",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-22.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.13371418931521473,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.18731456522371737,
+      -0.08356725054456371
+    ]
+  },
+  {
+    "id": "c1022-retail-23",
+    "name": "Supertrend computed on Heikin Ashi candles",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-23.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.028079389753809192,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.3900253185429303,
+      0.13952087830772442
+    ]
+  },
+  {
+    "id": "c1022-retail-24",
+    "name": "Turtle 20/10 Donchian breakout gated by ADX >= 25",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-24.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09460733300954893,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.5093941833283431,
+      0.10601307434778406
+    ]
+  },
+  {
+    "id": "c1022-retail-25",
+    "name": "Keltner channel pullback buy in an uptrend (Raschke-style)",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-25.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06744348739621286,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07927011660507066,
+      -0.05577685320444892
+    ]
+  },
+  {
+    "id": "c1022-retail-26",
+    "name": "ADX turning up from below 20 with +DI leading (Wilder trend-start)",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-26.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12333387361716097,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.16822762749467746,
+      -0.08160805656960224
+    ]
+  },
+  {
+    "id": "c1022-retail-27",
+    "name": "DI-cross trend with ADX peak exit (exhaustion above 40)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-27.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.19236017462557964,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.8486614009937625,
+      0.15881741761660728
+    ]
+  },
+  {
+    "id": "c1022-retail-28",
+    "name": "Year-to-date anchored VWAP trend filter (Shannon)",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-28.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06637573202221758,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09851805392454183,
+      -0.036790786380585194
+    ]
+  },
+  {
+    "id": "c1022-retail-29",
+    "name": "Anchored VWAP from the 52-week high: reclaim buy",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-29.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.15236293326052142,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.21227821561941318,
+      -0.09602329712087831
+    ]
+  },
+  {
+    "id": "c1022-retail-30",
+    "name": "Monthly anchored VWAP with a 0.3% band (hourly crypto)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-30.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.24554565190801014,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.6020445270128905,
+      -0.0633163133708976
+    ]
+  },
+  {
+    "id": "c1022-retail-31",
+    "name": "Heikin Ashi strong candles (no lower wick) continuation (Valcu)",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-31.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16148556884533427,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.20028632298323812,
+      -0.12554651551636442
+    ]
+  },
+  {
+    "id": "c1022-retail-32",
+    "name": "Camarilla L3 bounce with L4 stop (Ochoa)",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-32.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.3095187213350892,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.410162545175508,
+      -0.6142390088822622
+    ]
+  },
+  {
+    "id": "c1022-retail-33",
+    "name": "Weekly floor pivot as a trend line (above P long, below S1 flat)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-33.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03624950841241814,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05387616691399044,
+      -0.018765820873495764
+    ]
+  },
+  {
+    "id": "c1022-retail-34",
+    "name": "Narrow CPR breakout (Ochoa central pivot range)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-34.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7147183167790621,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5810862450308223,
+      -0.2165604085886096
+    ]
+  },
+  {
+    "id": "c1022-retail-35",
+    "name": "Traders Dynamic Index (TDI) fast/slow cross above 50",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-35.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.36421976545364343,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.1418940755065685,
+      0.07770934720079414
+    ]
+  },
+  {
+    "id": "c1022-retail-36",
+    "name": "ConnorsRSI < 10 above the 200-day SMA",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-36.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1652060286511492,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23330089497333373,
+      -0.100735123077633
+    ]
+  },
+  {
+    "id": "c1022-retail-37",
+    "name": "Elder-Ray: bear power rising from below with a rising EMA",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-37.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06487545171657016,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07102200987629037,
+      -0.058841633101036184
+    ]
+  },
+  {
+    "id": "c1022-retail-38",
+    "name": "TradingView Technical Rating 'Strong Buy'",
+    "family": "other",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-38.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1304132291280098,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.19269805487925606,
+      -0.07173161885624535
+    ]
+  },
+  {
+    "id": "c1022-retail-39",
+    "name": "Vegas Tunnel (EMA 144/169) with EMA 12 trigger",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-39.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.43339583282923866,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.0466569467216125,
+      -0.10475858377757685
+    ]
+  },
+  {
+    "id": "c1022-retail-40",
+    "name": "Ripster EMA clouds (5/12 over 34/50) stacked long",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-40.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12066549152320749,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.16152186488106612,
+      -0.08279945234188624
+    ]
+  },
+  {
+    "id": "c1022-retail-41",
+    "name": "Alt/BTC ratio above its 50-day SMA (alts that beat Bitcoin)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-41.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 1.3079163384351746,
+    "pExcess": 0.015499690006199876,
+    "halfExcess": [
+      3.57804381250046,
+      0.375048043902497
+    ]
+  },
+  {
+    "id": "c1022-retail-42",
+    "name": "O'Neil follow-through day market buy",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-42.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.10776263133689201,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1250574932266686,
+      -0.09013409512791926
+    ]
+  },
+  {
+    "id": "c1022-retail-43",
+    "name": "Grid-bot exposure around the 50-day SMA (Pionex/3Commas style)",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-43.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7140053159368751,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.603252678059253,
+      -0.17908529154647967
+    ]
+  },
+  {
+    "id": "c1022-retail-44",
+    "name": "Bullish Gartley harmonic (0.618 B, 0.786 D) on fractal pivots",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-44.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14052438664758982,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1573074848754592,
+      -0.12426473796330861
+    ]
+  },
+  {
+    "id": "c1022-retail-45",
+    "name": "The Strat 2-1-2 bullish reversal",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-45.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17871714705833086,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24386126783502848,
+      -0.11719448349227435
+    ]
+  },
+  {
+    "id": "c1022-retail-46",
+    "name": "Al Brooks H2 second-entry buy above the 20 EMA",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-46.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16015465235285697,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.21364166503177828,
+      -0.11011437753739539
+    ]
+  },
+  {
+    "id": "c1022-retail-47",
+    "name": "Hikkake bullish (failed inside-bar breakdown)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-47.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.15855116130439728,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.21852892441338967,
+      -0.1021496864894238
+    ]
+  },
+  {
+    "id": "c1022-retail-48",
+    "name": "Ascending triangle breakout (Bulkowski)",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-48.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17916792804996107,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2422824573536433,
+      -0.11966310926764123
+    ]
+  },
+  {
+    "id": "c1022-retail-49",
+    "name": "Tweezer bottom at a 20-day low",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-49.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6239929664921209,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5859285622769619,
+      -0.0224674488212655
+    ]
+  },
+  {
+    "id": "c1022-retail-50",
+    "name": "Piercing line after a 5-day decline",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-50.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1736790997178006,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23595231805309425,
+      -0.11500840945615631
+    ]
+  },
+  {
+    "id": "c1022-retail-51",
+    "name": "VSA stopping volume (ultra-high volume down bar closing in the upper half)",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-51.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.18298658886354935,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.25058837535803347,
+      -0.11900949973732666
+    ]
+  },
+  {
+    "id": "c1022-retail-52",
+    "name": "OBV above its 20-day average with price above the 50-day SMA (Granville)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-52.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05222661634472647,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06108769471145159,
+      -0.04350893602004824
+    ]
+  },
+  {
+    "id": "c1022-retail-53",
+    "name": "Percent envelope (SMA20, 10%) lower-band buy",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-53.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6269001780495165,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.619153574613697,
+      0.005566950650270908
+    ]
+  },
+  {
+    "id": "c1022-retail-54",
+    "name": "Linear regression channel: buy the -2 sigma line in a rising channel",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-54.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05792964047182725,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0648258700637574,
+      -0.05115622554277843
+    ]
+  },
+  {
+    "id": "c1022-retail-55",
+    "name": "Tillson T3(20) trend line",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-55.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11042348476558983,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.14021428429969096,
+      -0.08299874516463634
+    ]
+  },
+  {
+    "id": "c1022-retail-56",
+    "name": "ALMA 9/50 crossover",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-56.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.027675933403567443,
+    "pExcess": 0.4662668665667166,
+    "halfExcess": [
+      -0.3970515822161027,
+      0.22580849086615196
+    ]
+  },
+  {
+    "id": "c1022-retail-57",
+    "name": "Landry three-bar pullback in a rising 50-day SMA",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-57.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1711555376137328,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2191360493399901,
+      -0.12644614739328963
+    ]
+  },
+  {
+    "id": "c1022-retail-58",
+    "name": "200-day EMA touch-and-hold in an established uptrend",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-58.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1768886404175276,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2462235379413904,
+      -0.11117349302063362
+    ]
+  },
+  {
+    "id": "c1022-retail-59",
+    "name": "New York open range breakout on hourly crypto",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-59.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -1.078139188249064,
+    "pExcess": 1,
+    "halfExcess": [
+      -2.211611660914298,
+      -0.3477544294756504
+    ]
+  },
+  {
+    "id": "c1022-retail-61",
+    "name": "Previous-day-high close-through continuation",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-61.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3564026356012846,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9143026511596692,
+      -0.05930728665723395
+    ]
+  },
+  {
+    "id": "c1022-retail-62",
+    "name": "Previous-week-high breakout with previous-week-low exit",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-62.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09204327892437436,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.12838163297932348,
+      -0.05848219179964986
+    ]
+  },
+  {
+    "id": "c1022-retail-63",
+    "name": "Donchian 20 breakout with a 1.618 Fibonacci extension target",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-63.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2210285150521556,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.6749166958600026,
+      0.009603544400139663
+    ]
+  },
+  {
+    "id": "c1022-retail-64",
+    "name": "Awesome Oscillator twin peaks (Bill Williams)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1022/retail",
+    "evidencePath": "research/hunt2/results/c1022-retail-64.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5884041811427514,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5280083855203166,
+      -0.008528892300854185
+    ]
+  },
+  {
+    "id": "c1023-acad2-03",
+    "name": "Crash sensitivity: long the quintile with the highest lower-tail dependence with the market (Chabi-Yo-Ruenzi-Weigert)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-03.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.017668836153428735,
+    "pExcess": 0.24237881059470265,
+    "halfExcess": [
+      0.022323856184581325,
+      0.013557664960276217
+    ]
+  },
+  {
+    "id": "c1023-acad2-04",
+    "name": "Realized semibetas: long the quintile with the highest negative-minus-positive semibeta (Bollerslev-Patton-Quaedvlieg)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-04.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.01671277323631415,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0025396345434909318,
+      -0.030252779926074114
+    ]
+  },
+  {
+    "id": "c1023-acad2-05",
+    "name": "Salience theory: long the quintile with the lowest salience-weighted past-month return (Cosemans-Frehen)",
+    "family": "other",
+    "assetClass": "us_stock",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-05.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.015290589666584253,
+    "pExcess": 0.2928535732133933,
+    "halfExcess": [
+      0.03638574124409,
+      -0.004720571085756298
+    ]
+  },
+  {
+    "id": "c1023-acad2-06",
+    "name": "Average skewness timing: hold the equity universe only when average cross-sectional skewness is below its historical median (Jondeau-Zhang-Zhu)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-06.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1288223263885735,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.19432997044903466,
+      -0.06837367063058486
+    ]
+  },
+  {
+    "id": "c1023-acad2-08",
+    "name": "Pre-holiday beta rotation: high-beta quintile on the session before each NYSE holiday, low-beta quintile otherwise (Ariel; Savor-Wilson shape)",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-08.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07322813175141074,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10564261143810638,
+      -0.04238135285155464
+    ]
+  },
+  {
+    "id": "c1023-acad2-09",
+    "name": "Momentum in quarter-ending months: 12-1 winners held only in March, June, September and December (Sias)",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-09.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16685402674136474,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1873630951771681,
+      -0.14750196326206588
+    ]
+  },
+  {
+    "id": "c1023-acad2-10",
+    "name": "Prospect-theory value: long the quintile with the lowest TK value of the past 60 monthly returns (Barberis-Mukherjee-Wang)",
+    "family": "other",
+    "assetClass": "us_stock",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-10.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.028693073774125555,
+    "pExcess": 0.2703648175912044,
+    "halfExcess": [
+      0.06581426634105081,
+      -0.010223332717115285
+    ]
+  },
+  {
+    "id": "c1023-acad2-15",
+    "name": "Announcement-day Treasuries: long TLT/IEF only over employment-report and FOMC sessions (Savor-Wilson)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-15.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.015456412938667174,
+    "pExcess": 0.30134932533733133,
+    "halfExcess": [
+      -0.03759626180907816,
+      0.06471519408282456
+    ]
+  },
+  {
+    "id": "c1023-acad2-17",
+    "name": "Daylight-saving Monday: flat QQQ/DIA on the first session after each clock change, long otherwise (Kamstra-Kramer-Levi)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-17.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.0013650102948561393,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.003049136155838239,
+      0.0003687525573379258
+    ]
+  },
+  {
+    "id": "c1023-acad2-18",
+    "name": "Post-FOMC drift in Treasuries: hold TLT/IEF in the direction of the FOMC-day move for the next 15 sessions (Brooks-Katz-Lustig)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-18.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.004620122385793568,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.052731009438287346,
+      0.03982777212688027
+    ]
+  },
+  {
+    "id": "c1023-acad2-19",
+    "name": "Crypto intermediate-horizon reversal: long the 6 worst coins by their week-2-to-week-8 return, weekly (Jia-Goodell-Shen)",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-19.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16695685788457815,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0797774123575632,
+      -0.1858672335769721
+    ]
+  },
+  {
+    "id": "c1023-acad2-20",
+    "name": "Crypto frog-in-the-pan: among 12-week winners, long the 5 with the most continuous (least discrete) information arrival (Da-Gurun-Warachka transfer)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-20.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07537370286561207,
+    "pExcess": 1,
+    "halfExcess": [
+      0.1568061050338696,
+      -0.15430409896069885
+    ]
+  },
+  {
+    "id": "c1023-acad2-21",
+    "name": "Crypto pre-FOMC drift: long the 8 hourly coins from 19:00 UTC the day before an FOMC decision to 18:00 UTC on the decision day (Lucca-Moench; Pyo-Lee)",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-21.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8093761109310822,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.8663847416484851,
+      -0.15679427933004098
+    ]
+  },
+  {
+    "id": "c1023-acad2-22",
+    "name": "Crypto FOMC-cycle weeks: long all 18 coins in even FOMC-cycle weeks, flat in odd weeks (Cieslak-Morse-Vissing-Jorgensen transfer)",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-22.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.053344045352314406,
+    "pExcess": 0.45327336331834084,
+    "halfExcess": [
+      -0.18787765799428335,
+      0.15303063946277984
+    ]
+  },
+  {
+    "id": "c1023-acad2-23",
+    "name": "Crypto intermediate momentum echo: long the top 6 by the week-5-to-week-12 return, weekly (Novy-Marx transfer)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-23.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.036129948760245334,
+    "pExcess": 1,
+    "halfExcess": [
+      0.14121010689939384,
+      -0.10390194582898071
+    ]
+  },
+  {
+    "id": "c1023-acad2-24",
+    "name": "Crypto downside beta: long the 6 coins with the highest beta to the crypto market on its down days, weekly (Zhang-Li-Xiong-Wang)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-24.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.11206108755036115,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.04054653699168709,
+      -0.12213506046503841
+    ]
+  },
+  {
+    "id": "c1023-acad2-25",
+    "name": "Crypto high idiosyncratic volatility: long the 6 coins with the highest residual volatility to the crypto market, weekly (Zhang-Li)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-25.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.16398582305755993,
+    "pExcess": 0.1539230384807596,
+    "halfExcess": [
+      0.39956333870751015,
+      0.031178617120443453
+    ]
+  },
+  {
+    "id": "c1023-acad2-26",
+    "name": "Crypto salience: long the 6 coins with the lowest salience-weighted past-3-week return, weekly (Cosemans-Frehen transfer)",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-26.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.2649593782984434,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.3091718053754935,
+      -0.22547355382515533
+    ]
+  },
+  {
+    "id": "c1023-acad2-27",
+    "name": "Crypto same-weekday seasonality: each day long the 6 coins with the best average return on the coming weekday over the past year (Keloharju-Linnainmaa-Nyberg transfer)",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-27.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3819352368356774,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.33283271964747163,
+      -0.3303321505239427
+    ]
+  },
+  {
+    "id": "c1023-acad2-28",
+    "name": "Crypto pre-holiday drift: long all 18 coins over the UTC day before each NYSE holiday (Ariel transfer; Qadan-Aharon-Eichel)",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-28.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5935003676732369,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5916775211484948,
+      0.04520512709450397
+    ]
+  },
+  {
+    "id": "c1023-acad2-29",
+    "name": "Crypto momentum gap: 3-week momentum top 6 only when the winner-loser spread is below its historical median, weekly (Huang transfer)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-29.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.45522672159465727,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.5859594365718008,
+      0.3530489278314817
+    ]
+  },
+  {
+    "id": "c1023-acad2-30",
+    "name": "Crypto crash sensitivity to Bitcoin: long the 6 alts with the highest lower-tail dependence with BTC, weekly (Chabi-Yo-Ruenzi-Weigert transfer)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-30.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1179804929386532,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.4442083576827929,
+      0.028762339374842738
+    ]
+  },
+  {
+    "id": "c1023-acad2-31",
+    "name": "Crypto prospect-theory value: long the 6 coins with the lowest TK value of the past 52 weekly returns, weekly (Barberis-Mukherjee-Wang transfer)",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-31.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04039441488102402,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.06019302347961197,
+      -0.026971299384267677
+    ]
+  },
+  {
+    "id": "c1023-acad2-32",
+    "name": "Crypto low volatility-of-volatility: long the 6 coins whose rolling 7-day volatility was most stable over 60 days, weekly (Baltussen-van Bekkum-van der Grient transfer)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1023/acad2",
+    "evidencePath": "research/hunt2/results/c1023-acad2-32.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1338490415634992,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.17297588900633887,
+      -0.10215996047301901
+    ]
+  },
+  {
+    "id": "c1023-pop-01",
+    "name": "Larry Williams 'Oops!' gap-down reversal, 2-day hold",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-01.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1795583096963873,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24134963234132778,
+      -0.12136464328501873
+    ]
+  },
+  {
+    "id": "c1023-pop-02",
+    "name": "Larry Williams bearish 'Smash Day' reversal buy, 3-day hold",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-02.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16896430346073665,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.24339779390687433,
+      -0.09810140014742097
+    ]
+  },
+  {
+    "id": "c1023-pop-03",
+    "name": "Connors %b strategy: Bollinger %b < 0.2 three days running above the 200-day, exit %b > 0.8 (ETFs)",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-03.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04488448103268339,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05240360602111194,
+      -0.03749579616152232
+    ]
+  },
+  {
+    "id": "c1023-pop-04",
+    "name": "Connors RSI(2) < 10 above the 200 EMA on hourly crypto, exit RSI(2) > 65",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-04.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7445091091087126,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.493854672431357,
+      -0.3196904637176965
+    ]
+  },
+  {
+    "id": "c1023-pop-05",
+    "name": "O'Neil sell rules: 52-week-high breakout on volume with a 7% stop and a 20% profit target",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-05.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.15778256161450632,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2217730043338786,
+      -0.09740798958101027
+    ]
+  },
+  {
+    "id": "c1023-pop-06",
+    "name": "O'Neil 50-day line: buy the first pullback that touches a rising 50-day SMA above the 200-day, sell 3% below it",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-06.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16729629916152589,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23350569965094303,
+      -0.10471124494068063
+    ]
+  },
+  {
+    "id": "c1023-pop-07",
+    "name": "Death cross as a contrarian buy: long the day the 50-day crosses below the 200-day, hold 60 bars",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-07.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14277687544677553,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1861648657406887,
+      -0.10248469392345139
+    ]
+  },
+  {
+    "id": "c1023-pop-08",
+    "name": "Golden cross long with an RSI(14) overbought profit-take: out at RSI 75, back in at RSI 55 (equity ETFs)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-08.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.037115887241579326,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0068145999331479246,
+      -0.06643897868677273
+    ]
+  },
+  {
+    "id": "c1023-pop-09",
+    "name": "200-day SMA with a fixed 3% envelope (whipsaw filter): in above +3%, out below -3% (equity ETFs)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-09.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.04378081310011628,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.023504235208962942,
+      -0.06358140922858113
+    ]
+  },
+  {
+    "id": "c1023-pop-10",
+    "name": "Weinstein stage analysis on weekly bars: Stage 2 above a rising 30-week MA, exit only when price is below a flat-or-falling MA (Stage 4)",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-10.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.048588978936800586,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.03053934287700777,
+      -0.06624975103185227
+    ]
+  },
+  {
+    "id": "c1023-pop-11",
+    "name": "Faber 10-month SMA timing on crypto: long when the monthly close is above the 10-month average, cash otherwise",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-11.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.3549261111718476,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9843272261591687,
+      -0.015157196302569842
+    ]
+  },
+  {
+    "id": "c1023-pop-12",
+    "name": "Turtle System 1 on US stocks: 20-day breakout taken only after a losing breakout, 55-day fail-safe, 2N stop, 10/20-day exits",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-12.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.12104907328498382,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1629511082156352,
+      -0.08218620553151901
+    ]
+  },
+  {
+    "id": "c1023-pop-13",
+    "name": "Darvas box breakout on crypto: 3-day confirmed box top and bottom near a 100-day high, buy the top on 1.5x volume, stop under the box",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-13.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.4684046245102089,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.3059677874241151,
+      0.021736999196021678
+    ]
+  },
+  {
+    "id": "c1023-pop-14",
+    "name": "Fixed 2:1 reward-to-risk bracket on a 20-day breakout above the 200-day: stop 2 ATR, target 4 ATR",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-14.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14936552748226806,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.207689000503835,
+      -0.09459351881232525
+    ]
+  },
+  {
+    "id": "c1023-pop-15",
+    "name": "Breakout and retest: buy the first pullback to a broken 50-day high within 15 bars, stop 3% under the level",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-15.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14923839232212033,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.21015402031240193,
+      -0.0919113164006764
+    ]
+  },
+  {
+    "id": "c1023-pop-16",
+    "name": "Stockbee 4% momentum burst: 4%+ up day on 1.5x volume, strong close, quiet prior 3 days, 5-day hold",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-16.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17435711168344814,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23920664956723958,
+      -0.11312783987813502
+    ]
+  },
+  {
+    "id": "c1023-pop-17",
+    "name": "Wyckoff spring: undercut of the 30-day low on sub-1.5x volume, close back inside within 3 bars, target the range top",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-17.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1259531768278892,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.176895595847121,
+      -0.0783920109426488
+    ]
+  },
+  {
+    "id": "c1023-pop-18",
+    "name": "Bulkowski double bottom (Adam & Adam): two fractal lows within 3% at least 15 bars apart, 10% middle rise, buy the neckline break, measured-move target",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-18.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.17163546347871317,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.23783700970646104,
+      -0.10905825038032946
+    ]
+  },
+  {
+    "id": "c1023-pop-19",
+    "name": "Elder Triple Screen on daily stocks: weekly MACD histogram rising, daily 2-day Force Index dip, buy the break of the prior day's high",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-19.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14310254657440624,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.19366916138848578,
+      -0.0959021382729146
+    ]
+  },
+  {
+    "id": "c1023-pop-20",
+    "name": "'Gaps get filled': buy an unfilled 1%+ down gap at the close, exit when the pre-gap close is reclaimed or after 10 bars",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-20.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1257582251395042,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.16701835352265748,
+      -0.08750491317405418
+    ]
+  },
+  {
+    "id": "c1023-pop-21",
+    "name": "Bottom fishing: buy a new 52-week closing low, hold 60 bars",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-21.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.13626644299366708,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1906358746857868,
+      -0.08536905165020325
+    ]
+  },
+  {
+    "id": "c1023-pop-22",
+    "name": "Buy the 10% correction in equity ETFs, sell at the next 1-year high",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-22.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03726748019008208,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05001393561311285,
+      -0.02442727590157112
+    ]
+  },
+  {
+    "id": "c1023-pop-23",
+    "name": "Buy the dip in a bull market: 10% off the 20-day high while above the 200-day SMA, exit on a new 20-day high or trend break (crypto)",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-23.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.6428120536886812,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.4787094963233756,
+      -0.15193256929053367
+    ]
+  },
+  {
+    "id": "c1023-pop-24",
+    "name": "Three red days above the 200-day: buy after three consecutive down closes, sell on the first up close (equity ETFs)",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-24.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.09176325377695305,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.07355256957933642,
+      -0.10956323264108137
+    ]
+  },
+  {
+    "id": "c1023-pop-25",
+    "name": "Three red days above the 200-day on crypto: buy after three consecutive down closes, sell on the first up close",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-25.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.5086978871900385,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.395525821102361,
+      0.023063422148797974
+    ]
+  },
+  {
+    "id": "c1023-pop-26",
+    "name": "RSI(14) above 70 as a momentum buy on US stocks: enter on the cross above 70, exit below 50",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-26.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.14300333332406723,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.2015616194148988,
+      -0.08800072627127453
+    ]
+  },
+  {
+    "id": "c1023-pop-27",
+    "name": "Buy last week's winners: top 5 of 40 large caps by 1-week return, rebalanced weekly",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-27.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.017066667383046186,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.003955329168755517,
+      -0.028611254206548642
+    ]
+  },
+  {
+    "id": "c1023-pop-28",
+    "name": "10% trailing stop on buy-and-hold with re-entry on a new 20-day closing high",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-28.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07693404901231293,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10219427809220094,
+      -0.05376587251803455
+    ]
+  },
+  {
+    "id": "c1023-pop-29",
+    "name": "Mayer Multiple overheat exit: long while close is below 2.4x the 200-day SMA, flat above it (crypto)",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-29.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.31694480628839705,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9399335475962891,
+      0.017154078539877826
+    ]
+  },
+  {
+    "id": "c1023-pop-30",
+    "name": "YouTube MACD + 200 EMA: hourly MACD cross up below the zero line above the 200 EMA, 1.5R target, swing-low stop (crypto)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-30.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.8910871113908615,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.912136926789313,
+      -0.27074773223448545
+    ]
+  },
+  {
+    "id": "c1023-pop-31",
+    "name": "Hourly golden cross on crypto: long while the 50 EMA is above the 200 EMA",
+    "family": "trend",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-31.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.08471734392094943,
+    "pExcess": 0.3918040979510245,
+    "halfExcess": [
+      0.19161403296803714,
+      0.031222318025427187
+    ]
+  },
+  {
+    "id": "c1023-pop-32",
+    "name": "ICT weekly open: Monday-Tuesday dip below the weekly open then reclaim, long into Thursday close, in an uptrend (hourly crypto)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/pop",
+    "evidencePath": "research/hunt2/results/c1023-pop-32.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.7757406690475008,
+    "pExcess": 1,
+    "halfExcess": [
+      -1.7225693038157313,
+      -0.21724715501346903
+    ]
+  },
+  {
+    "id": "c1023-r2-01",
+    "name": "Low BTC-correlation sleeve with an exponentially weighted correlation (60-day half-life), rank-weighted, monthly",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-01.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.1424578791887674,
+    "pExcess": 0.13343328335832083,
+    "halfExcess": [
+      0.43050923768292604,
+      0.014703932953080256
+    ]
+  },
+  {
+    "id": "c1023-r2-02",
+    "name": "Low BTC-correlation sleeve only while the EW alt index is below its 200-day SMA, BTC otherwise",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-02.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.09907043148253036,
+    "pExcess": 0.33883058470764615,
+    "halfExcess": [
+      -0.10474425099228846,
+      0.17641248077443095
+    ]
+  },
+  {
+    "id": "c1023-r2-03",
+    "name": "Low BTC-correlation picks (bottom half) sized by inverse realised volatility, monthly",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-03.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.3029805479867431,
+    "pExcess": 0.03398300849575212,
+    "halfExcess": [
+      0.629718002604926,
+      0.13495063944629582
+    ]
+  },
+  {
+    "id": "c1023-r2-04",
+    "name": "Double sort: bottom-half BTC correlation intersected with top-half 3-week momentum, monthly",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-04.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.09825891007079912,
+    "pExcess": 0.3218390804597701,
+    "halfExcess": [
+      0.7827595475128786,
+      -0.1390644388326565
+    ]
+  },
+  {
+    "id": "c1023-r2-05",
+    "name": "Low BTC-correlation sleeve, bottom half, with a 70th-percentile hold buffer, monthly",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-05.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.26522881539234877,
+    "pExcess": 0.05547226386806597,
+    "halfExcess": [
+      0.6315005254363868,
+      0.08957114182676129
+    ]
+  },
+  {
+    "id": "c1023-r2-08",
+    "name": "Alt/BTC ratio above its 50-day SMA, restricted to the 9 alts with the lowest 90-day BTC beta (A x B)",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-08.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.8788359352813635,
+    "pExcess": 0.05747126436781609,
+    "halfExcess": [
+      1.3315393979108707,
+      0.5791025768566598
+    ]
+  },
+  {
+    "id": "c1023-r2-09",
+    "name": "Two-week momentum in greed, low-BTC-correlation sleeve in fear, weekly",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-09.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.30386977109890223,
+    "pExcess": 0.03698150924537731,
+    "halfExcess": [
+      0.9906890893623261,
+      0.01952917401741039
+    ]
+  },
+  {
+    "id": "c1023-r2-10",
+    "name": "Crypto momentum consensus (14/21/28) with the most recent week removed from every horizon, weekly",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-10.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.027627564666962146,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09216670192019816,
+      0.0019701712988535736
+    ]
+  },
+  {
+    "id": "c1023-r2-11",
+    "name": "Vol-neutralised 90-day momentum (top 20%) with a 50% hold buffer, daily",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-11.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.20365774096199285,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.9127571314186624,
+      0.18457246081062229
+    ]
+  },
+  {
+    "id": "c1023-r2-12",
+    "name": "Rank-weighted 3-week momentum with a BTC volume-share veto (cash when BTC's 7-day share is above its 60-day mean), weekly",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-12.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.011987003451201295,
+    "pExcess": 1,
+    "halfExcess": [
+      0.3319865292664286,
+      -0.12910015983925893
+    ]
+  },
+  {
+    "id": "c1023-r2-13",
+    "name": "12-1 momentum among high-volatility stocks with the sleeve volatility-scaled to a 10% tracking target (wide US stocks), monthly",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-13.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.05138365238891329,
+    "pExcess": 0.05247376311844078,
+    "halfExcess": [
+      0.04215604240251358,
+      0.060444153417692936
+    ]
+  },
+  {
+    "id": "c1023-r2-14",
+    "name": "Top-decile 12-1 momentum held only while the EW universe is above its 200-day SMA, equal weight otherwise (wide US stocks)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-14.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.023261994897702643,
+    "pExcess": 0.31334332833583206,
+    "halfExcess": [
+      0.021259272245380822,
+      0.025230338750413805
+    ]
+  },
+  {
+    "id": "c1023-r2-15",
+    "name": "Moving-average distance 21/200 with a 3-month scaled entry (wide US stocks), monthly",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-15.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.013957629608346567,
+    "pExcess": 0.3213393303348326,
+    "halfExcess": [
+      0.006130352112601267,
+      0.021590782758745153
+    ]
+  },
+  {
+    "id": "c1023-r2-16",
+    "name": "12-7 momentum restricted to the top-half dollar-volume names (wide US stocks), monthly",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-16.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.005591291506678253,
+    "pExcess": 0.43278360819590206,
+    "halfExcess": [
+      -0.03819420588798894,
+      0.04955829671066603
+    ]
+  },
+  {
+    "id": "c1023-r2-18",
+    "name": "12-1 momentum sleeve paired 50/50 with the high-downside-beta sleeve (wide US stocks), monthly",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-18.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.036699399763816976,
+    "pExcess": 0.11444277861069466,
+    "halfExcess": [
+      0.008318947265155918,
+      0.06485763836066871
+    ]
+  },
+  {
+    "id": "c1023-r2-19",
+    "name": "High downside beta with the sleeve volatility matched to the EW universe, exposure check (wide US stocks), monthly",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-19.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.02755309882259538,
+    "pExcess": 0.1794102948525737,
+    "halfExcess": [
+      -0.0009901758039299047,
+      0.055863676184528144
+    ]
+  },
+  {
+    "id": "c1023-r2-20",
+    "name": "Lowest VIX-beta stocks from weekly innovations, weekly rebalance (40 large caps)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-20.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.019895138406616164,
+    "pExcess": 0.3728135932033983,
+    "halfExcess": [
+      0.005427639997651168,
+      0.03296183217362669
+    ]
+  },
+  {
+    "id": "c1023-r2-21",
+    "name": "High downside beta sorted inside the high-volatility half only (wide US stocks), monthly",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-21.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.0480874901894226,
+    "pExcess": 0.16041979010494753,
+    "halfExcess": [
+      0.009499788380057828,
+      0.08670665994901539
+    ]
+  },
+  {
+    "id": "c1023-r2-23",
+    "name": "Top 5 of 20 ETFs by 12-1 momentum with a 20% volatility-managed overlay (remainder in AGG/IEF)",
+    "family": "momentum",
+    "assetClass": "etf",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-23.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.010693095104290506,
+    "pExcess": 0.15692153923038482,
+    "halfExcess": [
+      -0.00043299225505344374,
+      0.021766316067866276
+    ]
+  },
+  {
+    "id": "c1023-r2-24",
+    "name": "Dual momentum across five risk ETFs (QQQ, DIA, GLD, DBC, VNQ) versus four safe ETFs (AGG, IEF, TLT, SHY), monthly",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1023/r2",
+    "evidencePath": "research/hunt2/results/c1023-r2-24.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.07135408791475006,
+    "pExcess": 0.02253954920901582,
+    "halfExcess": [
+      0.053088328852918254,
+      0.08926788843297162
+    ]
+  },
+  {
+    "id": "c1024-acad3-01",
+    "name": "Realized kurtosis: long the quintile with the fattest-tailed daily returns over the past 3 months (Amaya-Christoffersen-Jacobs-Vasquez)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-01.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.004572296137515197,
+    "pExcess": 0.4027986006996502,
+    "halfExcess": [
+      0.025228365373029638,
+      -0.015033806712910325
+    ]
+  },
+  {
+    "id": "c1024-acad3-02",
+    "name": "Cokurtosis premium: long the quintile whose returns co-move most with the cubed market return (Dittmar)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-02.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06295966229029304,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.110697951136006,
+      -0.014899779217401488
+    ]
+  },
+  {
+    "id": "c1024-acad3-04",
+    "name": "Alpha momentum: long the quintile with the highest 12-1 month CAPM alpha against the equal-weight market (Huehn-Scholz)",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-04.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.011409530318817529,
+    "pExcess": 0.3733133433283358,
+    "halfExcess": [
+      -0.03448617334924431,
+      0.05758682907478141
+    ]
+  },
+  {
+    "id": "c1024-acad3-05",
+    "name": "Value-at-risk premium: long the quintile with the largest 5% daily loss over the past year (Bali-Cakici)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-05.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.039533995886370965,
+    "pExcess": 0.2143928035982009,
+    "halfExcess": [
+      -0.01607097539004987,
+      0.09597379472836987
+    ]
+  },
+  {
+    "id": "c1024-acad3-07",
+    "name": "Low inflation beta: long the quintile least exposed to weekly changes in 10-year breakeven inflation, weekly (Fang-Liu-Roussanov)",
+    "family": "macro",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-07.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06062089212506483,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.05207785057093006,
+      -0.06886869409364071
+    ]
+  },
+  {
+    "id": "c1024-acad3-08",
+    "name": "Short-duration premium: long the quintile least hurt by weekly rises in the 10-year real yield, weekly (Goncalves; Weber)",
+    "family": "macro",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-08.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.05658775825645046,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.1351465763295825,
+      0.024930303124733655
+    ]
+  },
+  {
+    "id": "c1024-acad3-09",
+    "name": "Treasury auction cycle: long TLT/IEF for the 5 sessions after each month's 10-year note auction (Lou-Yan-Zhang)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-09.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.004439439335033879,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0474902646029467,
+      0.0351309834129917
+    ]
+  },
+  {
+    "id": "c1024-acad3-10",
+    "name": "VIX-change style rotation: DIA when the VIX rose over the past week, QQQ when it fell, weekly (Copeland-Copeland)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-10.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.07429512762182156,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0592575805288984,
+      -0.08954085739527717
+    ]
+  },
+  {
+    "id": "c1024-acad3-12",
+    "name": "Cross-asset skewness premium: hold the 8 of 25 asset-class ETFs with the most negative one-year daily skewness, monthly (Lemperiere et al.)",
+    "family": "volatility",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-12.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.03850447309085414,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.0564033830315116,
+      -0.020746060783187525
+    ]
+  },
+  {
+    "id": "c1024-acad3-13",
+    "name": "September effect: flat 13 US equity ETFs for the sessions of September, long otherwise",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-13.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.003055032542460312,
+    "pExcess": 0.39780109945027486,
+    "halfExcess": [
+      -0.012706363826493261,
+      0.018971108851230323
+    ]
+  },
+  {
+    "id": "c1024-acad3-14",
+    "name": "Crypto illiquidity premium: long the 6 coins with the highest 30-day Amihud price impact, weekly (Zhang-Li; Amihud)",
+    "family": "other",
+    "assetClass": "crypto",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-14.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.18877072860369903,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.6753743042684854,
+      0.057672488753749196
+    ]
+  },
+  {
+    "id": "c1024-acad3-15",
+    "name": "Crypto realized kurtosis: long the 6 coins with the fattest-tailed daily returns over the past 63 days, weekly (Amaya et al. transfer)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-15.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.16593516731211144,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.3628161871364468,
+      -0.06370997863771721
+    ]
+  },
+  {
+    "id": "c1024-acad3-16",
+    "name": "Crypto coskewness: long the 6 alts whose returns co-move least with squared Bitcoin returns, weekly (Harvey-Siddique transfer)",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-16.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.012361247516988083,
+    "pExcess": 0.512743628185907,
+    "halfExcess": [
+      -0.1420949262458593,
+      0.0756219654672936
+    ]
+  },
+  {
+    "id": "c1024-acad3-17",
+    "name": "Sector long-term reversal: hold the 3 of 11 sector ETFs with the worst 36-to-1-month return, monthly (De Bondt-Thaler; AMP value)",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-17.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.02120616410408016,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.10773946949228852,
+      0.0723155830815223
+    ]
+  },
+  {
+    "id": "c1024-acad3-18",
+    "name": "Crypto size rotation on VIX changes: Bitcoin only in weeks after the VIX rose, equal-weight alts after it fell (Copeland-Copeland transfer)",
+    "family": "macro",
+    "assetClass": "crypto",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-18.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.10663032650681314,
+    "pExcess": 0.3343328335832084,
+    "halfExcess": [
+      0.13468065075888624,
+      0.08096017192052529
+    ]
+  },
+  {
+    "id": "c1024-acad3-19",
+    "name": "Crypto first-half-of-month: long all 18 coins from the month-end close through the 15th, flat in the second half (Ariel transfer; Kaiser)",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-19.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.1932026344276545,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.515802654865992,
+      -0.031249375449364347
+    ]
+  },
+  {
+    "id": "c1024-acad3-20",
+    "name": "Within-sector low volatility: the least volatile fifth of each sector, equal weight, monthly (Baker-Bradley-Taliaferro micro component)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-20.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.06978314421088427,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09050829597261689,
+      -0.04949392352579829
+    ]
+  },
+  {
+    "id": "c1024-acad3-21",
+    "name": "Low inflation-beta sectors: hold the 4 of 11 sector ETFs least exposed to weekly breakeven-inflation changes, weekly (Fang-Liu-Roussanov)",
+    "family": "macro",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-21.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.029028587742592427,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.018873748438587246,
+      -0.03902535334741586
+    ]
+  },
+  {
+    "id": "c1024-acad3-22",
+    "name": "'Sell Rosh Hashanah, buy Yom Kippur': flat 13 US equity ETFs between the two holidays, long otherwise (Frieder-Subrahmanyam)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-22.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.000017129540080818018,
+    "pExcess": 0.4847576211894053,
+    "halfExcess": [
+      -0.00005455003390397728,
+      0.00008848341827882855
+    ]
+  },
+  {
+    "id": "c1024-acad3-23",
+    "name": "Left-tail momentum: long the quintile with the smallest expected shortfall over the past year (Atilgan-Bali-Demirtas-Gunaydin)",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-23.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.08299673443773803,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.09501567330105187,
+      -0.07137804750399557
+    ]
+  },
+  {
+    "id": "c1024-acad3-24",
+    "name": "Treasury auction cycle, both legs: short TLT/IEF for the 5 sessions into each 10-year auction, long for the 5 after (Lou-Yan-Zhang)",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "source": "c1024/acad3",
+    "evidencePath": "research/hunt2/results/c1024-acad3-24.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.019916460114446033,
+    "pExcess": 0.2993503248375812,
+    "halfExcess": [
+      -0.03821344496385248,
+      0.074171667965931
+    ]
+  },
+  {
+    "id": "c1024-r3-01",
+    "name": "Residual volatility to BTC (90-day OLS), top half by residual vol sized by inverse realised volatility, monthly",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-01.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.09294585829992785,
+    "pExcess": 0.26686656671664166,
+    "halfExcess": [
+      0.952488248061151,
+      -0.18642629968037294
+    ]
+  },
+  {
+    "id": "c1024-r3-02",
+    "name": "Low BTC-correlation sleeve, bottom half, 70th-percentile hold buffer, sized by inverse realised volatility, monthly",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-02.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.2214839678817202,
+    "pExcess": 0.07796101949025487,
+    "halfExcess": [
+      0.34291457583399687,
+      0.14294881790949576
+    ]
+  },
+  {
+    "id": "c1024-r3-03",
+    "name": "Survivorship test: c1023-r2-05's low-correlation sleeve with hold buffer on the 14 discovery coins listed on Binance before 2020-01-01 (list frozen here), monthly",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-03.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.19625133952212104,
+    "pExcess": 0.11544227886056972,
+    "halfExcess": [
+      1.1386460563063223,
+      -0.12726003490218807
+    ]
+  },
+  {
+    "id": "c1024-r3-04",
+    "name": "Core-satellite: 50% BTC fixed plus 50% in the rank-weighted low-BTC-correlation sleeve, monthly",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-04.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.19861402795097716,
+    "pExcess": 0.09095452273863068,
+    "halfExcess": [
+      0.23565296394349833,
+      0.15736103850265137
+    ]
+  },
+  {
+    "id": "c1024-r3-06",
+    "name": "Low-BTC-correlation picks sized proportional to (1 - correlation), monthly (continuous tilt)",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-06.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.23088253341990184,
+    "pExcess": 0.03698150924537731,
+    "halfExcess": [
+      0.6841458127990907,
+      0.03244363298270447
+    ]
+  },
+  {
+    "id": "c1024-r3-07",
+    "name": "r2-09 leg (a): two-week momentum top 4 in greed, cash in fear, equal weight when neutral or unavailable, weekly",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-07.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.5421690947233904,
+    "pExcess": 0.0944527736131934,
+    "halfExcess": [
+      1.3540149284853138,
+      0.17129678494135447
+    ]
+  },
+  {
+    "id": "c1024-r3-08",
+    "name": "r2-09 leg (b): rank-weighted low-BTC-correlation sleeve in fear, equal weight in greed and neutral, weekly",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-08.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.1132601835772098,
+    "pExcess": 0.063968015992004,
+    "halfExcess": [
+      0.3851727403736991,
+      -0.0039403024717397095
+    ]
+  },
+  {
+    "id": "c1024-r3-09",
+    "name": "High downside beta, sleeve volatility matched to the EW universe with the residual in cash, exposure check (e) as a hard gate (wide US stocks), monthly",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-09.json",
+    "beatBuyHoldAfterCosts": "no",
+    "excessAnnual": -0.007097088020132647,
+    "pExcess": 1,
+    "halfExcess": [
+      -0.02850500210827067,
+      0.013964620131905248
+    ]
+  },
+  {
+    "id": "c1024-r3-10",
+    "name": "High downside beta restricted to the top-half dollar-volume names (wide US stocks), monthly",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-10.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.027620246956735484,
+    "pExcess": 0.2223888055972014,
+    "halfExcess": [
+      -0.0064242181819942346,
+      0.06154136414217937
+    ]
+  },
+  {
+    "id": "c1024-r3-11",
+    "name": "Intersection of top-half 12-1 momentum and top-half downside beta, equal weight (wide US stocks), monthly",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-11.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.026631120349904336,
+    "pExcess": 0.18690654672663667,
+    "halfExcess": [
+      0.013308232764628336,
+      0.03969140130176929
+    ]
+  },
+  {
+    "id": "c1024-r3-12",
+    "name": "High downside beta on the 40 large caps, 10-name book, monthly",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-12.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.07209283281609258,
+    "pExcess": 0.12493753123438281,
+    "halfExcess": [
+      0.07868593254400258,
+      0.06599378344959295
+    ]
+  },
+  {
+    "id": "c1024-r3-13",
+    "name": "Lower-tail dependence with the market sorted inside the high-volatility half (wide US stocks), monthly",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-13.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.012319872209971994,
+    "pExcess": 0.3658170914542729,
+    "halfExcess": [
+      -0.08126547932313333,
+      0.11062402721157194
+    ]
+  },
+  {
+    "id": "c1024-r3-14",
+    "name": "12-1 momentum among high-volatility, top-half dollar-volume names with the sleeve volatility-scaled to a 10% tracking target (wide US stocks), monthly",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-14.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.031093165655045052,
+    "pExcess": 0.19790104947526238,
+    "halfExcess": [
+      0.0275733802950342,
+      0.0345455241985384
+    ]
+  },
+  {
+    "id": "c1024-r3-15",
+    "name": "12-1 momentum top 20% with the sleeve volatility matched to the EW universe, residual in cash, exposure check (e) as a hard gate (wide US stocks), monthly",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-15.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.00522668905215995,
+    "pExcess": 0.42628685657171417,
+    "halfExcess": [
+      0.01018143929312032,
+      0.000465668978600009
+    ]
+  },
+  {
+    "id": "c1024-r3-16",
+    "name": "9-ETF dual momentum with the lookback decided by a 3/6/12-month majority vote (QQQ, DIA, GLD, DBC, VNQ vs AGG, IEF, TLT, SHY), monthly",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-16.json",
+    "beatBuyHoldAfterCosts": "not significant",
+    "excessAnnual": 0.04903711769567276,
+    "pExcess": 0.07946026986506746,
+    "halfExcess": [
+      0.04615330195970602,
+      0.05181485157402088
+    ]
+  },
+  {
+    "id": "c1024-r3-17",
+    "name": "9-ETF dual momentum with a 20% volatility-managed overlay on the risk holding, remainder in the best safe ETF, monthly",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-17.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.0690908765586844,
+    "pExcess": 0.011779764404711906,
+    "halfExcess": [
+      0.06708688561372123,
+      0.07101093453184926
+    ]
+  },
+  {
+    "id": "c1024-r3-18",
+    "name": "9-ETF dual momentum with the absolute-momentum hurdle set to SHY's 12-month return (textbook GEM), monthly",
+    "family": "trend",
+    "assetClass": "etf",
+    "source": "c1024/r3",
+    "evidencePath": "research/hunt2/results/c1024-r3-18.json",
+    "beatBuyHoldAfterCosts": "yes",
+    "excessAnnual": 0.08074470058188243,
+    "pExcess": 0.010579788404231915,
+    "halfExcess": [
+      0.06144034053994152,
+      0.09969558355494956
+    ]
+  },
+  {
     "id": "calendar-crypto-funding-reset-drift",
     "name": "Crypto perpetual funding-reset time drift",
     "family": "calendar",

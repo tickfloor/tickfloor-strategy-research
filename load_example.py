@@ -21,7 +21,7 @@ print(f"lowest q-value in this file ({len(rows)} strategies): {min_q:.3f}")
 
 
 def test():
-    assert len(rows) == 708
+    assert len(rows) == 1083
     assert len(survived_fdr) == 0
     assert min_q > 0.05
     print("self-check passed")

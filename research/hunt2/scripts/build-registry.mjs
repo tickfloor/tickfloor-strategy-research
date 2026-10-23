@@ -17,7 +17,7 @@ const { DISCOVERY_END } = await import("../../research/hunt2/data.mjs");
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const p = (...s) => join(ROOT, ...s);
 const isControl = (family) => /^deep-validation/.test(family ?? "");
-const baseId = (id) => id.replace(/__rob\d+$/, "");
+const baseId = (id) => id.replace(/__rob\d+(-v\d+)?$/, ""); // a fixed neighbour (__rob1-v2) folds into its base id too
 
 // Batch planners label each idea with its own family ("indicator-fisher"); fold those into the
 // shared families so the public family count means something. Ledger rows stay as written.

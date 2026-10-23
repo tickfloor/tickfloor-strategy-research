@@ -18,6 +18,3381 @@
     "verdict": "no"
   },
   {
+    "id": "c1022-acad-01",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.059583,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-02",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.053466,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-03",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.010215,
+    "p": 0.3583208395802099,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-04",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.04922,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-05",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.082823,
+    "p": 0.13193403298350825,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-06",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.0206,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-07",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.043144,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-08",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.024819,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-09",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.042984,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-10",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": -0.104426,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-11",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.117832,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-12",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.440202,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-13",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": 0.000494,
+    "p": 0.4737631184407796,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-14",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.045757,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-15",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": 0.002154,
+    "p": 0.41679160419790107,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-16",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.030334,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-17",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.000801,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-18",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.047601,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-19",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.318147,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-20",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.056072,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-21",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.062153,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-22",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.452376,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-23",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.133374,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-24",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.037822,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-25",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.391266,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-26",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.039391,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-27",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.003746,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-28",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": 0.011266,
+    "p": 0.18940529735132433,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-29",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.001252,
+    "p": 0.47876061969015493,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-30",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.035709,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-31",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.123542,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-32",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.074322,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-33",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.010808,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-34",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "excess": -0.079034,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-35",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "excess": -0.182925,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-36",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "excess": -0.262091,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-37",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "excess": -0.084805,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-38",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "excess": -0.064649,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-39",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.12137,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-40",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.10222,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-41",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.064721,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-42",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": 0.015665,
+    "p": 0.1184407796101949,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-43",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.058224,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-44",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.094698,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-45",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.006028,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-46",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.596935,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-47",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.762345,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-49",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.046027,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-50",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.040677,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-51",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -1.377264,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-52",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.049686,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-53",
+    "family": "other",
+    "assetClass": "us_stock",
+    "excess": -0.051412,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-54",
+    "family": "other",
+    "assetClass": "us_stock",
+    "excess": 0.071744,
+    "p": 0.02798600699650175,
+    "q": 0.7385196290743516,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-acad-55",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.029432,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-56",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.047028,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-57",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.551625,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-58",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.099405,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-59",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 0.10489,
+    "p": 0.3873063468265867,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-60",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": 0.007147,
+    "p": 0.4287856071964018,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-61",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.031873,
+    "p": 0.2098950524737631,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-62",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.090835,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-acad-63",
+    "family": "other",
+    "assetClass": "us_stock",
+    "excess": 0.006699,
+    "p": 0.4512743628185907,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-acad-64",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.013692,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-01",
+    "family": "carry",
+    "assetClass": "crypto",
+    "excess": -0.519426,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-02",
+    "family": "carry",
+    "assetClass": "crypto",
+    "excess": -0.626816,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-03",
+    "family": "carry",
+    "assetClass": "crypto",
+    "excess": -0.576366,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-04",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.707507,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-05",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.26976,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-06",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.660921,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-07",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.581694,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-08",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.576866,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-09",
+    "family": "carry",
+    "assetClass": "crypto",
+    "excess": -0.530547,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-10",
+    "family": "carry",
+    "assetClass": "crypto",
+    "excess": -0.261554,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-11",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.834268,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-12",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.889883,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-13",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.944234,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-14",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.86024,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-15",
+    "family": "carry",
+    "assetClass": "crypto",
+    "excess": -0.822458,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-16",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.863949,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-17",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.82781,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-18",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -1.09302,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-19",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.73347,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-20",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -1.287827,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-21",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.514613,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-22",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.586243,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-23",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.386247,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-24",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.803175,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-26",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -1.056084,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-27",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.026176,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-28",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.783766,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-29",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.762041,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-30",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.984497,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-31",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -1.059859,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-32",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.708567,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-33",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.041913,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-34",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 0.175423,
+    "p": 0.27436281859070466,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-crypto-35",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.423913,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-36",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.22894,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-39",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.563997,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-40",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 0.303469,
+    "p": 0.11494252873563218,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-crypto-42",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.167674,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-43",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": 0.200993,
+    "p": 0.296351824087956,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-crypto-44",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.520137,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-45",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": 0.50617,
+    "p": 0.0879560219890055,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-crypto-46",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": 0.004637,
+    "p": 0.4852573713143428,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-crypto-47",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.499553,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-48",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.423762,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-49",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.705737,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-50",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": 0.176792,
+    "p": 0.2938530734632684,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-crypto-52",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.428105,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-53",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.765162,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-54",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.097032,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-55",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.252293,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-56",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.319434,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-57",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.261772,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-58",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.287236,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-59",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.865187,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-60",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.482411,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-61",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.358606,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-62",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.856711,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-63",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.591601,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-crypto-64",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -1.242267,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-02",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.033553,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-03",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.01613,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-04",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.057909,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-05",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.044493,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-06",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -1.02551,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-07",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.050577,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-08",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": -0.024602,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-09",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": 0.00091,
+    "p": 0.4497751124437781,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-10",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.025992,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-11",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.008171,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-12",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.112178,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-13",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.19981,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-14",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.034664,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-15",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.017826,
+    "p": 0.1199400299850075,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-16",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.015363,
+    "p": 0.2288855572213893,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-17",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.022321,
+    "p": 0.14992503748125938,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-18",
+    "family": "macro",
+    "assetClass": "crypto",
+    "excess": 0.143399,
+    "p": 0.29735132433783107,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-19",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.0034,
+    "p": 0.41579210394802596,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-20",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.009351,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-22",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.022999,
+    "p": 0.01633967320653587,
+    "q": 0.626987460250795,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-macro-23",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.019239,
+    "p": 0.19290354822588707,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-24",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": 0.019041,
+    "p": 0.26036981509245377,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-25",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.013585,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-26",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.010993,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-27",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.00086,
+    "p": 0.4942528735632184,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-28",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.03294,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-30",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.062045,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-31",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.05595,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-32",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.027491,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-33",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.018327,
+    "p": 0.2768615692153923,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-34",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.004969,
+    "p": 0.391304347826087,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-35",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.021171,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-36",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": -0.024096,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-37",
+    "family": "other",
+    "assetClass": "etf",
+    "excess": 0.008124,
+    "p": 0.32983508245877063,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-38",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.017748,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-39",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.006883,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-40",
+    "family": "macro",
+    "assetClass": "crypto",
+    "excess": -0.271644,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-41",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.040023,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-42",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.007365,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-43",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.009263,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-44",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.025363,
+    "p": 0.17691154422788605,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-45",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.042395,
+    "p": 0.0064598708025839485,
+    "q": 0.5457640847183056,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-macro-47",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": 0.003013,
+    "p": 0.4192903548225887,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-48",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": 0.010674,
+    "p": 0.26636681659170414,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-50",
+    "family": "macro",
+    "assetClass": "crypto",
+    "excess": -0.051224,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-51",
+    "family": "macro",
+    "assetClass": "crypto",
+    "excess": -0.607695,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-52",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.898068,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-53",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.262045,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-54",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.019233,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-55",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.020071,
+    "p": 0.39080459770114945,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-57",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.090378,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-58",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.052913,
+    "p": 0.13343328335832083,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-59",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.019459,
+    "p": 0.12143928035982009,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-60",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": 0.018428,
+    "p": 0.20689655172413793,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-61",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.080526,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-62",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.029664,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-macro-63",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": 0.004406,
+    "p": 0.3938030984507746,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-macro-64",
+    "family": "macro",
+    "assetClass": "crypto",
+    "excess": -0.379625,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-redteam-03",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.487704,
+    "p": 0.0033399332013359733,
+    "q": 0.3661080624541355,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-redteam-04",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.235443,
+    "p": 0.03648175912043978,
+    "q": 0.7630113514671236,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-redteam-05",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.173255,
+    "p": 0.19640179910044978,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-redteam-06",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.160527,
+    "p": 0.3073463268365817,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-redteam-07",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.598359,
+    "p": 0.02498750624687656,
+    "q": 0.698180321603904,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-redteam-10",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 0.569397,
+    "p": 0.008219835603287933,
+    "q": 0.5577745587945383,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-redteam-11",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 0.109814,
+    "p": 0.2798600699650175,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-redteam-13",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 0.240354,
+    "p": 0.007659846803063939,
+    "q": 0.5457640847183056,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-redteam-22",
+    "family": "breadth",
+    "assetClass": "crypto",
+    "excess": 0.201569,
+    "p": 0.25837081459270367,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-redteam-23",
+    "family": "breadth",
+    "assetClass": "crypto",
+    "excess": 0.127041,
+    "p": 0.3213393303348326,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-redteam-29",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "excess": 0.011205,
+    "p": 0.4492753623188406,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-redteam-30",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": 0.251339,
+    "p": 0.03648175912043978,
+    "q": 0.7630113514671236,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-redteam-36",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.005267,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-redteam-42",
+    "family": "breadth",
+    "assetClass": "etf",
+    "excess": -0.036891,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-redteam-46",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.062931,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-redteam-47",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.017731,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-redteam-58",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.108217,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-redteam-60",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.007405,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-redteam-62",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": 0.143689,
+    "p": 0.2978510744627686,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-redteam-63",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.053516,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-01",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.16118,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-02",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": 0.217148,
+    "p": 0.23888055972013994,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-retail-03",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.162205,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-04",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.061267,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-05",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.072658,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-06",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.160171,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-07",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.848584,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-08",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.036396,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-09",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.170454,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-10",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.160477,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-11",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.107395,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-12",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.023159,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-13",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.174713,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-14",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.070551,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-15",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.16165,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-16",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.509786,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-17",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.177461,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-18",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.127094,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-19",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.139473,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-22",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.133714,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-23",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.028079,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-24",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.094607,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-25",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.067443,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-26",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.123334,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-27",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.19236,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-28",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.066376,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-29",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.152363,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-30",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.245546,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-31",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.161486,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-32",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -1.309519,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-33",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.03625,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-34",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.714718,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-35",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.36422,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-36",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.165206,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-37",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": -0.064875,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-38",
+    "family": "other",
+    "assetClass": "us_stock",
+    "excess": -0.130413,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-39",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.433396,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-40",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.120665,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-41",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 1.307916,
+    "p": 0.015499690006199876,
+    "q": 0.626987460250795,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1022-retail-42",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.107763,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-43",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.714005,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-44",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.140524,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-45",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.178717,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-46",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.160155,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-47",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.158551,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-48",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.179168,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-49",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.623993,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-50",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.173679,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-51",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.182987,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-52",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.052227,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-53",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.6269,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-54",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.05793,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-55",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.110423,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-56",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": 0.027676,
+    "p": 0.4662668665667166,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1022-retail-57",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.171156,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-58",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.176889,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-59",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -1.078139,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-61",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.356403,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-62",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.092043,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-63",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.221029,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1022-retail-64",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.588404,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-03",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": 0.017669,
+    "p": 0.24237881059470265,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-acad2-04",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": -0.016713,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-05",
+    "family": "other",
+    "assetClass": "us_stock",
+    "excess": 0.015291,
+    "p": 0.2928535732133933,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-acad2-06",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": -0.128822,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-08",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "excess": -0.073228,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-09",
+    "family": "seasonality",
+    "assetClass": "us_stock",
+    "excess": -0.166854,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-10",
+    "family": "other",
+    "assetClass": "us_stock",
+    "excess": 0.028693,
+    "p": 0.2703648175912044,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-acad2-15",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": 0.015456,
+    "p": 0.30134932533733133,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-acad2-17",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.001365,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-18",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.00462,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-19",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.166957,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-20",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.075374,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-21",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.809376,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-22",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": 0.053344,
+    "p": 0.45327336331834084,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-acad2-23",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.03613,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-24",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.112061,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-25",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": 0.163986,
+    "p": 0.1539230384807596,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-acad2-26",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.264959,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-27",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.381935,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-28",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.5935,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-29",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.455227,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-30",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.11798,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-31",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.040394,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-acad2-32",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.133849,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-01",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.179558,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-02",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.168964,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-03",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.044884,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-04",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.744509,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-05",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.157783,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-06",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.167296,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-07",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.142777,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-08",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.037116,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-09",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.043781,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-10",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": -0.048589,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-11",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.354926,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-12",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.121049,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-13",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.468405,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-14",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.149366,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-15",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.149238,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-16",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.174357,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-17",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.125953,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-18",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.171635,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-19",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.143103,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-20",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.125758,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-21",
+    "family": "mean_reversion",
+    "assetClass": "us_stock",
+    "excess": -0.136266,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-22",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.037267,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-23",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.642812,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-24",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.091763,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-25",
+    "family": "mean_reversion",
+    "assetClass": "crypto",
+    "excess": -0.508698,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-26",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.143003,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-27",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": -0.017067,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-28",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": -0.076934,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-29",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": -0.316945,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-30",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.891087,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-pop-31",
+    "family": "trend",
+    "assetClass": "crypto",
+    "excess": 0.084717,
+    "p": 0.3918040979510245,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-pop-32",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.775741,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-r2-01",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.142458,
+    "p": 0.13343328335832083,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-02",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.09907,
+    "p": 0.33883058470764615,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-03",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.302981,
+    "p": 0.03398300849575212,
+    "q": 0.7630113514671236,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1023-r2-04",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.098259,
+    "p": 0.3218390804597701,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-05",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.265229,
+    "p": 0.05547226386806597,
+    "q": 0.8499782366881077,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-08",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": 0.878836,
+    "p": 0.05747126436781609,
+    "q": 0.8620689655172414,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-09",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "excess": 0.30387,
+    "p": 0.03698150924537731,
+    "q": 0.7630113514671236,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1023-r2-10",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.027628,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-r2-11",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.203658,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-r2-12",
+    "family": "momentum",
+    "assetClass": "crypto",
+    "excess": -0.011987,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1023-r2-13",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.051384,
+    "p": 0.05247376311844078,
+    "q": 0.8359950459552832,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-14",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.023262,
+    "p": 0.31334332833583206,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-15",
+    "family": "trend",
+    "assetClass": "us_stock",
+    "excess": 0.013958,
+    "p": 0.3213393303348326,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-16",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.005591,
+    "p": 0.43278360819590206,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-18",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "excess": 0.036699,
+    "p": 0.11444277861069466,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-19",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "excess": 0.027553,
+    "p": 0.1794102948525737,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-20",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": 0.019895,
+    "p": 0.3728135932033983,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-21",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "excess": 0.048087,
+    "p": 0.16041979010494753,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-23",
+    "family": "momentum",
+    "assetClass": "etf",
+    "excess": 0.010693,
+    "p": 0.15692153923038482,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1023-r2-24",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.071354,
+    "p": 0.02253954920901582,
+    "q": 0.6830768289324727,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1024-acad3-01",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": 0.004572,
+    "p": 0.4027986006996502,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-acad3-02",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": -0.06296,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-04",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.01141,
+    "p": 0.3733133433283358,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-acad3-05",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": 0.039534,
+    "p": 0.2143928035982009,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-acad3-07",
+    "family": "macro",
+    "assetClass": "us_stock",
+    "excess": -0.060621,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-08",
+    "family": "macro",
+    "assetClass": "us_stock",
+    "excess": -0.056588,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-09",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": -0.004439,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-10",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.074295,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-12",
+    "family": "volatility",
+    "assetClass": "etf",
+    "excess": -0.038504,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-13",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": 0.003055,
+    "p": 0.39780109945027486,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-acad3-14",
+    "family": "other",
+    "assetClass": "crypto",
+    "excess": -0.188771,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-15",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": -0.165935,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-16",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": 0.012361,
+    "p": 0.512743628185907,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-acad3-17",
+    "family": "mean_reversion",
+    "assetClass": "etf",
+    "excess": -0.021206,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-18",
+    "family": "macro",
+    "assetClass": "crypto",
+    "excess": 0.10663,
+    "p": 0.3343328335832084,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-acad3-19",
+    "family": "seasonality",
+    "assetClass": "crypto",
+    "excess": -0.193203,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-20",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": -0.069783,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-21",
+    "family": "macro",
+    "assetClass": "etf",
+    "excess": -0.029029,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-22",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": 0.000017,
+    "p": 0.4847576211894053,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-acad3-23",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": -0.082997,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-acad3-24",
+    "family": "seasonality",
+    "assetClass": "etf",
+    "excess": 0.019916,
+    "p": 0.2993503248375812,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-01",
+    "family": "volatility",
+    "assetClass": "crypto",
+    "excess": 0.092946,
+    "p": 0.26686656671664166,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-02",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.221484,
+    "p": 0.07796101949025487,
+    "q": 0.9894389088641521,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-03",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.196251,
+    "p": 0.11544227886056972,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-04",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.198614,
+    "p": 0.09095452273863068,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-06",
+    "family": "equity-factors",
+    "assetClass": "crypto",
+    "excess": 0.230883,
+    "p": 0.03698150924537731,
+    "q": 0.7630113514671236,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1024-r3-07",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "excess": 0.542169,
+    "p": 0.0944527736131934,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-08",
+    "family": "sentiment",
+    "assetClass": "crypto",
+    "excess": 0.11326,
+    "p": 0.063968015992004,
+    "q": 0.9207517453394515,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-09",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "excess": -0.007097,
+    "p": 1,
+    "q": 1,
+    "verdict": "no"
+  },
+  {
+    "id": "c1024-r3-10",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "excess": 0.02762,
+    "p": 0.2223888055972014,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-11",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "excess": 0.026631,
+    "p": 0.18690654672663667,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-12",
+    "family": "equity-factors",
+    "assetClass": "us_stock",
+    "excess": 0.072093,
+    "p": 0.12493753123438281,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-13",
+    "family": "volatility",
+    "assetClass": "us_stock",
+    "excess": 0.01232,
+    "p": 0.3658170914542729,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-14",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.031093,
+    "p": 0.19790104947526238,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-15",
+    "family": "momentum",
+    "assetClass": "us_stock",
+    "excess": 0.005227,
+    "p": 0.42628685657171417,
+    "q": 1,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-16",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.049037,
+    "p": 0.07946026986506746,
+    "q": 0.9908089433544098,
+    "verdict": "not significant"
+  },
+  {
+    "id": "c1024-r3-17",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.069091,
+    "p": 0.011779764404711906,
+    "q": 0.626987460250795,
+    "verdict": "yes"
+  },
+  {
+    "id": "c1024-r3-18",
+    "family": "trend",
+    "assetClass": "etf",
+    "excess": 0.080745,
+    "p": 0.010579788404231915,
+    "q": 0.626987460250795,
+    "verdict": "yes"
+  },
+  {
     "id": "calendar-crypto-funding-reset-drift",
     "family": "calendar",
     "assetClass": "crypto",
@@ -428,7 +3803,7 @@
     "assetClass": "us_stock",
     "excess": 0.051626,
     "p": 0.030984507746126936,
-    "q": 1,
+    "q": 0.7630113514671236,
     "verdict": "yes"
   },
   {
@@ -446,7 +3821,7 @@
     "assetClass": "us_stock",
     "excess": 0.065147,
     "p": 0.02348825587206397,
-    "q": 1,
+    "q": 0.6830768289324727,
     "verdict": "yes"
   },
   {
@@ -1346,7 +4721,7 @@
     "assetClass": "etf",
     "excess": 0.04705,
     "p": 0.05347326336831584,
-    "q": 1,
+    "q": 0.8359950459552832,
     "verdict": "not significant"
   },
   {
@@ -2003,7 +5378,7 @@
     "assetClass": "crypto",
     "excess": 0.389232,
     "p": 0.007599848003039939,
-    "q": 0.6087478250434991,
+    "q": 0.5457640847183056,
     "verdict": "yes"
   },
   {
@@ -2066,7 +5441,7 @@
     "assetClass": "etf",
     "excess": 0.032735,
     "p": 0.0020599588008239837,
-    "q": 0.22627797444051118,
+    "q": 0.3578261768097971,
     "verdict": "yes"
   },
   {
@@ -2138,7 +5513,7 @@
     "assetClass": "etf",
     "excess": 0.038432,
     "p": 0.04447776111944028,
-    "q": 1,
+    "q": 0.823127397340291,
     "verdict": "yes"
   },
   {
@@ -2147,7 +5522,7 @@
     "assetClass": "etf",
     "excess": 0.058337,
     "p": 0.0006199876002479951,
-    "q": 0.2242755144897102,
+    "q": 0.3578261768097971,
     "verdict": "yes"
   },
   {
@@ -2264,7 +5639,7 @@
     "assetClass": "crypto",
     "excess": 0.317724,
     "p": 0.0015799684006319874,
-    "q": 0.22627797444051118,
+    "q": 0.3578261768097971,
     "verdict": "yes"
   },
   {
@@ -2273,7 +5648,7 @@
     "assetClass": "crypto",
     "excess": 0.315992,
     "p": 0.06096951524237881,
-    "q": 1,
+    "q": 0.8956861775297917,
     "verdict": "not significant"
   },
   {
@@ -2372,7 +5747,7 @@
     "assetClass": "crypto",
     "excess": 0.405851,
     "p": 0.06796601699150424,
-    "q": 1,
+    "q": 0.9359605911330049,
     "verdict": "not significant"
   },
   {
@@ -2480,7 +5855,7 @@
     "assetClass": "etf",
     "excess": 0.046909,
     "p": 0.07096451774112944,
-    "q": 1,
+    "q": 0.9540041300104665,
     "verdict": "not significant"
   },
   {
@@ -2496,7 +5871,7 @@
     "id": "r27-sector-dollar-domestic",
     "family": "macro",
     "assetClass": "etf",
-    "excess": -6.7e-05,
+    "excess": -0.000067,
     "p": 1,
     "q": 1,
     "verdict": "no"
@@ -3038,7 +6413,7 @@
     "assetClass": "crypto",
     "excess": 0.394619,
     "p": 0.04997501249375312,
-    "q": 1,
+    "q": 0.8359950459552832,
     "verdict": "yes"
   },
   {
@@ -3317,7 +6692,7 @@
     "assetClass": "etf",
     "excess": 0.037573,
     "p": 0.021989005497251374,
-    "q": 1,
+    "q": 0.6830768289324727,
     "verdict": "yes"
   },
   {
@@ -3830,7 +7205,7 @@
     "assetClass": "us_stock",
     "excess": 0.057892,
     "p": 0.06896551724137931,
-    "q": 1,
+    "q": 0.9359605911330049,
     "verdict": "not significant"
   },
   {
@@ -4253,7 +7628,7 @@
     "assetClass": "etf",
     "excess": 0.044994,
     "p": 0.022488755622188907,
-    "q": 1,
+    "q": 0.6830768289324727,
     "verdict": "yes"
   },
   {
@@ -4262,7 +7637,7 @@
     "assetClass": "etf",
     "excess": 0.045468,
     "p": 0.016439671206575867,
-    "q": 1,
+    "q": 0.626987460250795,
     "verdict": "yes"
   },
   {
@@ -5927,7 +9302,7 @@
     "assetClass": "us_stock",
     "excess": 0.188463,
     "p": 0.04697651174412794,
-    "q": 1,
+    "q": 0.8359950459552832,
     "verdict": "yes"
   },
   {
