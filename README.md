@@ -1,12 +1,12 @@
 # Tickfloor Strategy Research
 
-Derived results from testing 1,083 trading strategies across 57 families against an equal-weight, daily-rebalanced hold of the same assets,
+Derived results from testing 1,342 trading strategies across 77 families against an equal-weight, daily-rebalanced hold of the same assets,
 after Benjamini-Hochberg false-discovery-rate correction for running that many tests. Last
-updated 24 October 2026 (ledger runs 15 September 2026 to 22 October 2026; the robustness and holdout reports are from 29 September).
+updated 1 November 2026 (ledger runs 15 September 2026 to 31 October 2026; the robustness and holdout reports are from 29 September).
 
-**Result: 0 of 1,425 tests survived correction** (1,083 strategies plus reruns and variants). 217
-strategies beat the benchmark on the raw number, and 28 of those cleared p < 0.05 before correction. The median strategy finished 8.8 points
-a year behind the benchmark. The closest miss is a three-way tie at q = 0.3578: "60/40 with a duration-momentum bond sleeve (QQQ + TLT/IEF/SHY)"; "Volatility-managed QQQ with the remainder in AGG (2005+)"; "Crypto rank-weighted low BTC beta, monthly", above the ledger's q < 0.10 gate. The 2 candidates that then got a
+**Result: 0 of 1,774 tests survived correction** (1,342 strategies plus reruns and variants). 265
+strategies beat the benchmark on the raw number, and 39 of those cleared p < 0.05 before correction. The median strategy finished 8.5 points
+a year behind the benchmark. The closest miss is a three-way tie at q = 0.4455: "60/40 with a duration-momentum bond sleeve (QQQ + TLT/IEF/SHY)"; "Volatility-managed QQQ with the remainder in AGG (2005+)"; "Crypto rank-weighted low BTC beta, monthly", above the ledger's q < 0.10 gate. The 2 candidates that then got a
 single look at held-back data (after 2025-03-15) were both not confirmed.
 
 Every backtest number here is in-sample, not a promise: it describes how each rule did on the discovery window, not what it will do next, and nothing in this repo
@@ -19,20 +19,20 @@ actually beat holding the same assets, and published the negative result rather 
 
 ## What's in the data
 
-`data/strategy-results.json` has one row per strategy (1,083 rows):
+`data/strategy-results.json` has one row per strategy (1,342 rows):
 
 | field | meaning |
 |---|---|
 | `id` | strategy identifier |
-| `family` | strategy family: trend, breadth, calendar, momentum, etc. (57 total) |
+| `family` | strategy family: trend, breadth, calendar, momentum, etc. (77 total) |
 | `assetClass` | `us_stock`, `etf`, `crypto`, etc. |
 | `excess` | annualized excess return vs. the benchmark (equal-weight, daily-rebalanced hold; pays no costs) |
 | `p` | p-value on excess return, before correction |
-| `q` | Benjamini-Hochberg FDR-adjusted q-value across all 1,425 tests |
+| `q` | Benjamini-Hochberg FDR-adjusted q-value across all 1,774 tests |
 | `verdict` | `yes` (beat benchmark, p < 0.05, pre-correction), `not significant`, or `no` |
 
-`q` is computed over all 1,425 tests (reruns and variants included); each row shows the latest
-run of its strategy, and a rerun of a rule can carry a different p and q than its first run. The lowest `q` in this file is 0.3578.
+`q` is computed over all 1,774 tests (reruns and variants included); each row shows the latest
+run of its strategy, and a rerun of a rule can carry a different p and q than its first run. The lowest `q` in this file is 0.4455.
 
 **Not included:** raw price bars. The underlying OHLC data comes from vendors whose terms
 limit redisplay, so this dataset ships only the derived statistics per strategy: enough to
@@ -81,11 +81,11 @@ Under `research/`, generated from the same ledger:
 
 | path | what |
 |---|---|
-| `research/STRATEGY-REGISTRY.json` | the generated registry: 1,083 strategies, excess, p, half-window excess, cost-sweep fields |
-| `research/researchStats.ts` | headline numbers (1,083 strategies, 57 families, 1,425 FDR tests) emitted from the ledger |
+| `research/STRATEGY-REGISTRY.json` | the generated registry: 1,342 strategies, excess, p, half-window excess, cost-sweep fields |
+| `research/researchStats.ts` | headline numbers (1,342 strategies, 77 families, 1,774 FDR tests) emitted from the ledger |
 | `research/hunt2/ledger.jsonl` | the append-only ledger of every run, with source/data/harness hashes |
-| `research/hunt2/strategies/` | the source of all 1,524 strategy files, one rule each; signals are blocked from reading later bars |
-| `research/hunt2/campaign-*/prereg-*.json` | the preregistered specs (9 files) that the October strategy files cite |
+| `research/hunt2/strategies/` | the source of all 1,906 strategy files, one rule each; signals are blocked from reading later bars |
+| `research/hunt2/campaign-*/prereg-*.json` | the preregistered specs (17 files) that the October strategy files cite |
 | `research/hunt2/harness.mjs`, `ledger.mjs`, `run.mjs`, `data.mjs` | the harness, BH-FDR ledger and runner |
 | `research/hunt2/prereg-0929.md`, `robustness-0929.md`, `robustness-0929/` | pre-registration and the robustness battery on the top 20 (14 pass a weaker, separate test; a few distinct ideas, none is an edge) |
 | `research/hunt2/holdout-exam-0929.md`, `.json` | the one-shot holdout exam: 2 candidates, 0 confirmed |
@@ -111,8 +111,8 @@ Limits: fills are at the signal bar close, which is optimistic; the stock univer
 caps (survivorship bias); delisted stocks, shorting, leverage and options are not covered. Known accounting issue:
 in rank-mode (portfolio-mode) strategies the harness held fixed target weights between decisions and charged turnover only at
 decision points, so restoring drifted weights was free (accounting v1). From 7 October 2026 it charges that too (accounting v2;
-`research/hunt2/CHANGELOG.md`, entry of 2026-10-07). Of the 487 portfolio-mode rows in the data file, 291 are v1 records and
-196 were run under v2. This repo does not quantify the effect on the v1 rows. Like tickfloor.com/evidence, it treats every
+`research/hunt2/CHANGELOG.md`, entry of 2026-10-07). Of the 592 portfolio-mode rows in the data file, 291 are v1 records and
+301 were run under v2. This repo does not quantify the effect on the v1 rows. Like tickfloor.com/evidence, it treats every
 rank-mode result, whichever version produced it, as a screening output and not a confirmation. The ledger itself is a screening statistic.
 Preregistration files exist for batches from 24 September on (no third-party timestamp); the 15 to 23 September batches are exploratory.
 
@@ -144,8 +144,8 @@ or with pandas: `pd.read_json("data/strategy-results.json")`, `pd.read_csv("data
 
 ## Citing
 
-> Tickfloor Strategy Research (2026). 1,083 backtested trading strategies, FDR-corrected
-> significance (updated 2026-10-24). https://github.com/tickfloor/tickfloor-strategy-research,
+> Tickfloor Strategy Research (2026). 1,342 backtested trading strategies, FDR-corrected
+> significance (updated 2026-11-01). https://github.com/tickfloor/tickfloor-strategy-research,
 > derived from https://tickfloor.com/evidence.
 
 `CITATION.cff` holds the same reference in machine-readable form (GitHub's "Cite this repository" reads it).
