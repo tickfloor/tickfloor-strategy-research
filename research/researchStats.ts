@@ -4,34 +4,34 @@
 // CONTROL rows excluded entirely). public/research-registry.json is the trimmed
 // copy the landing page fetches. Re-run `npm run research:registry` after any new test.
 
-export const STRATEGIES_TESTED = 1083; // distinct strategies, controls excluded
+export const STRATEGIES_TESTED = 1342; // distinct strategies, controls excluded
 export const STRATEGY_UNIT = "strategies";
-export const STRATEGY_FAMILIES = 57;
+export const STRATEGY_FAMILIES = 77;
 /** Individual scored runs behind those strategies (robustness reruns included). */
-export const STRATEGY_TEST_RUNS = 1410;
+export const STRATEGY_TEST_RUNS = 1759;
 /** Strategies whose point-estimate return (after their own costs) beat the equal-weight, daily-rebalanced, no-cost benchmark. Not a significance test. */
-export const STRATEGIES_AHEAD = 217;
+export const STRATEGIES_AHEAD = 265;
 /** Of STRATEGIES_AHEAD, those whose excess over that benchmark also had an unadjusted p < 0.05 (no multiple-testing correction; FDR_PASSED is the corrected count). */
-export const STRATEGIES_SIGNIFICANT = 28;
+export const STRATEGIES_SIGNIFICANT = 39;
 /** Median strategy's CAGR minus the benchmark's CAGR (fraction per year, negative = behind). */
-export const MEDIAN_EXCESS_ANNUAL = -0.088;
-export const STRATEGIES_BY_ASSET_CLASS: Record<string, number> = {"crypto":402,"etf":281,"us_stock":400};
+export const MEDIAN_EXCESS_ANNUAL = -0.0845;
+export const STRATEGIES_BY_ASSET_CLASS: Record<string, number> = {"crypto":510,"etf":366,"us_stock":466};
 
 /** Benjamini-Hochberg family: every distinct non-control run that traded (research/hunt2/ledger.mjs). */
-export const FDR_TESTS = 1425;
+export const FDR_TESTS = 1774;
 export const FDR_Q_MAX = 0.1;
 /** Runs that cleared the full gate (q, random controls, both halves, trades, net > 0, 2+ assets). */
 export const FDR_PASSED = 0;
 export const FDR_LOWEST_P = 0.00062;
-export const FDR_LOWEST_Q = 0.3578;
+export const FDR_LOWEST_Q = 0.4455;
 
 /** Last bar any test could see; everything after it is held back. */
 export const DISCOVERY_END_DATE = "2025-03-15";
 export const LEDGER_FIRST_RUN = "2026-09-15";
-export const LEDGER_LAST_UPDATED = "2026-10-22";
+export const LEDGER_LAST_UPDATED = "2026-10-31";
 
 /** Sign persistence of excess/yr between the two halves of the discovery window (from the registry's halfExcess). */
-export const HALF_PERSISTENCE = {"aheadFirstHalf":169,"aheadBothHalves":122,"aheadSecondHalfOnly":237,"aheadFullWindowAndBothHalves":122};
+export const HALF_PERSISTENCE = {"aheadFirstHalf":207,"aheadBothHalves":154,"aheadSecondHalfOnly":276,"aheadFullWindowAndBothHalves":154};
 
 export type CostFamilyRow = { family: string; strategies: number; losesAtZeroCost: number; needsCheaper: number; aheadAtRealCost: number; medianExcessAtZeroCost: number };
 /** Cost-to-breakeven (scripts/research/cost-sweep.mjs): each strategy re-run at 0/5/10/20bp per side; null until that sweep has run. */
@@ -245,12 +245,12 @@ export const RANDOM_CONTROL: null | { n: number; rejected: number; note: string;
         "under5PctOfControls": 6
       },
       "tested": {
-        "n": 402,
-        "p10": -0.981,
-        "p50": -0.3913,
-        "p90": 0.1768,
-        "aboveRandomP95": 111,
-        "aboveRandomMedian": 178
+        "n": 510,
+        "p10": -1.047,
+        "p50": -0.5026,
+        "p90": 0.1705,
+        "aboveRandomP95": 124,
+        "aboveRandomMedian": 199
       }
     },
     {
@@ -265,12 +265,12 @@ export const RANDOM_CONTROL: null | { n: number; rejected: number; note: string;
         "under5PctOfControls": 6
       },
       "tested": {
-        "n": 281,
-        "p10": -0.0935,
-        "p50": -0.0332,
-        "p90": 0.0178,
-        "aboveRandomP95": 126,
-        "aboveRandomMedian": 183
+        "n": 366,
+        "p10": -0.095,
+        "p50": -0.0379,
+        "p90": 0.0162,
+        "aboveRandomP95": 143,
+        "aboveRandomMedian": 215
       }
     },
     {
@@ -285,12 +285,12 @@ export const RANDOM_CONTROL: null | { n: number; rejected: number; note: string;
         "under5PctOfControls": 3
       },
       "tested": {
-        "n": 400,
-        "p10": -0.1806,
-        "p50": -0.1002,
-        "p90": 0.0233,
-        "aboveRandomP95": 146,
-        "aboveRandomMedian": 209
+        "n": 466,
+        "p10": -0.1796,
+        "p50": -0.0848,
+        "p90": 0.0282,
+        "aboveRandomP95": 188,
+        "aboveRandomMedian": 262
       }
     }
   ]
@@ -300,8 +300,8 @@ export type FamilyLedgerRow = { family: string; strategies: number; ahead: numbe
 export const FAMILY_LEDGER: FamilyLedgerRow[] = [
   {
     "family": "momentum",
-    "strategies": 166,
-    "ahead": 54,
+    "strategies": 210,
+    "ahead": 59,
     "significant": 5,
     "bestExcessAnnual": 1.3079,
     "bestId": "c1022-retail-41",
@@ -313,9 +313,9 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
   },
   {
     "family": "trend",
-    "strategies": 147,
-    "ahead": 29,
-    "significant": 7,
+    "strategies": 194,
+    "ahead": 43,
+    "significant": 13,
     "bestExcessAnnual": 0.2609,
     "bestId": "r27-crypto-scaled-trend",
     "assetClasses": [
@@ -326,11 +326,11 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
   },
   {
     "family": "mean_reversion",
-    "strategies": 106,
-    "ahead": 3,
-    "significant": 0,
-    "bestExcessAnnual": 0.0227,
-    "bestId": "s29-etf-credit-spread-revert",
+    "strategies": 142,
+    "ahead": 4,
+    "significant": 1,
+    "bestExcessAnnual": 0.0469,
+    "bestId": "c1031-macro-10",
     "assetClasses": [
       "crypto",
       "etf",
@@ -339,8 +339,8 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
   },
   {
     "family": "volatility",
-    "strategies": 100,
-    "ahead": 18,
+    "strategies": 121,
+    "ahead": 21,
     "significant": 2,
     "bestExcessAnnual": 0.2023,
     "bestId": "r27-cx-tsmom28-vixts",
@@ -352,9 +352,9 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
   },
   {
     "family": "equity-factors",
-    "strategies": 57,
-    "ahead": 29,
-    "significant": 7,
+    "strategies": 76,
+    "ahead": 45,
+    "significant": 10,
     "bestExcessAnnual": 0.5984,
     "bestId": "c1022-redteam-07",
     "assetClasses": [
@@ -365,8 +365,8 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
   },
   {
     "family": "other",
-    "strategies": 57,
-    "ahead": 11,
+    "strategies": 64,
+    "ahead": 12,
     "significant": 3,
     "bestExcessAnnual": 0.5062,
     "bestId": "c1022-crypto-45",
@@ -378,11 +378,24 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
   },
   {
     "family": "seasonality",
-    "strategies": 56,
+    "strategies": 62,
     "ahead": 8,
     "significant": 0,
     "bestExcessAnnual": 0.0533,
     "bestId": "c1023-acad2-22",
+    "assetClasses": [
+      "crypto",
+      "etf",
+      "us_stock"
+    ]
+  },
+  {
+    "family": "macro",
+    "strategies": 49,
+    "ahead": 17,
+    "significant": 2,
+    "bestExcessAnnual": 0.1434,
+    "bestId": "c1022-macro-18",
     "assetClasses": [
       "crypto",
       "etf",
@@ -403,12 +416,12 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
-    "family": "macro",
-    "strategies": 37,
-    "ahead": 14,
+    "family": "sentiment",
+    "strategies": 33,
+    "ahead": 9,
     "significant": 1,
-    "bestExcessAnnual": 0.1434,
-    "bestId": "c1022-macro-18",
+    "bestExcessAnnual": 0.5422,
+    "bestId": "c1024-r3-07",
     "assetClasses": [
       "crypto",
       "etf",
@@ -441,19 +454,6 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
-    "family": "sentiment",
-    "strategies": 22,
-    "ahead": 6,
-    "significant": 1,
-    "bestExcessAnnual": 0.5422,
-    "bestId": "c1024-r3-07",
-    "assetClasses": [
-      "crypto",
-      "etf",
-      "us_stock"
-    ]
-  },
-  {
     "family": "macro-intermarket",
     "strategies": 19,
     "ahead": 6,
@@ -473,6 +473,18 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     "significant": 0,
     "bestExcessAnnual": 0.0889,
     "bestId": "st-mtf-d",
+    "assetClasses": [
+      "crypto",
+      "etf"
+    ]
+  },
+  {
+    "family": "carry",
+    "strategies": 16,
+    "ahead": 1,
+    "significant": 0,
+    "bestExcessAnnual": 0.0162,
+    "bestId": "s29-etf-curve-duration",
     "assetClasses": [
       "crypto",
       "etf"
@@ -504,15 +516,14 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
-    "family": "carry",
+    "family": "event-driven",
     "strategies": 13,
-    "ahead": 1,
+    "ahead": 5,
     "significant": 0,
-    "bestExcessAnnual": 0.0162,
-    "bestId": "s29-etf-curve-duration",
+    "bestExcessAnnual": 0.0516,
+    "bestId": "c1031-stockxs-17",
     "assetClasses": [
-      "crypto",
-      "etf"
+      "us_stock"
     ]
   },
   {
@@ -539,6 +550,19 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
+    "family": "chart-structure",
+    "strategies": 11,
+    "ahead": 1,
+    "significant": 0,
+    "bestExcessAnnual": 0.0727,
+    "bestId": "h3-cd-three-line-break",
+    "assetClasses": [
+      "crypto",
+      "etf",
+      "us_stock"
+    ]
+  },
+  {
     "family": "calendar",
     "strategies": 10,
     "ahead": 0,
@@ -552,14 +576,14 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
-    "family": "event-driven",
+    "family": "positioning",
     "strategies": 10,
-    "ahead": 4,
+    "ahead": 0,
     "significant": 0,
-    "bestExcessAnnual": 0.0286,
-    "bestId": "ctrl-bigmove-drift-40d",
+    "bestExcessAnnual": -0.5696,
+    "bestId": "c1031-cryptoderiv-07",
     "assetClasses": [
-      "us_stock"
+      "crypto"
     ]
   },
   {
@@ -572,18 +596,6 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     "assetClasses": [
       "crypto",
       "etf",
-      "us_stock"
-    ]
-  },
-  {
-    "family": "chart-structure",
-    "strategies": 9,
-    "ahead": 1,
-    "significant": 0,
-    "bestExcessAnnual": 0.0727,
-    "bestId": "h3-cd-three-line-break",
-    "assetClasses": [
-      "crypto",
       "us_stock"
     ]
   },
@@ -609,6 +621,18 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
       "crypto",
       "etf",
       "us_stock"
+    ]
+  },
+  {
+    "family": "liquidity_sweep",
+    "strategies": 5,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.0736,
+    "bestId": "c1031-tjr-22",
+    "assetClasses": [
+      "crypto",
+      "etf"
     ]
   },
   {
@@ -666,6 +690,41 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     "bestId": "sol-perp-led-rally-veto",
     "assetClasses": [
       "crypto"
+    ]
+  },
+  {
+    "family": "premium_discount",
+    "strategies": 4,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.0782,
+    "bestId": "c1031-tjr-23",
+    "assetClasses": [
+      "crypto",
+      "etf",
+      "us_stock"
+    ]
+  },
+  {
+    "family": "tjr_core_model",
+    "strategies": 4,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.9244,
+    "bestId": "c1031-tjr-04",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
+    "family": "volume",
+    "strategies": 4,
+    "ahead": 1,
+    "significant": 0,
+    "bestExcessAnnual": 0.0191,
+    "bestId": "c1031-stockxs-06",
+    "assetClasses": [
+      "us_stock"
     ]
   },
   {
@@ -749,6 +808,17 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
+    "family": "breakout",
+    "strategies": 2,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -1.216,
+    "bestId": "c1031-intraday-12",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
     "family": "capital-deployment",
     "strategies": 2,
     "ahead": 0,
@@ -771,6 +841,51 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
+    "family": "daily_profile",
+    "strategies": 2,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.9715,
+    "bestId": "c1031-tjr-15",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
+    "family": "fair_value_gap",
+    "strategies": 2,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -1.0001,
+    "bestId": "c1031-tjr-12",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
+    "family": "htf_cascade",
+    "strategies": 2,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.0254,
+    "bestId": "c1031-tjr-25",
+    "assetClasses": [
+      "etf"
+    ]
+  },
+  {
+    "family": "judas_swing",
+    "strategies": 2,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.0707,
+    "bestId": "c1031-tjr-33",
+    "assetClasses": [
+      "crypto",
+      "etf"
+    ]
+  },
+  {
     "family": "macro-disagreement",
     "strategies": 2,
     "ahead": 0,
@@ -779,6 +894,17 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     "bestId": "sol-gold-dollar-resilience",
     "assetClasses": [
       "etf"
+    ]
+  },
+  {
+    "family": "session_liquidity",
+    "strategies": 2,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.981,
+    "bestId": "c1031-tjr-05",
+    "assetClasses": [
+      "crypto"
     ]
   },
   {
@@ -849,6 +975,50 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
+    "family": "failed_breakout",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -1.2177,
+    "bestId": "c1031-tjr-13",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
+    "family": "index_alignment",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.1364,
+    "bestId": "c1031-tjr-28",
+    "assetClasses": [
+      "etf"
+    ]
+  },
+  {
+    "family": "liquidity_draw",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -1.2233,
+    "bestId": "c1031-tjr-10",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
+    "family": "liquidity_run",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.9005,
+    "bestId": "c1031-tjr-09",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
     "family": "low-vol regime + breakout",
     "strategies": 1,
     "ahead": 0,
@@ -860,12 +1030,56 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     ]
   },
   {
+    "family": "market_structure",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.1891,
+    "bestId": "c1031-tjr-29",
+    "assetClasses": [
+      "us_stock"
+    ]
+  },
+  {
     "family": "open interest divergence",
     "strategies": 1,
     "ahead": 0,
     "significant": 0,
     "bestExcessAnnual": -0.8158,
     "bestId": "crypto-oi-price-divergence",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
+    "family": "order_block",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.0737,
+    "bestId": "c1031-tjr-31",
+    "assetClasses": [
+      "etf"
+    ]
+  },
+  {
+    "family": "participation",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.8559,
+    "bestId": "c1031-cryptoderiv-08",
+    "assetClasses": [
+      "crypto"
+    ]
+  },
+  {
+    "family": "regime",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.8457,
+    "bestId": "c1031-cryptoderiv-31",
     "assetClasses": [
       "crypto"
     ]
@@ -890,6 +1104,17 @@ export const FAMILY_LEDGER: FamilyLedgerRow[] = [
     "bestId": "h4-etf-sign-evidence-exit",
     "assetClasses": [
       "etf"
+    ]
+  },
+  {
+    "family": "session_range",
+    "strategies": 1,
+    "ahead": 0,
+    "significant": 0,
+    "bestExcessAnnual": -0.9617,
+    "bestId": "c1031-tjr-20",
+    "assetClasses": [
+      "crypto"
     ]
   },
   {
@@ -1007,7 +1232,7 @@ export const DOUBLE7_RULE_ANNUAL_PCT = 3.2;
 export const DOUBLE7_HOLD_ANNUAL_PCT = 16.6;
 
 export const RESEARCH_HEADLINE =
-  "1083 strategies across 57 families. None passed the corrected test against an equal-weight benchmark that pays no costs.";
+  "1,342 strategies across 77 families. None passed the corrected test against an equal-weight benchmark that pays no costs.";
 
 export const RESEARCH_SUBLINE =
-  "1083 distinct strategies across 57 families, 1410 scored runs, all backtested with real costs against an equal-weight benchmark rebalanced daily that pays no trading costs. 217 finished ahead of it on the point estimate; 28 had an unadjusted p-value under 0.05, and none met the corrected q < 0.1 threshold (Benjamini-Hochberg, 1425 tests). That does not prove no strategy works.";
+  "1,342 distinct strategies across 77 families, 1,759 scored runs, all backtested with real costs against an equal-weight benchmark rebalanced daily that pays no trading costs. 265 finished ahead of it on the point estimate; 39 had an unadjusted p-value under 0.05, and none met the corrected q < 0.1 threshold (Benjamini-Hochberg, 1,774 tests). That does not prove no strategy works.";

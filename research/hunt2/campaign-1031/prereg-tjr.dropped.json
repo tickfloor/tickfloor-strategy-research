@@ -1,0 +1,14 @@
+[
+ {
+  "id": "c1031-tjr-17",
+  "reason": "dup_of c1031-tjr-16 (same Judas reclaim template at 07:00 UTC instead of 00:00 UTC; tjr-16 kept)"
+ },
+ {
+  "id": "c1031-tjr-27",
+  "reason": "near-duplicate of registry t100-fvg-h (ICT FVG retest, stop at far edge, 2R target) ported to ETF daily with a 1 ATR displacement filter; least novel of the set"
+ },
+ {
+  "id": "c1031-tjr-32",
+  "reason": "weakest of the two QQQ/DIA gate specs: SMT 5-session stand-aside on two ~0.9-correlated index ETFs is a near-buy-and-hold filter; sibling tjr-28 (structure alignment) kept"
+ }
+]

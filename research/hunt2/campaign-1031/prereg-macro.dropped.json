@@ -1,0 +1,14 @@
+[
+ {
+  "id": "c1031-macro-19",
+  "reason": "redundant third copy of the beta-factor-momentum template (macro-17, macro-18 kept); closest prior is s29-us-oil-beta-rotation, an oil-beta tilt following the oil trend"
+ },
+ {
+  "id": "c1031-macro-30",
+  "reason": "dup_of s29-etf-bond-vol-gate (same 20d yield-vol 75th pct gate, equity ETFs); sibling macro-29 kept"
+ },
+ {
+  "id": "c1031-macro-32",
+  "reason": "not a macro hypothesis: inverse-vol risk parity with VIX replacing one realised-vol input; least worth a test"
+ }
+]

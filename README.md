@@ -1,4 +1,19 @@
-# Tickfloor Strategy Research
+# Tested 1,342 trading strategies. None survived multiple-testing correction. Here is every number.
+
+```
+git clone https://github.com/tickfloor/tickfloor-strategy-research && cd tickfloor-strategy-research
+python3 load_example.py   # needs only Python 3, no installs
+python3 scripts/make_chart.py   # redraws the chart below from the data
+```
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/chart-dark.svg">
+  <img alt="Scatter of excess return against Benjamini-Hochberg q-value for 1,342 strategies. Every dot is above the q = 0.10 line." src="docs/chart-light.svg">
+</picture>
+
+Each dot is one strategy. A strategy would count as a survivor if it sat below the dashed q = 0.10 line. None does: the lowest q is 0.4455. See [COMPARISONS.md](COMPARISONS.md) for how this differs from a typical "best strategy" backtest.
+
+## Tickfloor Strategy Research
 
 Derived results from testing 1,342 trading strategies across 77 families against an equal-weight, daily-rebalanced hold of the same assets,
 after Benjamini-Hochberg false-discovery-rate correction for running that many tests. Last
@@ -85,7 +100,7 @@ Under `research/`, generated from the same ledger:
 | `research/researchStats.ts` | headline numbers (1,342 strategies, 77 families, 1,774 FDR tests) emitted from the ledger |
 | `research/hunt2/ledger.jsonl` | the append-only ledger of every run, with source/data/harness hashes |
 | `research/hunt2/strategies/` | the source of all 1,906 strategy files, one rule each; signals are blocked from reading later bars |
-| `research/hunt2/campaign-*/prereg-*.json` | the preregistered specs (17 files) that the October strategy files cite |
+| `research/hunt2/campaign-*/prereg-*.json` | the preregistered specs (28 files) that the October strategy files cite |
 | `research/hunt2/harness.mjs`, `ledger.mjs`, `run.mjs`, `data.mjs` | the harness, BH-FDR ledger and runner |
 | `research/hunt2/prereg-0929.md`, `robustness-0929.md`, `robustness-0929/` | pre-registration and the robustness battery on the top 20 (14 pass a weaker, separate test; a few distinct ideas, none is an edge) |
 | `research/hunt2/holdout-exam-0929.md`, `.json` | the one-shot holdout exam: 2 candidates, 0 confirmed |
@@ -124,7 +139,7 @@ Full method notes, scope and limits: [tickfloor.com/evidence](https://tickfloor.
 import json
 rows = json.load(open("data/strategy-results.json"))
 
-survived = [r for r in rows if r["q"] < 0.05]  # 0
+survived = [r for r in rows if r["q"] < 0.10]  # 0
 print(f"{len(survived)} of {len(rows)} survived FDR correction")
 
 by_family = {}
@@ -137,7 +152,7 @@ or with pandas: `pd.read_json("data/strategy-results.json")`, `pd.read_csv("data
 
 ## License
 
-- Code (`load_example.py`, `research/**/*.mjs`, `research/*.ts`, `scripts/*.mjs`): [MIT](LICENSE)
+- Code (`load_example.py`, `scripts/make_chart.py`, `research/**/*.mjs`, `research/*.ts`, `scripts/*.mjs`): [MIT](LICENSE)
 - Data and write-ups (`data/strategy-results.json`, `data/reads-ledger.csv`, `research/**/*.json`, `*.jsonl`, `*.md`): [CC BY 4.0](LICENSE-DATA). Reuse it, adapt it, and
   redistribute it, crediting Tickfloor Strategy Research and linking to this repository.
   The reads ledger omits the newest 24 hours of published reads.
@@ -145,7 +160,7 @@ or with pandas: `pd.read_json("data/strategy-results.json")`, `pd.read_csv("data
 ## Citing
 
 > Tickfloor Strategy Research (2026). 1,342 backtested trading strategies, FDR-corrected
-> significance (updated 2026-11-01). https://github.com/tickfloor/tickfloor-strategy-research,
+> significance, v1.0.0 (2026-11-02). https://github.com/tickfloor/tickfloor-strategy-research,
 > derived from https://tickfloor.com/evidence.
 
 `CITATION.cff` holds the same reference in machine-readable form (GitHub's "Cite this repository" reads it).

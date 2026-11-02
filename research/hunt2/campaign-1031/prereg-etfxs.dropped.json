@@ -1,0 +1,38 @@
+[
+ {
+  "id": "c1031-etfxs-28",
+  "reason": "dropped for the 30 cap: January-only IEF switch is a one-month calendar hack on plain 12-1 momentum, weakest of the 32 non-dup specs"
+ },
+ {
+  "id": "c1031-etfxs-31",
+  "reason": "dup_of c1022-redteam-41 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-etfxs-33",
+  "reason": "dropped for the 30 cap: rank-weighting of the same 12-1 signal as r27-etf20-xsmom and etfxs-05/16/17/22; weighting-only change"
+ },
+ {
+  "id": "c1031-etfxs-04",
+  "reason": "FIXED: factors excluded from the candidate set (self-regression gives a 0/0 score)"
+ },
+ {
+  "id": "c1031-etfxs-06",
+  "reason": "FIXED: even-count median defined"
+ },
+ {
+  "id": "c1031-etfxs-07",
+  "reason": "FIXED: even-count median defined"
+ },
+ {
+  "id": "c1031-etfxs-13",
+  "reason": "DISCLOSURE added: unadjusted opens put ex-dividend gaps in the overnight component"
+ },
+ {
+  "id": "c1031-etfxs-18",
+  "reason": "FIXED: per-symbol anchor made explicit"
+ },
+ {
+  "id": "c1031-etfxs-32",
+  "reason": "FIXED: hedge weight floored at 0 so a negative beta sum cannot flip the hedge into a long"
+ }
+]

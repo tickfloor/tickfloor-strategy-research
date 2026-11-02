@@ -1,0 +1,838 @@
+[
+ {
+  "id": "c1031-intraday-01",
+  "name": "US-session extreme move reversed into the Asia session",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "sessionBars": 7,
+   "zEntry": 2.0,
+   "holdBars": 8,
+   "volWindow": 720
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==20 (close = 21:00): R = close[i]/open[i-6]-1 (the 14:00-21:00 US session, 7 bars i-6..i); z = R/(sigma(i-7)*sqrt(7)). If flat: z<=-2.0 -> position +1; z>=+2.0 -> position -1; otherwise 0. Hold exactly 8 bars (bars H=21,22,23,0,1,2,3,4) and return 0 from the bar whose close is 05:00 onward (i.e. set position 0 at the bar i+8, the bar with H==4).",
+  "rationale": "Large moves made in the US session are partly inventory and leverage driven; the thinner Asia session has been argued to give part of them back, which is the intraday analogue of liquidity-provision reversal. Testable per symbol with a pre-fixed 2 sigma gate.",
+  "source": "Campbell, Grossman, Wang (1993) 'Trading volume and serial correlation in stock returns' QJE; Gao-Han-Li-Zhou (2018) intraday momentum JFE; Kaiko 2023 intraday liquidity by session",
+  "expectedTradesPerYear": 150,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-02",
+  "name": "Asia-session move continues into the London session",
+  "family": "momentum",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "sessionBars": 8,
+   "zEntry": 1.5,
+   "holdBars": 6,
+   "volWindow": 720
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==7 (close = 08:00): R = close[i]/open[i-7]-1 (00:00-08:00, 8 bars i-7..i); z = R/(sigma(i-8)*sqrt(8)). If z>=+1.5 -> +1; z<=-1.5 -> -1; else 0. Hold 6 bars (H=8..13) and return 0 from the bar with H==13 on (position 0 set at bar i+6).",
+  "rationale": "Pairs with the US-to-Asia reversal spec: tests the opposite session hand-off, where Asia-hours order flow is followed by the arrival of European desks rather than reversed. Both directions of this question are pre-registered.",
+  "source": "Gao, Han, Li, Zhou (2018) 'Market intraday momentum' JFE; Bogousslavsky (2016) infrequent rebalancing and intraday momentum, JF",
+  "expectedTradesPerYear": 400,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-03",
+  "name": "Saturday move fade into Sunday",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "dayBars": 24,
+   "zEntry": 1.5,
+   "holdBars": 24,
+   "volWindow": 720
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with D(i)==6 and H(i)==23 (close = Sunday 00:00): R = close[i]/open[i-23]-1 (the Saturday UTC day, 24 bars); z = R/(sigma(i-24)*sqrt(24)). If z>=+1.5 -> -1; z<=-1.5 -> +1; else 0. Hold 24 bars (all of Sunday) and set position 0 at the bar i+24 (the bar with D==0 and H==23 closes the trade; return 0 from the Sunday H==23 bar on).",
+  "rationale": "Weekend books are thin, so large Saturday moves are more likely to be liquidity-driven than information-driven and to be partly reversed once weekday liquidity returns; fading them over Sunday tests that.",
+  "source": "Kaiko 2023 weekend liquidity research; Baur, Cahill, Godfrey, Liu (2019) 'Bitcoin time-of-day, day-of-week and month-of-year effects in returns and trading volume'",
+  "expectedTradesPerYear": 55,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-04",
+  "name": "Trend held only outside US cash hours",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "emaBars": 336,
+   "flatFrom": 14,
+   "flatTo": 21
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long-only. e = ctx.ema('close',336,i). nextHour = (H(i)+1)%24. Position = +1 if close[i] > e AND nextHour is NOT in [14,20] (that is, hold bars that open 21:00 through 13:00, flat for bars opening 14:00-20:00); else 0. Re-evaluated every bar (the trend condition can end the hold early). (Clarification: params.flatTo=21 is the exclusive end of the flat window; the rule text above is the definition.)",
+  "rationale": "Complement of the already-tested 'hourly trend only during US hours': if crypto trend returns accrue overnight (the equity overnight-drift pattern) this holds the trend only in the non-US window. Together the two tests cover both halves of the day.",
+  "source": "Cliff, Cooper, Gulen (2008) 'Return differences between trading and non-trading hours: like night and day'; Lou, Polk, Skouras (2019) 'A tug of war: overnight versus intraday expected returns' JFE",
+  "expectedTradesPerYear": 900,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-05",
+  "name": "London opening range (08:00-10:00) breakout",
+  "family": "breakout",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "rangeBars": 2,
+   "entryHoursFrom": 10,
+   "entryHoursTo": 14,
+   "exitHour": 15
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short, weekdays only (D(i) in 1..5). At bar i with H(i)==9: hi = max(high[i-1],high[i]); lo = min(low[i-1],low[i]); mid=(hi+lo)/2; armed=true, traded=false (state, reset at every H==9 bar). At bars with H(i) in 10..14 while flat, armed and not traded: close[i]>hi -> +1, close[i]<lo -> -1, then traded=true. While long exit (0) when close[i]<mid; while short exit when close[i]>mid; always 0 from the bar with H(i)==15 on (position 0 returned at that bar) and disarm. Weekend days: armed=false, return 0.",
+  "rationale": "The London open is the first deep-liquidity handoff of the day and its first two hours define the reference range; the UTC-day and New York open ranges have been tested but the European open range has not.",
+  "source": "Crabel (1990) 'Day Trading With Short Term Price Patterns and Opening Range Breakout'; Zarattini & Aziz (2023) 'Can day trading really be profitable? Opening range breakout' SSRN 4416622",
+  "expectedTradesPerYear": 600,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-06",
+  "name": "Compressed Asia range breakout in the London session",
+  "family": "volatility",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "asiaBars": 8,
+   "lookbackDays": 20,
+   "compressFrac": 0.6,
+   "minHistory": 10,
+   "entryHoursFrom": 8,
+   "entryHoursTo": 14,
+   "exitHour": 15
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==7: hi=max high(i-7..i), lo=min low(i-7..i), ar=(hi-lo)/close[i]. Keep state.arHist (array, newest last, keep the last 20). Compute m = mean(arHist) BEFORE pushing ar (needs length>=10, else no trade today), then push ar. compressed = ar < 0.6*m. If compressed: armed=true, traded=false, store hi,lo,mid=(hi+lo)/2; else armed=false. At bars with H(i) in 8..14 while flat, armed and not traded: close[i]>hi -> +1; close[i]<lo -> -1; traded=true. While long exit when close[i]<mid, while short exit when close[i]>mid, and always return 0 from the bar H(i)==15 on and disarm. All 7 days of the week traded.",
+  "rationale": "Volatility clusters and ranges compress before expansion; the existing Asia-range tests fade sweeps, none ask whether a genuinely compressed Asia range (versus its own 20-session average) predicts a directional London breakout.",
+  "source": "Crabel (1990) narrow-range days; Toby Crabel NR4/NR7 expansion logic; Bollinger (2001) 'Bollinger on Bollinger Bands' on volatility compression",
+  "expectedTradesPerYear": 300,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-07",
+  "name": "Monday-morning move sets the week's direction",
+  "family": "momentum",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "mondayBars": 12,
+   "zEntry": 1.0,
+   "exitDow": 5,
+   "exitHour": 20,
+   "volWindow": 720
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with D(i)==1 and H(i)==11 (close = Monday 12:00): R = close[i]/open[i-11]-1 (Monday 00:00 to 12:00, 12 bars); z = R/(sigma(i-12)*sqrt(12)). If z>=+1.0 -> hold +1; z<=-1.0 -> hold -1; else 0 for the week. Hold until the close of the bar with D==5 and H==20 (Friday 21:00), then 0 (set position 0 at that bar). Nothing is evaluated again before the next Monday.",
+  "rationale": "Tests whether the first half-day of the trading week, when traditional-market desks re-engage after the weekend, sets the sign of the rest of the working week (a weekly time-series momentum with an event-time start rather than a rolling lookback).",
+  "source": "Moskowitz, Ooi, Pedersen (2012) 'Time series momentum' JFE; Aharon & Qadan (2019) 'Bitcoin and the day-of-the-week effect'",
+  "expectedTradesPerYear": 130,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-08",
+  "name": "UTC daily-close spike fade",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "spikeBars": 2,
+   "zEntry": 2.5,
+   "holdBars": 4,
+   "volWindow": 720
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==23 (close = 00:00 UTC): R = close[i]/open[i-1]-1 (bars H=22 and H=23, 2 bars); z = R/(sigma(i-2)*sqrt(2)). If flat: z>=+2.5 -> -1; z<=-2.5 -> +1; else 0. Hold 4 bars (H=0..3) and return 0 from the bar with H==3 on (position 0 set at bar i+4).",
+  "rationale": "Daily candle closes, daily option and futures marks and margin resets cluster at 00:00 UTC; an outsized move in the last two hours into that mark is more likely to be mechanical than informational and may mean-revert over the next few hours.",
+  "source": "Heston, Korajczyk, Sadka (2010) 'Intraday patterns in the cross-section of stock returns' JF; Harris (1989) 'The Day-End Anomalies' (end-of-period price pressure)",
+  "expectedTradesPerYear": 70,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-09",
+  "name": "Prior-week high/low breakout",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "weekBars": 168
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. Week = Monday 00:00 to Sunday 23:00. At the bar i with D(i)==1 and H(i)==0: phi=max high(i-168..i-1), plo=min low(i-168..i-1), pmid=(phi+plo)/2, traded=false (contiguity guard applies; if it fails no trade that week). From bar i through the bar with D==0,H==22 of that week: if flat and not traded: close[k]>phi -> +1, close[k]<plo -> -1, traded=true. While long exit when close<pmid; while short exit when close>pmid. At the bar with D==0 and H==23 return 0 and clear the week state.",
+  "rationale": "A prior-week high or low is one of the most watched reference levels on retail charts; a close beyond it is a widely used continuation trigger that has not been run on hourly crypto.",
+  "source": "Brock, Lakonishok, LeBaron (1992) trading range break; Murphy (1999) 'Technical Analysis of the Financial Markets' support/resistance",
+  "expectedTradesPerYear": 150,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-11",
+  "name": "Quiet-hours Bollinger reversion in the Asia session",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "smaBars": 24,
+   "k": 2.0,
+   "entryHours": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "exitHour": 7
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. m = ctx.sma('close',24,i); s = ctx.rollingStd('close',24,i) (std of the last 24 closes). If flat and H(i) in {2,3,4,5}: close[i] < m-2.0*s -> +1; close[i] > m+2.0*s -> -1. Exit: long when close[i]>=m, short when close[i]<=m; always 0 at the bar with H(i)==7 (position 0 at that bar). All days of the week.",
+  "rationale": "00:00-08:00 UTC is the thinnest high-participation part of the day for the USDT majors; ranging behaviour inside it is plausible, so a 2 sigma stretch from the 24h mean should be more likely to be absorbed than extended there than it would be at other times.",
+  "source": "Bollinger (2001); Heston, Korajczyk, Sadka (2010) JF intraday periodicity; Makarov & Schoar (2020) 'Trading and arbitrage in cryptocurrency markets' JFE (time-of-day liquidity)",
+  "expectedTradesPerYear": 400,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-12",
+  "name": "Prior-day high/low breakout continuation through the US session",
+  "family": "breakout",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "entryHoursFrom": 8,
+   "entryHoursTo": 19,
+   "exitHour": 20
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==0: pdh=max high(i-24..i-1), pdl=min low(i-24..i-1), pdm=(pdh+pdl)/2, traded=false. Entry on bars with H(i) in 8..19 when flat and not traded: close[i]>pdh -> +1; close[i]<pdl -> -1; traded=true. While long exit when close[i]<pdm; while short exit when close[i]>pdm; always 0 from the bar H==20 on (position 0 at that bar). One trade per symbol per day.",
+  "rationale": "The tested ICT-style rule FADES sweeps of the prior-day high/low; this is the continuation counterpart asking whether a CLOSE beyond yesterday's extreme during the active hours carries to the US close. Run as a pair it separates the two behaviours.",
+  "source": "Raschke & Connors (1995) 'Street Smarts' (prior-day extremes); Crabel (1990); Sullivan, Timmermann, White (1999) 'Data-snooping, technical trading rule performance, and the bootstrap' JF",
+  "expectedTradesPerYear": 800,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-13",
+  "name": "TTM squeeze release on hourly crypto",
+  "family": "volatility",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "bbBars": 20,
+   "bbK": 2.0,
+   "kcAtrBars": 20,
+   "kcMult": 1.5,
+   "minSqueezeBars": 6,
+   "maxHoldBars": 48
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. s = ctx.rollingStd('close',20,i); a = ctx.atr(20,i); sqOn = (2.0*s < 1.5*a) (Bollinger band 2 sigma inside the Keltner 1.5 ATR band, both centred on the 20-bar SMA). state.run counts consecutive sqOn bars (reset to 0 when sqOn false). Release at bar i: sqOn false at i AND state.run (value before reset) >= 6. At the release bar, mom = close[i] - ((ctx.donchian(20,i).upper+ctx.donchian(20,i).lower)/2 + ctx.sma('close',20,i))/2; enter +1 if mom>0, -1 if mom<0. Hold until sign(mom) at a later bar is opposite to the position (mom<0 for long / >0 for short) or 48 bars have passed, then 0.",
+  "rationale": "The TTM squeeze is one of the most widely shared retail volatility-breakout rules (Bollinger inside Keltner) and has not been asked on 1h crypto; the exit is mechanical and fixed.",
+  "source": "Carter (2012) 'Mastering the Trade' (TTM Squeeze); Bollinger (2001); Keltner (1960) 'How to Make Money in Commodities'",
+  "expectedTradesPerYear": 250,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-14",
+  "name": "Keltner channel breakout on hourly crypto (EMA24 +/- 2.5 ATR24)",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "emaBars": 24,
+   "atrBars": 24,
+   "mult": 2.5
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. e = ctx.ema('close',24,i); a = ctx.atr(24,i). If flat: close[i] > e+2.5*a -> +1; close[i] < e-2.5*a -> -1. Exit (0): long when close[i]<e; short when close[i]>e. Re-entry allowed on the next qualifying bar.",
+  "rationale": "A volatility-adaptive channel breakout (a close beyond 2.5 ATR from the 24h EMA) with the EMA as trailing exit; the daily version was tested, the hourly version has different cost-to-move economics and is a very common retail rule.",
+  "source": "Keltner (1960); Chande & Kroll (1994) 'The New Technical Trader'",
+  "expectedTradesPerYear": 250,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-15",
+  "name": "Turtle system scaled to hours: 480-bar breakout, 240-bar exit",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "entryBars": 480,
+   "exitBars": 240
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short, stop-and-reverse on the opposite entry. At bar i: up = ctx.donchian(480,i-1).upper; dn = ctx.donchian(480,i-1).lower; xdn = ctx.donchian(240,i-1).lower; xup = ctx.donchian(240,i-1).upper. If position<=0 and close[i]>up -> +1. If position>=0 and close[i]<dn -> -1. If position==+1 and close[i]<xdn -> 0 (or -1 if close[i]<dn). If position==-1 and close[i]>xup -> 0 (or +1 if close[i]>up). No stops, no pyramiding.",
+  "rationale": "The Turtle 20-day entry / 10-day exit scaled to 480 and 240 hourly bars gives a slow trend system that trades rarely enough for 0.1%/side costs; a famous rule that people want run on the hourly crypto majors as a trend baseline.",
+  "source": "Faith (2007) 'Way of the Turtle'; Curtis Faith Turtle rules (System 1: 20/10); Hurst, Ooi, Pedersen (2017) 'A century of evidence on trend-following investing'",
+  "expectedTradesPerYear": 20,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-17",
+  "name": "Wilder DMI/ADX(14) trend: +DI/-DI cross with ADX above 25",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "n": 14,
+   "adxMin": 25
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. Recursive Wilder state on each bar k>=1 (carry in ctx.state): upM=high[k]-high[k-1]; dnM=low[k-1]-low[k]; pDM=(upM>dnM && upM>0)?upM:0; mDM=(dnM>upM && dnM>0)?dnM:0; TR=max(high-low,|high-close[k-1]|,|low-close[k-1]|). Smoothed S_x = S_x*(13/14)+x/14 for x in {pDM,mDM,TR} (first values seeded at the first x; ignore signals for the first 200 bars). pDI=100*S_pDM/S_TR, mDI=100*S_mDM/S_TR; DX=100*|pDI-mDI|/(pDI+mDI) (0 if denominator 0); ADX = ADX*(13/14)+DX/14 (seeded at the first DX). Signal: pDI crossed above mDI at bar i (pDI[i-1]<=mDI[i-1] and pDI[i]>mDI[i]) AND ADX[i]>25 -> +1; mDI crossed above pDI AND ADX[i]>25 -> -1. A long exits to 0 when mDI crosses above pDI (to -1 if ADX>25); a short exits to 0 when pDI crosses above mDI (to +1 if ADX>25).",
+  "rationale": "DMI/ADX is the standard retail 'is there a trend, and which way' rule; the ADX gate is the rule's entire claim, so the test asks whether trending-regime crosses beat their cost on the hourly majors.",
+  "source": "Wilder (1978) 'New Concepts in Technical Trading Systems'; Brock, Lakonishok, LeBaron (1992) JF",
+  "expectedTradesPerYear": 200,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-18",
+  "name": "Ichimoku cloud breakout on hourly crypto (9/26/52)",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "tenkan": 9,
+   "kijun": 26,
+   "senkouB": 52,
+   "shift": 26
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. t(j)=(ctx.donchian(9,j).upper+ctx.donchian(9,j).lower)/2; k(j)=(ctx.donchian(26,j).upper+ctx.donchian(26,j).lower)/2; spanA at bar i = (t(i-26)+k(i-26))/2; spanB at bar i = (ctx.donchian(52,i-26).upper+ctx.donchian(52,i-26).lower)/2 (the cloud is displaced 26 bars forward, so only past bars are used). cloudTop=max(spanA,spanB), cloudBot=min(spanA,spanB). If flat: close[i]>cloudTop AND t(i)>k(i) -> +1; close[i]<cloudBot AND t(i)<k(i) -> -1. Exit: long when close[i]<k(i); short when close[i]>k(i).",
+  "rationale": "Ichimoku cloud breakouts are a popular multi-component retail system; the full rule (price beyond cloud plus Tenkan/Kijun alignment) has a fixed definition with no free parameters and is run on hourly bars with the standard 9/26/52 settings.",
+  "source": "Hosoda (1969) Ichimoku Kinko Hyo; Patel (2010) 'Trading with Ichimoku Clouds'",
+  "expectedTradesPerYear": 150,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-19",
+  "name": "Extreme 24h move continuation (|z| >= 2.5, hold 24h)",
+  "family": "momentum",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "moveBars": 24,
+   "zEntry": 2.5,
+   "holdBars": 24,
+   "volWindow": 720
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i: R = close[i]/close[i-24]-1; z = R/(sigma(i-24)*sqrt(24)). If flat: z>=+2.5 -> +1, z<=-2.5 -> -1. Hold exactly 24 bars from entry, then 0; no re-entry while holding. After the exit a new entry needs a new qualifying bar.",
+  "rationale": "Event-style momentum: only moves large relative to the coin's own volatility are traded, versus the always-on 24h momentum rules already tested. Complements the reversal specs in this set, which fade extremes inside single sessions.",
+  "source": "Jegadeesh & Titman (1993) JF momentum; Moskowitz, Ooi, Pedersen (2012) TSMOM; Liu & Tsyvinski (2021) 'Risks and returns of cryptocurrency' RFS",
+  "expectedTradesPerYear": 90,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-20",
+  "name": "Bollinger(48, 2.5) reversion against the 14-day trend",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "bbBars": 48,
+   "k": 2.5,
+   "trendEma": 336,
+   "maxHold": 48
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. m=ctx.sma('close',48,i); s=ctx.rollingStd('close',48,i); tr=ctx.ema('close',336,i). If flat: close[i] < m-2.5*s AND close[i] > tr -> +1 (buy a stretch in an uptrend); close[i] > m+2.5*s AND close[i] < tr -> -1 (sell a stretch in a downtrend). Exit: long when close[i]>=m, short when close[i]<=m, or after 48 bars.",
+  "rationale": "A trade-with-the-larger-trend pullback: only extremes against the 14-day EMA direction are taken, so it avoids catching knives in the opposite regime. Distinct from RSI(2) rules because the stretch is volatility-scaled.",
+  "source": "Bollinger (2001); Connors & Alvarez (2009) 'Short Term Trading Strategies That Work' (buy pullbacks in uptrends)",
+  "expectedTradesPerYear": 150,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-21",
+  "name": "Six consecutive hourly closes in one direction: fade",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "streak": 6,
+   "holdBars": 6
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i if flat: if close[k]<close[k-1] for all k in i-5..i (six consecutive down closes) -> +1; if close[k]>close[k-1] for all k in i-5..i (six up closes) -> -1. Hold exactly 6 bars then 0; no re-entry while holding.",
+  "rationale": "Connors-style streak reversal: long runs of one-way hourly closes tend to be exhausted more often than continued in liquid majors. Tests the simplest form with a fixed six-bar streak and six-bar hold.",
+  "source": "Connors & Alvarez (2009); Jegadeesh (1990) 'Evidence of predictable behavior of security returns' JF (short-horizon reversal)",
+  "expectedTradesPerYear": 350,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-22",
+  "name": "Pin bar rejection at a 168-hour extreme",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "extremeBars": 168,
+   "wickFrac": 0.6,
+   "closeFrac": 0.66,
+   "minRangeAtr": 1.0,
+   "maxHold": 24
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. rng=high[i]-low[i] (skip if 0); a=ctx.atr(24,i-1); body=|close[i]-open[i]|. Bullish pin: low[i] <= ctx.donchian(168,i-1).lower AND (min(open[i],close[i])-low[i]) >= 0.6*rng AND close[i] >= low[i]+0.66*rng AND rng >= a -> +1; stop level = low[i]. Bearish pin: high[i] >= ctx.donchian(168,i-1).upper AND (high[i]-max(open[i],close[i])) >= 0.6*rng AND close[i] <= low[i]+0.34*rng AND rng >= a -> -1; stop level = high[i]. Exit: close[k]>ctx.sma('close',24,k) for a long (close[k]<ctx.sma('close',24,k) for a short), OR close breaches the stop level (long: close<stop; short: close>stop), OR 24 bars elapsed. Only when flat.",
+  "rationale": "Price-action traders treat a long rejection wick at a one-week extreme as evidence of a failed break; the rule encodes the classic pin bar with a fixed wick fraction, a fixed location in the 7-day range and a minimum size so it ignores noise bars.",
+  "source": "Nison (1991) 'Japanese Candlestick Charting Techniques'; Bulkowski (2008) 'Encyclopedia of Candlestick Charts'; Marshall, Young, Rose (2006) 'Candlestick technical trading strategies: can they create value for investors?' JBF",
+  "expectedTradesPerYear": 120,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-23",
+  "name": "Triple-EMA ribbon pullback to the 21 EMA",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "fast": 8,
+   "mid": 21,
+   "slow": 55,
+   "slopeBars": 12
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. e8=ctx.ema('close',8,i), e21=ctx.ema('close',21,i), e55=ctx.ema('close',55,i), e55prev=ctx.ema('close',55,i-12). Up alignment: e8>e21>e55 AND e55>e55prev. If flat: up alignment AND low[i]<=e21 AND close[i]>e21 -> +1. Down alignment: e8<e21<e55 AND e55<e55prev: if flat AND high[i]>=e21 AND close[i]<e21 -> -1. Exit (0): long when close[i]<e55; short when close[i]>e55.",
+  "rationale": "Buy-the-pullback inside an aligned ribbon is the standard retail trend-continuation rule; the 55-EMA exit gives it a wide stop so costs are small relative to winners.",
+  "source": "Elder (1993) 'Trading for a Living' (EMA trend pullbacks); Murphy (1999)",
+  "expectedTradesPerYear": 200,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-24",
+  "name": "Opening-4-hour volume surge continuation",
+  "family": "momentum",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "openBars": 4,
+   "volRatio": 1.5,
+   "baselineDays": 20,
+   "exitHour": 19
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==3 (close = 04:00): V = sum volume(i-3..i); R = close[i]/open[i-3]-1. state.vh = array of the last 20 daily V values (newest last). If vh.length>=20: med = median(vh) computed BEFORE pushing V, ratio = V/med; if ratio >= 1.5 and R>0 -> +1, ratio >=1.5 and R<0 -> -1, else 0. Push V (drop the oldest beyond 20). Hold over bars H=4..19 (until 20:00): return the position through the bar H==18 and return 0 at the bar with H==19.",
+  "rationale": "Opening volume that is much larger than that symbol's norm marks a day with real participation; price direction during that burst may persist (volume-confirmed intraday momentum), and quiet openings are skipped. The volume-conditioned version has not been tested against the plain UTC-day ORB.",
+  "source": "Karpoff (1987) 'The relation between price changes and trading volume'; Campbell, Grossman, Wang (1993) QJE; Gervais, Kaniel, Mingelgrin (2001) 'The high-volume return premium' JF",
+  "expectedTradesPerYear": 450,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-25",
+  "name": "Turtle Soup: failed breakdown of the 120-bar extreme",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "extremeBars": 120,
+   "minAge": 4,
+   "maxHold": 12
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. L=ctx.donchian(120,i-1).lower; U=ctx.donchian(120,i-1).upper. Long when flat: low[i] < L AND close[i] > L AND min(low[i-4..i-1]) > L (the old low is at least 4 bars old) -> +1, stopLevel=low[i]. Short when flat: high[i] > U AND close[i] < U AND max(high[i-4..i-1]) < U -> -1, stopLevel=high[i]. Exit: close[k] < stopLevel for a long (> for a short), or 12 bars elapsed, then 0.",
+  "rationale": "Raschke's classic 'turtle soup' fades the false break of a multi-day extreme where stops cluster; ETF daily versions were tested, the hourly crypto version has a different stop-cluster geometry and is a commonly requested rule.",
+  "source": "Raschke & Connors (1995) 'Street Smarts: High Probability Short-Term Trading Strategies' (Turtle Soup); Osler (2003) 'Currency orders and exchange rate dynamics' JF (stop clusters)",
+  "expectedTradesPerYear": 150,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-27",
+  "name": "Prior-day close-location continuation into the next morning",
+  "family": "momentum",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "hiThresh": 0.8,
+   "loThresh": 0.2,
+   "holdBars": 12
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==23 (close = 00:00): dh=max high(i-23..i), dl=min low(i-23..i), clv=(close[i]-dl)/(dh-dl) (skip if dh==dl). If clv>=0.8 -> +1; clv<=0.2 -> -1; else 0. Hold 12 bars (H=0..11) and return 0 from the bar with H==11 on (position 0 set at bar i+12).",
+  "rationale": "A UTC day that closes in the top or bottom fifth of its range shows one-sided control going into the next session; this tests whether that persists over the Asian and European morning (the equity-style IBS result is reversal, so the sign is a real question for crypto).",
+  "source": "Raschke & Connors (1995); Pagonidis (2014) 'The IBS Effect: Mean Reversion in Equity ETFs' NAAIM",
+  "expectedTradesPerYear": 1000,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-28",
+  "name": "72-hour regression t-statistic trend (|t| >= 3)",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "windowBars": 72,
+   "tEntry": 3.0,
+   "tExit": 1.0
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At each bar i: regress y_k=ln(close[k]) on x_k=0..71 for the last 72 bars (k=i-71..i) by OLS with intercept; slope b; residual std error se = sqrt(sum(resid^2)/70)/sqrt(sum((x-35.5)^2)); t=b/se. State pos: if pos==0: t>=+3 -> +1; t<=-3 -> -1. If pos==+1: exit to 0 when t<1 (and to -1 if t<=-3). If pos==-1: exit to 0 when t>-1 (and to +1 if t>=+3).",
+  "rationale": "A volatility-normalised trend strength measure from quantitative practice: it enters only when the 3-day drift is statistically distinguishable from noise, so it needs far fewer trades than moving-average crossovers.",
+  "source": "Moskowitz, Ooi, Pedersen (2012) JFE (t-stat of trend); Baltas & Kosowski (2013) 'Momentum strategies in futures markets and trend-following funds'; Zakamulin (2017) 'Market Timing with Moving Averages'",
+  "expectedTradesPerYear": 220,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-29",
+  "name": "US cash-open hour spike fade",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "openHour": 14,
+   "zEntry": 2.0,
+   "holdBars": 4,
+   "volWindow": 720
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short, weekdays only (D(i) in 1..5). At bar i with H(i)==14 (close = 15:00): R = close[i]/open[i]-1 (one bar); z = R/sigma(i-1). If flat: z>=+2.0 -> -1; z<=-2.0 -> +1; else 0. Hold 4 bars (H=15..18) and return 0 from the bar H==18 on (position 0 at bar i+4). The summer/winter shift of the 13:30/14:30 open is ignored by design.",
+  "rationale": "'US equity-open hour momentum' was tested as a continuation; this is its other side. A spike at the equity open is often an auction/liquidity event that retraces once index futures settle, and both signs of the question are now pre-registered.",
+  "source": "Gao et al. (2018) JFE; Admati & Pfleiderer (1988) 'A theory of intraday patterns' RFS; Heston, Korajczyk, Sadka (2010) JF",
+  "expectedTradesPerYear": 250,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-30",
+  "name": "Volatility-managed trend: long only when short-run vol is below long-run vol",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "fastEma": 48,
+   "slowEma": 336,
+   "volShort": 168,
+   "volLong": 2160
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long-only. e1=ctx.ema('close',48,i), e2=ctx.ema('close',336,i), v1=ctx.rollingStd('ret',168,i), v2=ctx.rollingStd('ret',2160,i). Position = +1 if e1>e2 AND v1<v2 else 0, re-evaluated every bar.",
+  "rationale": "Moreira-Muir show that cutting exposure when recent volatility is high improves risk-adjusted factor returns; this applies the idea as a gate on an hourly trend filter and asks whether the gate adds anything over the plain trend (which is already in the registry).",
+  "source": "Moreira & Muir (2017) 'Volatility-managed portfolios' JF; Harvey et al. (2018) 'The impact of volatility targeting' JPM",
+  "expectedTradesPerYear": 120,
+  "chunk": 3
+ },
+ {
+  "id": "c1031-intraday-31",
+  "name": "Fibonacci 61.8% retracement entry inside a 168-hour swing",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "swingBars": 168,
+   "fib": 0.618,
+   "minSwingAtr": 4,
+   "maxHold": 48
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. SH=ctx.donchian(168,i-1).upper, SL=ctx.donchian(168,i-1).lower, tH=index of the (latest) bar of max high in i-168..i-1, tL=index of the (latest) bar of min low in the same window, a=ctx.atr(24,i-1), swing=SH-SL. Require swing >= 4*a. If tH>tL (up swing): level=SH-0.618*swing; if flat AND low[i]<=level AND close[i]>level AND close[i]>SL -> +1; stop=SL, target=SH. If tL>tH (down swing): level=SL+0.618*swing; if flat AND high[i]>=level AND close[i]<level AND close[i]<SH -> -1; stop=SH, target=SL. Exit: long when close>=target or close<stop; short when close<=target or close>stop; or after 48 bars.",
+  "rationale": "Fibonacci retracements are among the most widely used retail entry rules; the 61.8% level with a swing-extreme stop and swing-extreme target has a fixed definition and a minimum swing size, so it can be tested on its own rather than argued about.",
+  "source": "Fischer (1993) 'Fibonacci Applications and Strategies for Traders'; Osler (2000) 'Support for resistance: technical analysis and intraday exchange rates' FRBNY Economic Policy Review",
+  "expectedTradesPerYear": 130,
+  "chunk": 1
+ },
+ {
+  "id": "c1031-intraday-32",
+  "name": "Daily and weekly open alignment trend",
+  "family": "trend",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "atrBars": 24,
+   "entryAtr": 0.25
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. dO = open of the most recent bar with H==0 (needs it within the last 24 bars); wO = open of the most recent bar with D==1 and H==0 (within the last 168 bars); a=ctx.atr(24,i). If flat: close[i] > max(dO,wO)+0.25*a -> +1; close[i] < min(dO,wO)-0.25*a -> -1. Exit: long when close[i] < dO; short when close[i] > dO. Re-entry allowed next qualifying bar.",
+  "rationale": "Price holding above both the daily and weekly open is a common discretionary bias filter (ICT/open-based trading), asked here as a mechanical two-anchor trend rule with a small ATR buffer and the daily open as exit.",
+  "source": "Zarattini et al. (2024) intraday anchor logic; Michael Huddleston (ICT) opens-as-bias teaching; Brock, Lakonishok, LeBaron (1992)",
+  "expectedTradesPerYear": 500,
+  "chunk": 2
+ },
+ {
+  "id": "c1031-intraday-33",
+  "name": "Dalton 80% rule: re-entry into the prior-day value area",
+  "family": "mean_reversion",
+  "assetClass": "crypto",
+  "timeframe": "1h",
+  "assets": [
+   "BTCUSDT",
+   "BNBUSDT",
+   "XRPUSDT",
+   "ADAUSDT",
+   "DOGEUSDT",
+   "LTCUSDT",
+   "LINKUSDT",
+   "TRXUSDT"
+  ],
+  "params": {
+   "bins": 24,
+   "vaFrac": 0.7,
+   "confirmCloses": 2,
+   "entryHoursTo": 12,
+   "stopVaWidth": 0.5
+  },
+  "rule": "Conventions: signal mode on CRYPTO_1H, independent per symbol, all times UTC; time = bar OPEN in epoch seconds; bar k covers [time[k], time[k]+1h) and close[k] is the price at the END of the bar; H(k)=floor(time[k]/3600)%24; D(k)=(floor(time[k]/86400)+4)%7 (0=Sun..6=Sat); a 'bar H=h' is the bar that opens at h:00, so its close is the (h+1):00 price. signal(bars,i,ctx) is evaluated at the close of bar i using only bars 0..i and returns the position (+1/0/-1) held over bar i+1; 'enter/exit' means the returned position changes at bar i. ret1[k]=close[k]/close[k-1]-1; sigma(j) = ctx.rollingStd('ret',720,j) (sample std of the 720 hourly returns ending at bar j; NaN or <=0 means no trade); a z-score of an n-bar move R is R/(sigma(.)*sqrt(n)) with sigma taken at the bar BEFORE the move starts. Contiguity guard: any rule that looks back n bars requires time[i]-time[i-n]==n*3600; if it fails return 0 and clear ctx.state. State lives in ctx.state (initialise with `=== undefined` checks); position, flags and histories are reset only as stated. Long-only specs never return -1; 'long/short' specs may. One position at a time per symbol; while a position is held its entry rules are not re-evaluated unless stated. Params are fixed a priori and are never tuned. Long/short. At bar i with H(i)==0 (contiguity guard 24 bars): prior day = bars i-24..i-1: lo,hi (skip if equal); tp_k=(high+low+close)/3; bin_k=min(23,floor((tp_k-lo)/(hi-lo)*24)); vol[bin]+=volume_k. POC=bin with max vol (ties -> lowest). Value area: start with the POC bin; while covered volume < 0.70*total: add whichever adjacent bin (just above the block or just below it) has more volume (tie -> upper; if one side is exhausted use the other). VAH = upper edge of the highest included bin, VAL = lower edge of the lowest included bin. dayOpen=open[i]. Day state: openAbove = dayOpen>VAH, openBelow = dayOpen<VAL; if neither, no trade today. For bars with H in 1..12: count consecutive closes inside [VAL,VAH] (reset to 0 on any close outside); when the count reaches 2 and flat and not traded: openAbove -> -1 (target VAL), openBelow -> +1 (target VAH); traded=true. Exit: short when close<=VAL; long when close>=VAH; stop: short when close > VAH+0.5*(VAH-VAL), long when close < VAL-0.5*(VAH-VAL); always 0 at the bar with H==23.",
+  "rationale": "The 80% rule from Market Profile is a standard day-trader rule: when the day opens outside the prior value area and then re-enters it, price is expected to traverse the area. It is fully specifiable from hourly OHLCV and has not been tested on crypto.",
+  "source": "Dalton, Jones, Dalton (1990/2007) 'Mind Over Markets' (80% rule); Steidlmayer (1985) Market Profile",
+  "expectedTradesPerYear": 220,
+  "chunk": 3
+ }
+]

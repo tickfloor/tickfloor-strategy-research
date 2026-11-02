@@ -1,0 +1,14 @@
+[
+ {
+  "id": "c1031-overlay-01",
+  "reason": "dup_of c1022-redteam-25 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-overlay-24",
+  "reason": "narrow 5-ETF trend gate (SMA100 + 63d return) overlaps st-trend-comm-base, trend-faber-10m-sma-gtaa and c1022-acad-16; least worth a test"
+ },
+ {
+  "id": "c1031-overlay-25",
+  "reason": "three-close confirmation is a thin variant of the 200-day filters already run (volreg-ma200-base, c1022-macro-41) and of overlay-14 (hysteresis); least worth a test"
+ }
+]

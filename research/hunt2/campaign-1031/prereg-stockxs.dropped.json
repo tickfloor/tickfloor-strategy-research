@@ -1,0 +1,18 @@
+[
+ {
+  "id": "c1031-stockxs-15",
+  "reason": "dup_of c1031-acad4-27 (overseer rule: dup_of specs dropped)"
+ },
+ {
+  "id": "c1031-stockxs-13",
+  "reason": "dropped: annual rebuild gives ~7 portfolio changes in the discovery window, far under the 30-trade minimum, and 7 samples cannot test anything"
+ },
+ {
+  "id": "c1031-stockxs-14",
+  "reason": "dropped: same annual rebuild, ~7 portfolio changes (<30 trades); one January a year is a calendar hack on 7 observations"
+ },
+ {
+  "id": "c1031-stockxs-09",
+  "reason": "FIXED: name said \"rising 50-day mean\" but the rule only counts closes above the 50-day mean; name aligned to the rule (rule text unchanged)"
+ }
+]

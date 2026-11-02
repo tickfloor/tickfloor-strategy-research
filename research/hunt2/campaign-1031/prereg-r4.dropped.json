@@ -1,0 +1,26 @@
+[
+ {
+  "id": "c1031-r4-01",
+  "reason": "dup_of c1031-acad4-15 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-r4-05",
+  "reason": "dup_of c1031-r4-04 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-r4-06",
+  "reason": "dup_of c1031-r4-04 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-r4-11",
+  "reason": "dup_of c1031-r4-10 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-r4-12",
+  "reason": "dup_of c1031-r4-10 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-r4-29",
+  "reason": "dup_of c1031-r4-28 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ }
+]

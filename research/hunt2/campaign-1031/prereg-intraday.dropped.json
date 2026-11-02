@@ -1,0 +1,14 @@
+[
+ {
+  "id": "c1031-intraday-10",
+  "reason": "dup_of c1031-acad4-30 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-intraday-16",
+  "reason": "dup_of t100-supertrend-h (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-intraday-26",
+  "reason": "cut to reach 30: weakest premise; the CME weekly reopen is 22:00 UTC in summer and 23:00 UTC in winter, so the fixed H=23 bar is the post-reopen hour only half the year, and a single-hour z gating an 8-hour hold is the least motivated spec of the set"
+ }
+]

@@ -1,0 +1,893 @@
+[
+ {
+  "name": "Fading-fear re-entry: buy equity ETFs when an elevated VIX has fallen 15% in a week",
+  "family": "volatility",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA",
+   "XLK",
+   "XLF"
+  ],
+  "mode": "signal",
+  "holdBars": 10,
+  "params": {
+   "vixFloor": 20,
+   "fallRatio": 0.85,
+   "lag": 5,
+   "hold": 10
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nV(k) = M(\"VIXCLS\",k). Return 1 if V(0) >= 20 and V(0) <= 0.85*V(5), else 0. holdBars=10 opens a 10-bar long at the signal and ignores re-triggers while open.",
+  "rationale": "Existing VIX rules buy the spike or the level; this buys the first sign that fear is being unwound while it is still elevated, when the risk premium is fat but the tail is retreating.",
+  "source": "Whaley (2000) The Investor Fear Gauge, J. Portfolio Mgmt 26(3); Giot (2005) Relationships between implied volatility indexes and stock index returns, J. Portfolio Mgmt 31(3)",
+  "expectedTradesPerYear": 20,
+  "id": "c1031-macro-01",
+  "chunk": 1
+ },
+ {
+  "name": "VIX Schmitt trigger: leave equity ETFs when VIX closes at 22 or more, return only once it is back to 17 or less",
+  "family": "volatility",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA",
+   "XLK",
+   "XLF",
+   "XLI"
+  ],
+  "mode": "signal",
+  "params": {
+   "outAt": 22,
+   "inAt": 17
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nV = M(\"VIXCLS\",0). State inPos starts as 1 (set once: if ctx.state.inPos === undefined). If inPos==1 and V >= 22 then inPos=0. Else if inPos==0 and V <= 17 then inPos=1. Return inPos.",
+  "rationale": "The plain 'VIX above 20' rule whipsaws around its threshold; a hysteresis band is the standard fix and nobody has priced how much of the volatility-regime benefit survives it after costs.",
+  "source": "Simon & Wiggins (2001) S&P futures returns and contrary sentiment indicators, J. Futures Markets 21(5); Schmitt trigger (hysteresis) as used in Kaufman (2013) Trading Systems and Methods",
+  "expectedTradesPerYear": 5,
+  "id": "c1031-macro-02",
+  "chunk": 1
+ },
+ {
+  "name": "Confirmed dip buy: 7% off the 63-day high while the VIX curve is inverted, 15-bar hold",
+  "family": "mean_reversion",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA",
+   "XLK",
+   "XLF",
+   "XLI"
+  ],
+  "mode": "signal",
+  "holdBars": 15,
+  "params": {
+   "ddThreshold": -0.07,
+   "highWindow": 63,
+   "hold": 15,
+   "ratioMin": 1
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nRequires i >= 62. H = max of bars[i-62..i].close. dd = bars[i].close/H - 1. ratio = M(\"VIX\",0)/M(\"VIX3M\",0). Return 1 if dd <= -0.07 and ratio > 1.0, else 0. holdBars=15.",
+  "rationale": "A price drawdown alone is ambiguous; adding VIX backwardation separates market-wide panic (where liquidity providers are paid) from a slow grind lower.",
+  "source": "Nagel (2012) Evaporating liquidity, Rev. Financial Studies 25(7); Whaley (2009) Understanding the VIX, J. Portfolio Mgmt 35(3)",
+  "expectedTradesPerYear": 20,
+  "id": "c1031-macro-03",
+  "chunk": 1
+ },
+ {
+  "name": "55-day Donchian breakout on large-cap stocks, entries allowed only when VIX is below its 126-day mean",
+  "family": "trend",
+  "assetClass": "us_stock",
+  "timeframe": "1d",
+  "assets": [
+   "AAPL",
+   "NVDA",
+   "AMZN",
+   "GOOGL",
+   "META",
+   "TSLA",
+   "JPM",
+   "V",
+   "UNH",
+   "XOM",
+   "JNJ",
+   "COST",
+   "ABBV",
+   "MRK",
+   "AVGO",
+   "CVX",
+   "WMT",
+   "BAC",
+   "ORCL",
+   "ADBE",
+   "CRM",
+   "NFLX",
+   "AMD",
+   "INTC",
+   "ABT",
+   "MCD",
+   "DIS",
+   "QCOM",
+   "TXN",
+   "HON",
+   "CAT",
+   "LOW",
+   "SBUX",
+   "BA",
+   "UPS",
+   "PFE",
+   "T",
+   "MDT",
+   "UNP",
+   "MMM"
+  ],
+  "mode": "signal",
+  "params": {
+   "entryN": 55,
+   "exitN": 20,
+   "vixMeanN": 126
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nState pos starts 0. calm = M(\"VIXCLS\",0) < mean_126(M(\"VIXCLS\",k)). If pos==0 and calm and bars[i].close > ctx.donchian(55, i-1).upper then pos=1. If pos==1 and bars[i].close < ctx.donchian(20, i-1).lower then pos=0. The VIX gate applies to entries only. Return pos.",
+  "rationale": "Breakouts fail more often when implied volatility is already elevated and trending up; gating entries on a calm-VIX regime asks whether the Turtle rule's whipsaw problem is a volatility-regime problem.",
+  "source": "Faith (2007) Way of the Turtle; Moskowitz, Ooi & Pedersen (2012) Time series momentum, JFE 104(2)",
+  "expectedTradesPerYear": 80,
+  "id": "c1031-macro-04",
+  "chunk": 1
+ },
+ {
+  "name": "VIX percentile exposure scaling: equity weight = 1 minus the VIX's 3-year percentile, remainder in SHY, weekly",
+  "family": "volatility",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA",
+   "SHY"
+  ],
+  "mode": "rank",
+  "rebalance": "weekly",
+  "params": {
+   "minHist": 52,
+   "histWeeks": 156
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nEach call: v = ctx.macro(\"VIXCLS\"); if null return {QQQ:0.5,DIA:0.5}. Push v to ctx.state.h. If h.length < 52 return {QQQ:0.5,DIA:0.5}. Take the last min(156,h.length) values including v; p = fraction of them <= v. e = 1 - p. Return {QQQ: e/2, DIA: e/2, SHY: 1-e}.",
+  "rationale": "Volatility-managed sizing normally divides by volatility; ranking the VIX against its own history is a scale-free alternative that is invariant to the VIX's long drift.",
+  "source": "Moreira & Muir (2017) Volatility-managed portfolios, JF 72(4); Fleming, Kirby & Ostdiek (2001) The economic value of volatility timing, JF 56(1)",
+  "expectedTradesPerYear": 52,
+  "id": "c1031-macro-05",
+  "chunk": 1
+ },
+ {
+  "name": "Connors-style VIX stretch: buy when VIX closes 10% above its 10-day average in an index uptrend, exit above the 5-day average",
+  "family": "mean_reversion",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA"
+  ],
+  "proxyFor": {
+   "SPY": "QQQ"
+  },
+  "mode": "signal",
+  "params": {
+   "stretch": 1.1,
+   "vixSma": 10,
+   "trendSma": 200,
+   "exitSma": 5
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nV(k)=M(\"VIXCLS\",k). Stretch = V(0) >= 1.10 * mean_10(V). State pos starts 0. If pos==0 and Stretch and bars[i].close > ctx.sma(\"close\",200) then pos=1. If pos==1 and bars[i].close > ctx.sma(\"close\",5) then pos=0. Return pos.",
+  "rationale": "A short-term-trading classic that sells volume in books and courses; the VIX stretch above a short average is the entry, a rebound over the 5-day average is the exit.",
+  "source": "Connors & Alvarez (2009) Short Term Trading Strategies That Work (VIX stretch idea, reconstructed as above, thresholds fixed a priori)",
+  "expectedTradesPerYear": 10,
+  "id": "c1031-macro-06",
+  "chunk": 1
+ },
+ {
+  "name": "VIX-adaptive trend lookback: 50-day average when VIX is 20 or more, 200-day average when it is below",
+  "family": "trend",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA",
+   "XLK",
+   "XLF",
+   "XLI",
+   "XLV"
+  ],
+  "mode": "signal",
+  "params": {
+   "fast": 50,
+   "slow": 200,
+   "vixSplit": 20
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nV = M(\"VIXCLS\",0). L = 50 if V >= 20 else 200. Return 1 if bars[i].close > ctx.sma(\"close\", L) else 0 (NaN sma -> 0).",
+  "rationale": "A slow average lags badly in a crash and a fast one whipsaws in calm uptrends; switching the lookback on implied volatility is the textbook adaptive-trend fix and has a single fixed switch point.",
+  "source": "Kaufman (2013) Trading Systems and Methods (adaptive lookbacks); Faber (2007) A quantitative approach to tactical asset allocation, J. Wealth Mgmt 9(4)",
+  "expectedTradesPerYear": 40,
+  "id": "c1031-macro-07",
+  "chunk": 1
+ },
+ {
+  "name": "VIX-curve dispatch on sectors: momentum while the curve is in contango, short-term reversal when it is inverted, weekly",
+  "family": "momentum",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "XLK",
+   "XLF",
+   "XLE",
+   "XLV",
+   "XLI",
+   "XLP",
+   "XLY",
+   "XLU",
+   "XLB",
+   "VNQ"
+  ],
+  "mode": "rank",
+  "rebalance": "weekly",
+  "params": {
+   "momLookback": 63,
+   "revLookback": 5,
+   "n": 3
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nratio = ctx.macro(\"VIX\")/ctx.macro(\"VIX3M\"); if either null return {}. For each symbol with >= 64 bars: mom = b[L-1].close/b[L-64].close - 1 and rev = b[L-1].close/b[L-6].close - 1 (L = bars in view). If ratio < 1.0 pick the 3 symbols with highest mom; else pick the 3 with lowest rev. Ties by symbol ascending. Weight 1/3 each.",
+  "rationale": "Short-term reversals are strongest when liquidity is scarce and momentum is strongest in calm trending markets; the VIX curve is a direct liquidity-stress state variable.",
+  "source": "Nagel (2012) Evaporating liquidity, RFS 25(7); Moskowitz & Grinblatt (1999) Do industries explain momentum?, JF 54(4)",
+  "expectedTradesPerYear": 52,
+  "id": "c1031-macro-08",
+  "chunk": 1
+ },
+ {
+  "name": "Nominal-yield trend duration: hold Treasury and credit-duration ETFs while the 10y yield proxy is below its 100-day mean",
+  "family": "trend",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "TLT",
+   "IEF",
+   "AGG",
+   "LQD"
+  ],
+  "mode": "signal",
+  "params": {
+   "window": 100
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\ny(k) = M(\"DFII10\",k) + M(\"T10YIE\",k) = nominal 10y yield proxy in %. Return 1 if y(0) < mean_100(y(k)) else 0 (needs all 100 values non-null).",
+  "rationale": "Trend-following on the yield rather than the bond price removes the carry-and-roll noise from the price series; a falling yield trend is a rising price trend by construction, so this tests whether the cleaner input gives a cleaner gate.",
+  "source": "Hurst, Ooi & Pedersen (2017) A century of evidence on trend-following investing, J. Portfolio Mgmt 44(1); Asness, Moskowitz & Pedersen (2013) Value and momentum everywhere, JF 68(3)",
+  "expectedTradesPerYear": 30,
+  "id": "c1031-macro-09",
+  "chunk": 1
+ },
+ {
+  "name": "TLT and IEF below their yield-implied fair value: rolling 252-day regression residual z-score of -1 or lower",
+  "family": "mean_reversion",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "TLT",
+   "IEF"
+  ],
+  "mode": "signal",
+  "params": {
+   "window": 252,
+   "entryZ": -1,
+   "exitZ": 0
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\ny(k) = M(\"DFII10\",k) + M(\"T10YIE\",k) = nominal 10y yield proxy in %. Requires i >= 251 and all y non-null over the window. Over k=0..251 regress z_k = ln(bars[i-k].close) on x_k = y(k) with intercept (OLS), residual e_k = z_k - a - b*x_k, s = sample std of the e_k, zres = e_0/s. State pos starts 0. If pos==0 and zres <= -1.0 then pos=1. If pos==1 and zres >= 0.0 then pos=0. Return pos.",
+  "rationale": "Bond price is a deterministic function of yield plus carry and roll; a persistent price shortfall versus the yield-implied level should mean-revert faster than yields trend.",
+  "source": "Cochrane & Piazzesi (2005) Bond risk premia, AER 95(1); Gatev, Goetzmann & Rouwenhorst (2006) Pairs trading, RFS 19(3) (residual-reversion approach)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-10",
+  "chunk": 1
+ },
+ {
+  "name": "Oil/gold ratio falling over 13 weeks: hold intermediate and long Treasuries",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "GLD",
+   "TLT",
+   "IEF"
+  ],
+  "mode": "rank",
+  "rebalance": "weekly",
+  "params": {
+   "lagWeeks": 13
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nOil = ctx.macro(\"DCOILWTICO\"); if null or <= 5 return {}. r = Oil / universe.GLD last close. Push r to ctx.state.r. If r history length < 14 return {}. chg = r / r_hist[len-14] - 1 (13 calls ago). If chg < 0 return {TLT:0.5, IEF:0.5} else {}. GLD is an input only and is never held.",
+  "rationale": "The oil-to-gold ratio is a widely quoted real-time proxy for growth-and-inflation pressure on the 10-year yield; a falling ratio should favour duration.",
+  "source": "Practitioner lore (oil/gold ratio tracks 10y Treasury yields; Real Vision, Hedgeye and sell-side commentary); Hamilton (2009) Causes and consequences of the oil shock of 2007-08, Brookings Papers",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-11",
+  "chunk": 2
+ },
+ {
+  "name": "Oil/gold ratio above its 26-week mean: hold cyclical sectors, otherwise SHY",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "GLD",
+   "XLI",
+   "XLB",
+   "XLF",
+   "XLY",
+   "SHY"
+  ],
+  "mode": "rank",
+  "rebalance": "weekly",
+  "params": {
+   "meanWeeks": 26
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nOil = ctx.macro(\"DCOILWTICO\"); if null or <= 5 return {}. r = Oil / universe.GLD last close. Push r to ctx.state.r. If history length < 26 return {SHY:1}. If r > mean of the last 26 stored r (including r) return {XLI:0.25,XLB:0.25,XLF:0.25,XLY:0.25} else {SHY:1}. GLD is never held.",
+  "rationale": "Oil rising against gold is a growth signal; the same ratio that is used for bonds is used here to turn cyclical equity exposure on and off.",
+  "source": "Practitioner lore (oil/gold ratio as a risk-on indicator); Hamilton (2009) Brookings Papers; Chen, Roll & Ross (1986) Economic forces and the stock market, J. Business 59(3)",
+  "expectedTradesPerYear": 20,
+  "id": "c1031-macro-12",
+  "chunk": 2
+ },
+ {
+  "name": "Dollar-deflated oil above its 150-day mean: hold energy equities and commodity ETFs",
+  "family": "trend",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "XLE",
+   "USO",
+   "DBC"
+  ],
+  "mode": "signal",
+  "params": {
+   "window": 150
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nOil(k) = M(\"DCOILWTICO\",k); treat Oil(k) <= 5 as null. q(k) = Oil(k) / M(\"DTWEXBGS\",k) (oil priced in the broad dollar). Return 1 if q(0) > mean_150(q(k)) else 0.",
+  "rationale": "Oil priced in dollars conflates oil demand with dollar moves; deflating by the broad dollar isolates the real commodity trend that energy earnings follow.",
+  "source": "Kilian (2009) Not all oil price shocks are alike, AER 99(3); Akram (2009) Commodity prices, interest rates and the dollar, Energy Economics 31(6)",
+  "expectedTradesPerYear": 15,
+  "id": "c1031-macro-13",
+  "chunk": 2
+ },
+ {
+  "name": "Oil collapse relief: after WTI falls 15% in 20 bars, hold consumer, industrial, Dow and Nasdaq ETFs for 40 bars",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "XLY",
+   "XLI",
+   "DIA",
+   "QQQ"
+  ],
+  "mode": "signal",
+  "holdBars": 40,
+  "params": {
+   "drop": -0.15,
+   "lag": 20,
+   "hold": 40
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nO0 = M(\"DCOILWTICO\",0), O20 = M(\"DCOILWTICO\",20); if O20 <= 10 or O0 <= 5 return 0. Return 1 if O0/O20 - 1 <= -0.15 else 0. holdBars=40.",
+  "rationale": "Cheaper fuel is a tax cut for consumers and transport-intensive industry; markets often read oil falls as a growth scare first, so the horizon is long enough to test whether the relief channel eventually shows.",
+  "source": "Kilian & Park (2009) The impact of oil price shocks on the US stock market, Int. Economic Review 50(4); Driesprong, Jacobsen & Maat (2008) Striking oil: another puzzle?, JFE 89(2)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-14",
+  "chunk": 2
+ },
+ {
+  "name": "Foreign-revenue stocks when the dollar has weakened over 3 months, domestic-revenue stocks when it has strengthened, monthly",
+  "family": "macro",
+  "assetClass": "us_stock",
+  "timeframe": "1d",
+  "assets": [
+   "AAPL",
+   "QCOM",
+   "TXN",
+   "INTC",
+   "CAT",
+   "MMM",
+   "HON",
+   "BA",
+   "WMT",
+   "COST",
+   "LOW",
+   "UNP",
+   "T",
+   "UNH",
+   "ABT",
+   "MCD"
+  ],
+  "mode": "rank",
+  "rebalance": "monthly",
+  "params": {
+   "lagMonths": 3
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nF = {AAPL,QCOM,TXN,INTC,CAT,MMM,HON,BA} (fixed a priori, heavy foreign revenue); D = {WMT,COST,LOW,UNP,T,UNH,ABT,MCD}. d = ctx.macro(\"DTWEXBGS\"); if null return equal weight over all 16 present. Push d to ctx.state.d. If history < 4 return equal weight over all 16 present. chg = d/d_hist[len-4] - 1 (3 months ago). If chg < 0 return 1/n on each F symbol present, else 1/n on each D symbol present.",
+  "rationale": "The broad-dollar index drives translation of foreign sales; a weak dollar lifts reported earnings of multinationals relative to domestic earners. Sector-level versions have been tested, a stock-level, fixed-basket version has not.",
+  "source": "Jorion (1990) The exchange-rate exposure of U.S. multinationals, J. Business 63(3); Bartram & Bodnar (2007) The exchange rate exposure puzzle, Managerial Finance 33(9)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-15",
+  "chunk": 2
+ },
+ {
+  "name": "Long-duration versus short-duration stock baskets switched by the 3-month change in the 10y real yield, monthly",
+  "family": "macro",
+  "assetClass": "us_stock",
+  "timeframe": "1d",
+  "assets": [
+   "NVDA",
+   "TSLA",
+   "AMD",
+   "ADBE",
+   "CRM",
+   "NFLX",
+   "AMZN",
+   "META",
+   "XOM",
+   "CVX",
+   "JPM",
+   "BAC",
+   "T",
+   "PFE",
+   "MRK",
+   "MMM"
+  ],
+  "mode": "rank",
+  "rebalance": "monthly",
+  "params": {
+   "lagMonths": 3
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nL = {NVDA,TSLA,AMD,ADBE,CRM,NFLX,AMZN,META} (back-loaded cash flows); S = {XOM,CVX,JPM,BAC,T,PFE,MRK,MMM} (front-loaded). r = ctx.macro(\"DFII10\"); if null return equal weight over all 16 present. Push r. If history < 4 return equal weight over all 16 present. chg = r - r_hist[len-4] (3 months ago, percentage points). If chg <= 0 return 1/n on each L present, else 1/n on each S present.",
+  "rationale": "Equity duration theory says long-duration stocks are hurt most by rising real discount rates; the ETF-level QQQ-versus-DIA test cannot isolate this because of index composition, a stock basket can.",
+  "source": "Weber (2018) Cash flow duration and the term structure of equity returns, JFE 128(3); Lettau & Wachter (2007) Why is long-horizon equity less risky?, JF 62(1)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-16",
+  "chunk": 2
+ },
+ {
+  "name": "Real-yield factor momentum: hold the 5 of 25 ETFs with the highest (rising yields) or lowest (falling yields) 52-week beta to weekly real-yield changes",
+  "family": "momentum",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA",
+   "XLK",
+   "XLF",
+   "XLE",
+   "XLV",
+   "XLI",
+   "XLP",
+   "XLY",
+   "XLU",
+   "XLB",
+   "XLC",
+   "VNQ",
+   "TLT",
+   "IEF",
+   "SHY",
+   "LQD",
+   "HYG",
+   "AGG",
+   "GLD",
+   "SLV",
+   "USO",
+   "UNG",
+   "DBC",
+   "UUP"
+  ],
+  "mode": "rank",
+  "rebalance": "weekly",
+  "params": {
+   "betaWeeks": 52,
+   "trendWeeks": 13,
+   "n": 5
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nEach call: r = ctx.macro(\"DFII10\"); if null return {}. Push r to ctx.state.r and, for each symbol present, its last close to ctx.state.c[sym]. Need >= 53 stored values. For each symbol with 53 stored closes aligned to the last 53 calls: x_t = r_t - r_{t-1}, y_t = ln(c_t/c_{t-1}) for the last 52 weeks; beta = cov(y,x)/var(x). trend = r_now - r_13 calls ago. If trend > 0 pick the 5 highest betas, else the 5 lowest. Weight 0.2. Ties by symbol ascending. Symbols with fewer than 53 stored closes are skipped.",
+  "rationale": "Factors trend; if real yields are in a 3-month uptrend, the assets that load positively on real-yield changes are the beneficiaries of that factor's momentum, and vice versa. It turns a macro trend into a cross-sectional bet without hand-picking sectors.",
+  "source": "Ehsani & Linnainmaa (2022) Factor momentum and the momentum factor, JF 77(3); Gupta & Kelly (2019) Factor momentum everywhere, J. Portfolio Mgmt 45(3); Chen, Roll & Ross (1986)",
+  "expectedTradesPerYear": 30,
+  "id": "c1031-macro-17",
+  "chunk": 2
+ },
+ {
+  "name": "Dollar-factor momentum in stocks: hold the 8 of 40 large caps with the highest (dollar rising) or lowest (dollar falling) 52-week beta to weekly dollar changes",
+  "family": "momentum",
+  "assetClass": "us_stock",
+  "timeframe": "1d",
+  "assets": [
+   "AAPL",
+   "NVDA",
+   "AMZN",
+   "GOOGL",
+   "META",
+   "TSLA",
+   "JPM",
+   "V",
+   "UNH",
+   "XOM",
+   "JNJ",
+   "COST",
+   "ABBV",
+   "MRK",
+   "AVGO",
+   "CVX",
+   "WMT",
+   "BAC",
+   "ORCL",
+   "ADBE",
+   "CRM",
+   "NFLX",
+   "AMD",
+   "INTC",
+   "ABT",
+   "MCD",
+   "DIS",
+   "QCOM",
+   "TXN",
+   "HON",
+   "CAT",
+   "LOW",
+   "SBUX",
+   "BA",
+   "UPS",
+   "PFE",
+   "T",
+   "MDT",
+   "UNP",
+   "MMM"
+  ],
+  "mode": "rank",
+  "rebalance": "weekly",
+  "params": {
+   "betaWeeks": 52,
+   "trendWeeks": 13,
+   "n": 8
+  },
+  "rule": "Rank mode: ctx.macro(id) has no look-back, so keep any history in ctx.state, pushing the value once per rank() call; \"n calls ago\" means n rebalances ago. Weights are long-only and sum to at most 1.\nEach call: d = ctx.macro(\"DTWEXBGS\"); if null return {}. Push d to ctx.state.d and each symbol's last close to ctx.state.c[sym]. Need >= 53 stored values. For each symbol with 53 aligned stored closes: x_t = ln(d_t/d_{t-1}), y_t = ln(c_t/c_{t-1}) over the last 52 weeks; beta = cov(y,x)/var(x). trend = ln(d_now/d_13 calls ago). If trend > 0 pick the 8 highest betas, else the 8 lowest. Weight 0.125. Ties by symbol ascending.",
+  "rationale": "The dollar's trend is persistent and some large caps carry a stable negative or positive dollar loading through their foreign revenue; trading the loading in the direction of the dollar trend is the factor-momentum idea applied to a macro factor.",
+  "source": "Ehsani & Linnainmaa (2022) JF 77(3); Jorion (1990) J. Business 63(3); Bartram & Bodnar (2007)",
+  "expectedTradesPerYear": 40,
+  "id": "c1031-macro-18",
+  "chunk": 2
+ },
+ {
+  "name": "Crypto fear as a contrarian entry for tech equities: buy QQQ, XLK, DIA, XLY and XLF when the Fear & Greed index is 24 or less, hold 20 bars",
+  "family": "sentiment",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "XLK",
+   "DIA",
+   "XLY",
+   "XLF"
+  ],
+  "mode": "signal",
+  "holdBars": 20,
+  "params": {
+   "fearMax": 24,
+   "hold": 20
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nReturn 1 if M(\"FNG\",0) is not null and <= 24 else 0. holdBars=20.",
+  "rationale": "The crypto Fear & Greed index is a daily sentiment read on speculative risk appetite; extreme fear in it has coincided with broad risk-off washouts, and the question is whether tech equity ETFs are paid for buying them.",
+  "source": "Baker & Wurgler (2006) Investor sentiment and the cross-section of stock returns, JF 61(4); alternative.me Crypto Fear & Greed Index methodology",
+  "expectedTradesPerYear": 6,
+  "id": "c1031-macro-20",
+  "chunk": 2
+ },
+ {
+  "name": "Real-yield breakout: after the 10y TIPS yield makes a 126-day low, hold Treasuries, gold and utilities for 30 bars",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "TLT",
+   "GLD",
+   "XLU"
+  ],
+  "mode": "signal",
+  "holdBars": 30,
+  "params": {
+   "lookback": 126,
+   "hold": 30
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nReturn 1 if M(\"DFII10\",0) < min over k=1..126 of M(\"DFII10\",k) (strict new 126-bar low; any null -> 0) else 0. holdBars=30.",
+  "rationale": "A fresh multi-month low in real yields is a loosening-of-conditions event that should help every long-duration claim at once; the event form tests the level-shift rather than the state.",
+  "source": "Erb & Harvey (2013) The golden dilemma, FAJ 69(4); Campbell & Viceira (2001) Who should buy long-term bonds?, AER 91(1)",
+  "expectedTradesPerYear": 10,
+  "id": "c1031-macro-21",
+  "chunk": 2
+ },
+ {
+  "name": "Safe-haven basket while the VIX curve is inverted: UUP, TLT and GLD from ratio of 1.0 or more until it falls below 0.95",
+  "family": "volatility",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "UUP",
+   "TLT",
+   "GLD"
+  ],
+  "mode": "signal",
+  "params": {
+   "enterRatio": 1,
+   "exitRatio": 0.95
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nratio = M(\"VIX\",0)/M(\"VIX3M\",0). State pos starts 0. If pos==0 and ratio >= 1.0 then pos=1. If pos==1 and ratio < 0.95 then pos=0. Return pos.",
+  "rationale": "Dollar, Treasuries and gold are the three classic havens; holding them only while term-structure inversion signals acute stress tests the haven trade as a state rather than as a reaction to a spike.",
+  "source": "Baur & Lucey (2010) Is gold a hedge or a safe haven?, Financial Review 45(2); Ranaldo & Soderlind (2010) Safe haven currencies, Rev. of Finance 14(3)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-22",
+  "chunk": 3
+ },
+ {
+  "name": "Yield-peak rollover: after the 10y yield proxy drops 25bp from a recent peak, buy growth equities for 20 bars",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "XLK",
+   "XLY"
+  ],
+  "mode": "signal",
+  "holdBars": 20,
+  "params": {
+   "window": 63,
+   "minRange": 0.3,
+   "pullback": 0.25,
+   "peakWithin": 10,
+   "hold": 20
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\ny(k) = M(\"DFII10\",k) + M(\"T10YIE\",k) = nominal 10y yield proxy in %. Over k=0..62: H = max y(k), kH = the k of that max (smallest k on ties), Lo = min y(k). Return 1 if H - Lo >= 0.30 and H - y(0) >= 0.25 and kH <= 10, else 0. holdBars=20.",
+  "rationale": "Growth equities carry long cash-flow duration and tend to rebound when yields roll over from a spike; requiring a prior 30bp run-up and a fresh 25bp reversal makes the event specific.",
+  "source": "Weber (2018) JFE 128(3); Lettau & Wachter (2007) JF 62(1)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-23",
+  "chunk": 3
+ },
+ {
+  "name": "Yield-peak rollover (defensive leg): the same 25bp rollover trigger applied to Treasuries, utilities, REITs and gold",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "TLT",
+   "XLU",
+   "VNQ",
+   "GLD"
+  ],
+  "mode": "signal",
+  "holdBars": 20,
+  "params": {
+   "window": 63,
+   "minRange": 0.3,
+   "pullback": 0.25,
+   "peakWithin": 10,
+   "hold": 20
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\ny(k) = M(\"DFII10\",k) + M(\"T10YIE\",k) = nominal 10y yield proxy in %. Over k=0..62: H = max y(k), kH = the k of that max (smallest k on ties), Lo = min y(k). Return 1 if H - Lo >= 0.30 and H - y(0) >= 0.25 and kH <= 10, else 0. holdBars=20.",
+  "rationale": "Bond proxies and gold are the other side of the same rate-sensitivity trade; this pairs with the growth-equity leg so the two results show where a yield-peak rollover pays, if anywhere.",
+  "source": "Campbell & Viceira (2001) AER 91(1); Erb & Harvey (2013) FAJ 69(4)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-24",
+  "chunk": 3
+ },
+ {
+  "name": "Macro-driver pullback buying: RSI(5) under 30 in XLE, XLU, XLF or GLD only when its own macro driver is in a supportive 100-day trend",
+  "family": "mean_reversion",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "XLE",
+   "XLU",
+   "XLF",
+   "GLD"
+  ],
+  "mode": "signal",
+  "holdBars": 5,
+  "params": {
+   "rsiN": 5,
+   "rsiMax": 30,
+   "trendN": 100,
+   "hold": 5
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nUse ctx.symbol to choose the driver. XLE: ok = M(\"DCOILWTICO\",0) > mean_100(M(\"DCOILWTICO\",k)) (oil values <= 5 count as null). XLU: ok = M(\"DFII10\",0) < mean_100(M(\"DFII10\",k)). XLF: ok = M(\"T10Y2Y\",0) > mean_100(M(\"T10Y2Y\",k)). GLD: ok = M(\"DFII10\",0) < mean_100(M(\"DFII10\",k)). Return 1 if ok and ctx.rsi(5) < 30 else 0. holdBars=5.",
+  "rationale": "A pullback in a sector whose fundamental driver is still moving its way is more likely a pause than a reversal; the drivers are fixed a priori from textbook sensitivities.",
+  "source": "Connors & Alvarez (2009) Short Term Trading Strategies That Work; Chen, Roll & Ross (1986) J. Business 59(3)",
+  "expectedTradesPerYear": 25,
+  "id": "c1031-macro-25",
+  "chunk": 3
+ },
+ {
+  "name": "RSI(2) pullbacks on 40 large caps, allowed only while VIX sits between 15 and 30",
+  "family": "mean_reversion",
+  "assetClass": "us_stock",
+  "timeframe": "1d",
+  "assets": [
+   "AAPL",
+   "NVDA",
+   "AMZN",
+   "GOOGL",
+   "META",
+   "TSLA",
+   "JPM",
+   "V",
+   "UNH",
+   "XOM",
+   "JNJ",
+   "COST",
+   "ABBV",
+   "MRK",
+   "AVGO",
+   "CVX",
+   "WMT",
+   "BAC",
+   "ORCL",
+   "ADBE",
+   "CRM",
+   "NFLX",
+   "AMD",
+   "INTC",
+   "ABT",
+   "MCD",
+   "DIS",
+   "QCOM",
+   "TXN",
+   "HON",
+   "CAT",
+   "LOW",
+   "SBUX",
+   "BA",
+   "UPS",
+   "PFE",
+   "T",
+   "MDT",
+   "UNP",
+   "MMM"
+  ],
+  "mode": "signal",
+  "params": {
+   "rsiN": 2,
+   "rsiMax": 10,
+   "trendSma": 200,
+   "exitSma": 5,
+   "vixLo": 15,
+   "vixHi": 30
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nState pos starts 0. V = M(\"VIXCLS\",0). If pos==0 and bars[i].close > ctx.sma(\"close\",200) and ctx.rsi(2) < 10 and V >= 15 and V <= 30 then pos=1. If pos==1 and bars[i].close > ctx.sma(\"close\",5) then pos=0. Return pos.",
+  "rationale": "Pullback buying needs enough volatility to pay and not so much that the 200-day trend filter is a lie; a middle VIX band is the regime where short-term reversion is most often described as working.",
+  "source": "Connors & Alvarez (2009) Short Term Trading Strategies That Work; Nagel (2012) RFS 25(7)",
+  "expectedTradesPerYear": 120,
+  "id": "c1031-macro-26",
+  "chunk": 3
+ },
+ {
+  "name": "Dollar-surge exhaustion: after the broad dollar rises 2% in 20 bars, short UUP and long GLD, SLV, DBC, USO for 20 bars",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "UUP",
+   "GLD",
+   "SLV",
+   "DBC",
+   "USO"
+  ],
+  "longShort": true,
+  "mode": "signal",
+  "holdBars": 20,
+  "params": {
+   "surge": 0.02,
+   "lag": 20,
+   "hold": 20
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nd0 = M(\"DTWEXBGS\",0), d20 = M(\"DTWEXBGS\",20). Trigger = d0/d20 - 1 >= 0.02. Return (trigger ? (ctx.symbol == \"UUP\" ? -1 : 1) : 0). holdBars=20.",
+  "rationale": "Dollar spikes are often liquidity events that overshoot; commodity-linked assets sold off in sympathy then recover. The short UUP leg is the direct mean-reversion bet on the same series.",
+  "source": "Bruno & Shin (2015) Capital flows and the risk-taking channel of monetary policy, J. Monetary Economics 71; Akram (2009) Energy Economics 31(6)",
+  "expectedTradesPerYear": 12,
+  "id": "c1031-macro-27",
+  "chunk": 3
+ },
+ {
+  "name": "Hedging-demand warning: stand aside for 5 bars when an index rises over 5 days while the VIX also rises more than 10%",
+  "family": "volatility",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "QQQ",
+   "DIA",
+   "XLK",
+   "XLF"
+  ],
+  "mode": "signal",
+  "params": {
+   "lag": 5,
+   "vixRise": 0.1,
+   "flatBars": 5
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nState flatLeft starts 0. Up = bars[i].close/bars[i-5].close - 1 > 0. V0 = M(\"VIXCLS\",0), V5 = M(\"VIXCLS\",5). Trigger = Up and V0/V5 - 1 > 0.10. If Trigger then flatLeft=5. If flatLeft > 0 then flatLeft -= 1 and return 0, else return 1.",
+  "rationale": "Rising prices with rising implied volatility mean investors are buying protection into a rally; the divergence is a long-standing practitioner warning that has never been scored as a gate.",
+  "source": "Whaley (2000) J. Portfolio Mgmt 26(3); Bollen & Whaley (2004) Does net buying pressure affect the shape of implied volatility functions?, JF 59(2)",
+  "expectedTradesPerYear": 20,
+  "id": "c1031-macro-28",
+  "chunk": 3
+ },
+ {
+  "name": "Rate-volatility gate on bonds (MOVE proxy): flat Treasury and credit ETFs when 20-day yield volatility is above its 75th percentile of the past year",
+  "family": "volatility",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "TLT",
+   "IEF",
+   "LQD",
+   "AGG"
+  ],
+  "mode": "signal",
+  "params": {
+   "volN": 20,
+   "pctWindow": 252,
+   "pct": 0.75
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\ny(k) = M(\"DFII10\",k) + M(\"T10YIE\",k) = nominal 10y yield proxy in %. dy(k) = y(k) - y(k+1). rv(j) = sample std of dy(j..j+19). Requires i >= 280. Let A = [rv(j) for j=0..251]. Return 1 if rv(0) < the 75th percentile of A (linear interpolation, A sorted ascending, index 0.75*(251)) else 0.",
+  "rationale": "Bond volatility clusters and bond returns are worst in high rate-volatility states; a MOVE-style proxy built from the cached TIPS and breakeven series does not need the option-implied index.",
+  "source": "Bekaert, Hoerova & Lo Duca (2013) Risk, uncertainty and monetary policy, JME 60(7); Fleming, Kirby & Ostdiek (2001) JF 56(1)",
+  "expectedTradesPerYear": 8,
+  "id": "c1031-macro-29",
+  "chunk": 3
+ },
+ {
+  "name": "Breakeven breakout: after 10y breakeven inflation makes a 126-day high, hold energy, materials, commodities and gold for 30 bars",
+  "family": "macro",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "XLE",
+   "XLB",
+   "DBC",
+   "GLD"
+  ],
+  "mode": "signal",
+  "holdBars": 30,
+  "params": {
+   "lookback": 126,
+   "hold": 30
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nReturn 1 if M(\"T10YIE\",0) > max over k=1..126 of M(\"T10YIE\",k) (strict new 126-bar high; any null -> 0) else 0. holdBars=30.",
+  "rationale": "A breakout in market-implied inflation is a discrete repricing of inflation risk; real-asset ETFs should follow if the market is slow to move into them, an event study rather than a level state.",
+  "source": "Gorton & Rouwenhorst (2006) Facts and fantasies about commodity futures, FAJ 62(2); Bekaert & Wang (2010) Inflation risk and the inflation risk premium, Economic Policy 25(64)",
+  "expectedTradesPerYear": 8,
+  "id": "c1031-macro-31",
+  "chunk": 3
+ },
+ {
+  "name": "Cyclical sector trend gated by the yield-curve sign: XLF, XLI, XLB, XLE and XLY held above their 100-day average only while 2s10s is positive",
+  "family": "trend",
+  "assetClass": "etf",
+  "timeframe": "1d",
+  "assets": [
+   "XLF",
+   "XLI",
+   "XLB",
+   "XLE",
+   "XLY"
+  ],
+  "mode": "signal",
+  "params": {
+   "sma": 100
+  },
+  "rule": "M(id,k) = ctx.macro(id, i-k): the value known by the close of bar i-k, null if none. If any M used by the rule is null on a bar, return 0 for that bar (state-machine rules also leave state unchanged). mean_N(f) = average of f(k) over k=0..N-1 (bar i included).\nReturn 1 if bars[i].close > ctx.sma(\"close\",100) and M(\"T10Y2Y\",0) > 0 else 0.",
+  "rationale": "Cyclical earnings are most sensitive to the credit cycle that the curve summarises; the rule asks whether trend-following in cyclicals is better restricted to non-inverted-curve regimes.",
+  "source": "Estrella & Hardouvelis (1991) The term structure as a predictor of real economic activity, JF 46(2); Faber (2007) J. Wealth Mgmt 9(4)",
+  "expectedTradesPerYear": 30,
+  "id": "c1031-macro-33",
+  "chunk": 3
+ }
+]

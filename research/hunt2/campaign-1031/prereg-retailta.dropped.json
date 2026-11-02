@@ -1,0 +1,34 @@
+[
+ {
+  "id": "c1031-retailta-01",
+  "reason": "dup_of c1022-retail-21 (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-retailta-03",
+  "reason": "dup_of t1010-gmma-c (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-retailta-04",
+  "reason": "dup_of trader-books-raschke-holy-grail (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-retailta-07",
+  "reason": "dup_of t1010-cci100-s (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-retailta-17",
+  "reason": "near-dup of t1010-double7-s: identical entry/exit rule, only the universe swapped from US stocks to ETFs; not a new strategy"
+ },
+ {
+  "id": "c1031-retailta-20",
+  "reason": "dup_of t100-hns-s (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-retailta-30",
+  "reason": "dup_of t100-bbrsi-s (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ },
+ {
+  "id": "c1031-retailta-33",
+  "reason": "dup_of t100-cup-s (overseer rule: dup_of specs dropped; it may return in a later round as a new id)"
+ }
+]

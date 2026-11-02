@@ -7,7 +7,8 @@ authors:
   - name: "Tickfloor"
 repository-code: "https://github.com/tickfloor/tickfloor-strategy-research"
 url: "https://tickfloor.com/evidence"
-date-released: "2026-11-01"
+version: "1.0.0"
+date-released: "2026-11-02"
 keywords:
   - backtesting
   - trading strategies
