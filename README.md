@@ -27,7 +27,7 @@ single look at held-back data (after 2025-03-15) were both not confirmed.
 Every backtest number here is in-sample, not a promise: it describes how each rule did on the discovery window, not what it will do next, and nothing in this repo
 says a strategy, or the Tickfloor score, makes money.
 
-This is the dataset behind [tickfloor.com/evidence](https://tickfloor.com/evidence). Tickfloor
+This is the dataset behind [tickfloor.com/evidence](https://tickfloor.com/evidence). Tickfloor (Tick Floor)
 is a paid stock and crypto testing tool, and this research is also marketing for it. Its maker ran this
 study to check whether any of the standard trend/momentum/breadth/calendar-style strategies
 actually beat holding the same assets, and published the negative result rather than burying it.
